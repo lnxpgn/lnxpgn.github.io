@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0"
+  xmlns:atom="http://www.w3.org/2005/Atom"
+  xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>竹里馆</title>
+    <link>https://lnxpgn.github.io/</link>
+    
+    <atom:link href="/rss.xml" rel="self" type="application/rss+xml"/>
+    
+    <description>lnxpgn&#39;s tech blog</description>
+    <pubDate>Thu, 30 Apr 2020 16:00:00 GMT</pubDate>
+    <generator>http://hexo.io/</generator>
+    
+    <item>
+      <title>React Notes</title>
+      <link>https://lnxpgn.github.io/2020/03/02/react-notes/</link>
+      <guid>https://lnxpgn.github.io/2020/03/02/react-notes/</guid>
+      <pubDate>Sun, 01 Mar 2020 16:00:00 GMT</pubDate>
+      <description>
+      
+        &lt;h3 id=&quot;Introduction&quot;&gt;Introduction&lt;/h3&gt;&lt;p&gt;Some concepts I don&#39;t know from backend programming languages, some places I might make mistakes.&lt;/p&gt;&lt;p&gt;React:&lt;/p&gt;&lt;blockquote&gt;&lt;p&gt;&amp;gt;= v16.13.0&lt;/p&gt;&lt;/blockquote&gt;
+      
+      </description>
+      
+      
+      <comments>https://lnxpgn.github.io/2020/03/02/react-notes/#disqus_thread</comments>
+    </item>
+    
+    <item>
+      <title>Know JavaScript</title>
+      <link>https://lnxpgn.github.io/2020/01/20/know-javascript/</link>
+      <guid>https://lnxpgn.github.io/2020/01/20/know-javascript/</guid>
+      <pubDate>Sun, 19 Jan 2020 16:00:00 GMT</pubDate>
+      <description>
+      
+        &lt;h2 id=&quot;Introduction&quot;&gt;Introduction&lt;/h2&gt;&lt;p&gt;This is a JavaScript guide for developers who already know other programming languages.&lt;/p&gt;
+      
+      </description>
+      
+      
+      <comments>https://lnxpgn.github.io/2020/01/20/know-javascript/#disqus_thread</comments>
+    </item>
+    
+    <item>
+      <title>Make a right choice among Java Collections</title>
+      <link>https://lnxpgn.github.io/2018/12/17/make-a-right-choice-among-java-collections/</link>
+      <guid>https://lnxpgn.github.io/2018/12/17/make-a-right-choice-among-java-collections/</guid>
+      <pubDate>Mon, 17 Dec 2018 12:38:37 GMT</pubDate>
+      <description>
+      
+        &lt;p&gt;&lt;img src=&quot;/images/java-collections.png&quot; alt=&quot;Java Collections&quot;&gt;&lt;/p&gt;
+      
+      </description>
+      
+      
+      <comments>https://lnxpgn.github.io/2018/12/17/make-a-right-choice-among-java-collections/#disqus_thread</comments>
+    </item>
+    
+    <item>
+      <title>HTTP 1.1/2 Optimization</title>
+      <link>https://lnxpgn.github.io/2018/05/18/http-optimization/</link>
+      <guid>https://lnxpgn.github.io/2018/05/18/http-optimization/</guid>
+      <pubDate>Fri, 18 May 2018 05:55:10 GMT</pubDate>
+      <description>
+      
+        &lt;h2 id=&quot;Major-Features-of-HTTP-1-1-and-HTTP-2&quot;&gt;Major Features of HTTP/1.1 and HTTP/2&lt;/h2&gt;&lt;p&gt;&lt;img src=&quot;/images/http.png&quot; alt=&quot;HTTP/1.1 and HTTP/2&quot;&gt;&lt;/p&gt;
+      
+      </description>
+      
+      
+      <comments>https://lnxpgn.github.io/2018/05/18/http-optimization/#disqus_thread</comments>
+    </item>
+    
+    <item>
+      <title>Web开发者的简单颜色指南</title>
+      <link>https://lnxpgn.github.io/2016/04/18/a-simple-web-developer-guide-to-color/</link>
+      <guid>https://lnxpgn.github.io/2016/04/18/a-simple-web-developer-guide-to-color/</guid>
+      <pubDate>Mon, 18 Apr 2016 08:55:15 GMT</pubDate>
+      <description>
+      
+        &lt;p&gt;我从来不是一个颜色理论的爱好者，我想是因为我对它一直不太抱希望。我乐意坐在那儿，拿着色环，选取互补色(complementary colors)、分散的互补色(split-complementary colors)、三色(triad colors)等配色方案，让朋友、家人、客户印象深刻。&lt;/p&gt;&lt;p&gt;说实话，颜色理论对我很遥远，尝试在项目中使用颜色时我从未发现它有用。有点讽刺，我发现，颜色的选择、运用得越好，背后的理论我越有更好的认识。&lt;/p&gt;&lt;p&gt;刚起步时理论并没有真正得帮助，对吧？这就是为什么，在这篇文章里，你不会看到一个单一的色环，相反，我会展示一个简单的你能用在下一个Web项目的颜色工作流。&lt;/p&gt;
+      
+      </description>
+      
+      
+      <comments>https://lnxpgn.github.io/2016/04/18/a-simple-web-developer-guide-to-color/#disqus_thread</comments>
+    </item>
+    
+    <item>
+      <title>如何使用CSS垂直对齐元素</title>
+      <link>https://lnxpgn.github.io/2016/03/06/how-to-vertically-align-elements-using-css/</link>
+      <guid>https://lnxpgn.github.io/2016/03/06/how-to-vertically-align-elements-using-css/</guid>
+      <pubDate>Sun, 06 Mar 2016 15:18:36 GMT</pubDate>
+      <description>
+      
+        &lt;p&gt;任何一个Web开发人员都会遇到垂直对齐这个老问题。我在Web领域工作了将近一年，已经被客户问了多次“把这个对齐到窗口中央”或“把那个放到那个的中部”。使用CSS容易实现水平对齐：&lt;/p&gt;&lt;p&gt;对于块级元素（block-level element）&lt;/p&gt;&lt;figure class=&quot;highlight css&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;selector-tag&quot;&gt;display&lt;/span&gt;: &lt;span class=&quot;selector-tag&quot;&gt;block&lt;/span&gt;; &lt;span class=&quot;selector-tag&quot;&gt;margin&lt;/span&gt;: 0 &lt;span class=&quot;selector-tag&quot;&gt;auto&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;p&gt;对于内联元素（inline element，也叫行内元素）&lt;/p&gt;&lt;figure class=&quot;highlight css&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;selector-tag&quot;&gt;display&lt;/span&gt;: &lt;span class=&quot;selector-tag&quot;&gt;inline-block&lt;/span&gt;; &lt;span class=&quot;selector-tag&quot;&gt;text-align&lt;/span&gt;: &lt;span class=&quot;selector-tag&quot;&gt;center&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;p&gt;为什么垂直对齐不能这么简单？问题在于网站传统上并不是为了垂直对齐，网页是横向缩放的，高度改变以适应内容。我们幸运的是CSS有多种方法可以绕过这个问题，有些方法好于其他，有些则是十分糟糕，不应该使用。记住这些都是相对的（有时是绝对的），一个可以在某种情况下解决问题的方法可能不能解决另外一种情况的问题。&lt;/p&gt;
+      
+      </description>
+      
+      
+      <comments>https://lnxpgn.github.io/2016/03/06/how-to-vertically-align-elements-using-css/#disqus_thread</comments>
+    </item>
+    
+    <item>
+      <title>Hexo + Markdown issues</title>
+      <link>https://lnxpgn.github.io/2015/08/01/hexo-markdown-issues/</link>
+      <guid>https://lnxpgn.github.io/2015/08/01/hexo-markdown-issues/</guid>
+      <pubDate>Sat, 01 Aug 2015 08:19:03 GMT</pubDate>
+      <description>
+      
+        &lt;h2 id=&quot;Backslash-escapes&quot;&gt;Backslash escapes&lt;/h2&gt;&lt;p&gt;Hexo installs a plugin &lt;em&gt;hexo-renderer-marked&lt;/em&gt; as the default Markdown renderer, but the plugin generates literal characters which are not what you want if have a backslash before these characters, such as &lt;code&gt;scrapy crawl \&amp;lt;spider name\&amp;gt;&lt;/code&gt; becomes &lt;code&gt;scrapy crawl \&lt;/code&gt;. To fix this issue by replacing &lt;em&gt;hexo-renderer-marked&lt;/em&gt; with &lt;em&gt;hexo-renderer-markdown-it&lt;/em&gt;.&lt;/p&gt;
+      
+      </description>
+      
+      
+      <comments>https://lnxpgn.github.io/2015/08/01/hexo-markdown-issues/#disqus_thread</comments>
+    </item>
+    
+    <item>
+      <title>Using multiple spiders in a Scrapy project</title>
+      <link>https://lnxpgn.github.io/2015/07/27/using-multiple-spiders-in-a-scrapy-project/</link>
+      <guid>https://lnxpgn.github.io/2015/07/27/using-multiple-spiders-in-a-scrapy-project/</guid>
+      <pubDate>Mon, 27 Jul 2015 12:18:21 GMT</pubDate>
+      <description>
+      
+        &lt;h2 id=&quot;Introduction&quot;&gt;Introduction&lt;/h2&gt;&lt;p&gt;Different channel&#39;s structure in a websit are similar, sometimes we want to reuse source code and don&#39;t create a &lt;a href=&quot;http://scrapy.org/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Scrapy&lt;/a&gt; project per channel. This is a tutorial how to use multiple spiders in a Scrapy project.&lt;/p&gt;
+      
+      </description>
+      
+      
+      <comments>https://lnxpgn.github.io/2015/07/27/using-multiple-spiders-in-a-scrapy-project/#disqus_thread</comments>
+    </item>
+    
+  </channel>
+</rss>
