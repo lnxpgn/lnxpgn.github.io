@@ -13,13 +13,13 @@
     <generator>http://hexo.io/</generator>
     
     <item>
-      <title>React Notes</title>
+      <title>React notes</title>
       <link>https://lnxpgn.github.io/2020/03/02/react-notes/</link>
       <guid>https://lnxpgn.github.io/2020/03/02/react-notes/</guid>
       <pubDate>Sun, 01 Mar 2020 16:00:00 GMT</pubDate>
       <description>
       
-        &lt;h3 id=&quot;Introduction&quot;&gt;Introduction&lt;/h3&gt;&lt;p&gt;Some concepts I don&#39;t know from backend programming languages, some places I might make mistakes.&lt;/p&gt;&lt;p&gt;React:&lt;/p&gt;&lt;blockquote&gt;&lt;p&gt;&amp;gt;= v16.13.0&lt;/p&gt;&lt;/blockquote&gt;
+        &lt;p&gt;Some concepts I don&#39;t know from backend programming languages, some places I might make mistakes.&lt;/p&gt;&lt;p&gt;React: &lt;code&gt;&amp;gt;= v16.13.0&lt;/code&gt;&lt;/p&gt;
       
       </description>
       
@@ -34,7 +34,7 @@
       <pubDate>Sun, 19 Jan 2020 16:00:00 GMT</pubDate>
       <description>
       
-        &lt;h2 id=&quot;Introduction&quot;&gt;Introduction&lt;/h2&gt;&lt;p&gt;This is a JavaScript guide for developers who already know other programming languages.&lt;/p&gt;
+        &lt;p&gt;This is a JavaScript guide for developers who already know other programming languages.&lt;/p&gt;
       
       </description>
       
@@ -43,7 +43,7 @@
     </item>
     
     <item>
-      <title>Make a right choice among Java Collections</title>
+      <title>Make a right choice among Java collections</title>
       <link>https://lnxpgn.github.io/2018/12/17/make-a-right-choice-among-java-collections/</link>
       <guid>https://lnxpgn.github.io/2018/12/17/make-a-right-choice-among-java-collections/</guid>
       <pubDate>Mon, 17 Dec 2018 12:38:37 GMT</pubDate>
@@ -58,13 +58,13 @@
     </item>
     
     <item>
-      <title>HTTP 1.1/2 Optimization</title>
+      <title>HTTP 1.1/2 optimization</title>
       <link>https://lnxpgn.github.io/2018/05/18/http-optimization/</link>
       <guid>https://lnxpgn.github.io/2018/05/18/http-optimization/</guid>
       <pubDate>Fri, 18 May 2018 05:55:10 GMT</pubDate>
       <description>
       
-        &lt;h2 id=&quot;Major-Features-of-HTTP-1-1-and-HTTP-2&quot;&gt;Major Features of HTTP/1.1 and HTTP/2&lt;/h2&gt;&lt;p&gt;&lt;img src=&quot;/images/http.png&quot; alt=&quot;HTTP/1.1 and HTTP/2&quot;&gt;&lt;/p&gt;
+        &lt;h2 id=&quot;Major-features-of-HTTP-1-1-and-HTTP-2&quot;&gt;Major features of HTTP/1.1 and HTTP/2&lt;/h2&gt;&lt;p&gt;&lt;img src=&quot;/images/http.png&quot; alt=&quot;HTTP/1.1 and HTTP/2&quot;&gt;&lt;/p&gt;
       
       </description>
       
@@ -124,7 +124,7 @@
       <pubDate>Mon, 27 Jul 2015 12:18:21 GMT</pubDate>
       <description>
       
-        &lt;h2 id=&quot;Introduction&quot;&gt;Introduction&lt;/h2&gt;&lt;p&gt;Different channel&#39;s structure in a websit are similar, sometimes we want to reuse source code and don&#39;t create a &lt;a href=&quot;http://scrapy.org/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Scrapy&lt;/a&gt; project per channel. This is a tutorial how to use multiple spiders in a Scrapy project.&lt;/p&gt;
+        &lt;p&gt;Different channel&#39;s structure in a websit are similar, sometimes we want to reuse source code and don&#39;t create a &lt;a href=&quot;http://scrapy.org/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Scrapy&lt;/a&gt; project per channel. This is a tutorial how to use multiple spiders in a Scrapy project.&lt;/p&gt;
       
       </description>
       
