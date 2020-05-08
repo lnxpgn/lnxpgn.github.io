@@ -105,7 +105,7 @@
     <link href="https://lnxpgn.github.io/2016/04/18/a-simple-web-developer-guide-to-color/"/>
     <id>https://lnxpgn.github.io/2016/04/18/a-simple-web-developer-guide-to-color/</id>
     <published>2016-04-18T08:55:15.000Z</published>
-    <updated>2016-04-18T08:55:15.000Z</updated>
+    <updated>2020-05-07T16:00:00.000Z</updated>
     
     <summary type="html">
     
@@ -115,13 +115,13 @@
     
     
     
-      <category term="Web Design" scheme="https://lnxpgn.github.io/tags/Web-Design/"/>
-    
-      <category term="网页设计" scheme="https://lnxpgn.github.io/tags/%E7%BD%91%E9%A1%B5%E8%AE%BE%E8%AE%A1/"/>
-    
       <category term="Translation" scheme="https://lnxpgn.github.io/tags/Translation/"/>
     
       <category term="翻译" scheme="https://lnxpgn.github.io/tags/%E7%BF%BB%E8%AF%91/"/>
+    
+      <category term="Web Design" scheme="https://lnxpgn.github.io/tags/Web-Design/"/>
+    
+      <category term="网页设计" scheme="https://lnxpgn.github.io/tags/%E7%BD%91%E9%A1%B5%E8%AE%BE%E8%AE%A1/"/>
     
   </entry>
   
@@ -130,25 +130,25 @@
     <link href="https://lnxpgn.github.io/2016/03/06/how-to-vertically-align-elements-using-css/"/>
     <id>https://lnxpgn.github.io/2016/03/06/how-to-vertically-align-elements-using-css/</id>
     <published>2016-03-06T15:18:36.000Z</published>
-    <updated>2016-03-06T15:18:36.000Z</updated>
+    <updated>2020-05-07T16:00:00.000Z</updated>
     
     <summary type="html">
     
-      &lt;p&gt;任何一个Web开发人员都会遇到垂直对齐这个老问题。我在Web领域工作了将近一年，已经被客户问了多次“把这个对齐到窗口中央”或“把那个放到那个的中部”。使用CSS容易实现水平对齐：&lt;/p&gt;&lt;p&gt;对于块级元素（block-level element）&lt;/p&gt;&lt;figure class=&quot;highlight css&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;selector-tag&quot;&gt;display&lt;/span&gt;: &lt;span class=&quot;selector-tag&quot;&gt;block&lt;/span&gt;; &lt;span class=&quot;selector-tag&quot;&gt;margin&lt;/span&gt;: 0 &lt;span class=&quot;selector-tag&quot;&gt;auto&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;p&gt;对于内联元素（inline element，也叫行内元素）&lt;/p&gt;&lt;figure class=&quot;highlight css&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;selector-tag&quot;&gt;display&lt;/span&gt;: &lt;span class=&quot;selector-tag&quot;&gt;inline-block&lt;/span&gt;; &lt;span class=&quot;selector-tag&quot;&gt;text-align&lt;/span&gt;: &lt;span class=&quot;selector-tag&quot;&gt;center&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;p&gt;为什么垂直对齐不能这么简单？问题在于网站传统上并不是为了垂直对齐，网页是横向缩放的，高度改变以适应内容。我们幸运的是CSS有多种方法可以绕过这个问题，有些方法好于其他，有些则是十分糟糕，不应该使用。记住这些都是相对的（有时是绝对的），一个可以在某种情况下解决问题的方法可能不能解决另外一种情况的问题。&lt;/p&gt;
+      &lt;p&gt;任何一个Web开发人员都会遇到垂直对齐这个老问题。我在Web领域工作了将近一年，已经被客户问了多次“把这个对齐到窗口中央”或“把那个放到那个的中部”。使用CSS容易实现水平对齐：&lt;/p&gt;&lt;p&gt;对于块级元素（block-level element）&lt;/p&gt;&lt;figure class=&quot;highlight css&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;selector-tag&quot;&gt;display&lt;/span&gt;: &lt;span class=&quot;selector-tag&quot;&gt;block&lt;/span&gt;; &lt;span class=&quot;selector-tag&quot;&gt;margin&lt;/span&gt;: 0 &lt;span class=&quot;selector-tag&quot;&gt;auto&lt;/span&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;p&gt;对于内联元素（inline element，也叫行内元素）&lt;/p&gt;&lt;figure class=&quot;highlight css&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;selector-tag&quot;&gt;display&lt;/span&gt;: &lt;span class=&quot;selector-tag&quot;&gt;inline-block&lt;/span&gt;; &lt;span class=&quot;selector-tag&quot;&gt;text-align&lt;/span&gt;: &lt;span class=&quot;selector-tag&quot;&gt;center&lt;/span&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;p&gt;为什么垂直对齐不能这么简单？问题在于网站传统上并不是为了垂直对齐，网页是横向缩放的，高度改变以适应内容。我们幸运的是CSS有多种方法可以绕过这个问题，有些方法好于其他，有些则是十分糟糕，不应该使用。记住这些都是相对的（有时是绝对的），一个可以在某种情况下解决问题的方法可能不能解决另外一种情况的问题。&lt;/p&gt;
     
     </summary>
     
     
-    
-      <category term="Translation" scheme="https://lnxpgn.github.io/tags/Translation/"/>
-    
-      <category term="翻译" scheme="https://lnxpgn.github.io/tags/%E7%BF%BB%E8%AF%91/"/>
     
       <category term="CSS" scheme="https://lnxpgn.github.io/tags/CSS/"/>
     
       <category term="Vertically Align" scheme="https://lnxpgn.github.io/tags/Vertically-Align/"/>
     
       <category term="垂直对齐" scheme="https://lnxpgn.github.io/tags/%E5%9E%82%E7%9B%B4%E5%AF%B9%E9%BD%90/"/>
+    
+      <category term="Translation" scheme="https://lnxpgn.github.io/tags/Translation/"/>
+    
+      <category term="翻译" scheme="https://lnxpgn.github.io/tags/%E7%BF%BB%E8%AF%91/"/>
     
   </entry>
   
