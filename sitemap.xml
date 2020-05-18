@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://lnxpgn.github.io/2020/01/20/know-javascript/</loc>
+    
+    <lastmod>2020-05-17T16:00:00.000Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://lnxpgn.github.io/2020/05/17/issue-2-202005-2/</loc>
     
     <lastmod>2020-05-16T16:00:00.000Z</lastmod>
@@ -10,13 +17,6 @@
   
   <url>
     <loc>https://lnxpgn.github.io/2020/03/02/react-notes/</loc>
-    
-    <lastmod>2020-05-16T16:00:00.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://lnxpgn.github.io/2020/01/20/know-javascript/</loc>
     
     <lastmod>2020-05-16T16:00:00.000Z</lastmod>
     
