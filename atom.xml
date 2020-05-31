@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   <link href="https://pubsubhubbub.appspot.com/" rel="hub"/>
   <link href="https://lnxpgn.github.io/"/>
-  <updated>2020-05-23T16:00:00.000Z</updated>
+  <updated>2020-05-30T16:00:00.000Z</updated>
   <id>https://lnxpgn.github.io/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Weekly - issue 4</title>
+    <link href="https://lnxpgn.github.io/2020/05/31/issue-4-202005-4/"/>
+    <id>https://lnxpgn.github.io/2020/05/31/issue-4-202005-4/</id>
+    <published>2020-05-30T16:00:00.000Z</published>
+    <updated>2020-05-30T16:00:00.000Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h3 id=&quot;呼吸习惯与身心健康相关&quot;&gt;&lt;a href=&quot;https://www.solidot.org/story?sid=64454&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;呼吸习惯与身心健康相关&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;绝大多数人对呼吸有误解。我们认为呼吸是一种被动的行为。呼吸意味着活着，停止呼吸意味着死亡。但呼吸并非是简单的二元关系。&lt;a href=&quot;https://www.wsj.com/articles/the-healing-power-of-proper-breathing-11590098696&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;如何呼吸至关重要&lt;/a&gt;。我们呼吸摄入的空气分子比地球上所有沙滩上的沙砾还要多。我们每天呼入呼出的空气分子重约 30 磅，远超饮食。呼吸的方式与饮食、运动和基因一样重要。正确的呼吸能让我们活得更久更健康，糟糕的呼吸可能导致一系列慢性疾病，可能会改变我们的身体结构。古代的人对此主题有更深入的理解。主要宗教和文化都认为正确的呼吸对健康很关键。中国古代学者还写了多本关于呼吸的书籍。印度瑜伽修行者更是&lt;a href=&quot;https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3221193/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;呼吸的大师&lt;/a&gt;。我们许多人的呼吸习惯都不够好，我们会将其归罪于身体年龄。大约 30 岁之后，胸部骨骼会变薄向内收缩。到 50 岁时我们失去了 12% 的肺容量。这一收缩之后会加速。我们被迫更快更艰难的呼吸。但好消息是我们可以在任何时候改变呼吸习惯，逆转肺容量损失。1980 年代，长达 70 年的心脏疾病研究项目 Framingham Study 发现，衡量寿命的一个最关键指标不是遗传、饮食和每天的锻炼量，而是肺容量。肺容量越大寿命越长。更大的肺部可以用更少的呼吸吸入更多的空气，减少身体的磨损。健康呼吸的第一步是延长呼吸，更深入更长点。用大约 5 秒钟的时间慢慢吸气，然后用类似的时间呼气，每分钟大约完成六次呼吸。按照这样的节奏呼气吸气，几分钟就能将血压降低 10 个甚至 15 个点。健康呼吸的第二步：用鼻子呼吸。&lt;/p&gt;&lt;p&gt;&lt;em&gt;但是我想知道日常生活中一分钟呼吸6次如何做到。&lt;/em&gt;&lt;/p&gt;&lt;h3 id=&quot;Patroni&quot;&gt;&lt;a href=&quot;https://github.com/zalando/patroni&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Patroni&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;A template for PostgreSQL High Availability with Etcd, Consul, ZooKeeper, or Kubernetes.&lt;/p&gt;&lt;h3 id=&quot;So-you-want-to-learn-Microservices&quot;&gt;&lt;a href=&quot;https://dev.to/kgoralski/deep-dive-into-microservices-architecture-h54&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;So you want to learn Microservices?&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;Micro services architecture is complicated.&lt;/p&gt;&lt;h3 id=&quot;A-list-of-beginner-friendly-NLP-projects—using-pre-trained-models&quot;&gt;&lt;a href=&quot;https://towardsdatascience.com/a-list-of-beginner-friendly-nlp-projects-using-pre-trained-models-dc4768b4bec0&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;A list of beginner-friendly NLP projects—using pre-trained models&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;To build production software projects based on NLP (natural language processing): ML-powered autocomplete, customer support bots , predictive text generators, language identifiers, media monitors.&lt;/p&gt;&lt;h3 id=&quot;Prometheus-Basics&quot;&gt;&lt;a href=&quot;https://github.com/yolossn/Prometheus-Basics&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Prometheus-Basics&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;A beginner friendly introduction to &lt;em&gt;prometheus&lt;/em&gt;. &lt;em&gt;Prometheus&lt;/em&gt; is a system monitoring and alerting system.&lt;/p&gt;&lt;h3 id=&quot;MySQL-sharding-at-Quora&quot;&gt;&lt;a href=&quot;https://www.quora.com/q/quoraengineering/MySQL-sharding-at-Quora?share=1&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;MySQL sharding at Quora&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;How Quora scaled MySQL to meet the growing content requirements.&lt;/p&gt;
+        
+      
+    
+    </summary>
+    
+    
+    
+      <category term="Weekly" scheme="https://lnxpgn.github.io/tags/Weekly/"/>
+    
+  </entry>
   
   <entry>
     <title>Weekly - issue 3</title>
@@ -224,27 +249,6 @@
       <category term="Vertically Align" scheme="https://lnxpgn.github.io/tags/Vertically-Align/"/>
     
       <category term="垂直对齐" scheme="https://lnxpgn.github.io/tags/%E5%9E%82%E7%9B%B4%E5%AF%B9%E9%BD%90/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Hexo + Markdown issues</title>
-    <link href="https://lnxpgn.github.io/2015/08/01/hexo-markdown-issues/"/>
-    <id>https://lnxpgn.github.io/2015/08/01/hexo-markdown-issues/</id>
-    <published>2015-08-01T08:19:03.000Z</published>
-    <updated>2015-08-01T08:19:03.000Z</updated>
-    
-    <summary type="html">
-    
-      &lt;h2 id=&quot;Backslash-escapes&quot;&gt;Backslash escapes&lt;/h2&gt;&lt;p&gt;Hexo installs a plugin &lt;em&gt;hexo-renderer-marked&lt;/em&gt; as the default Markdown renderer, but the plugin generates literal characters which are not what you want if have a backslash before these characters, such as &lt;code&gt;scrapy crawl \&amp;lt;spider name\&amp;gt;&lt;/code&gt; becomes &lt;code&gt;scrapy crawl \&lt;/code&gt;. To fix this issue by replacing &lt;em&gt;hexo-renderer-marked&lt;/em&gt; with &lt;em&gt;hexo-renderer-markdown-it&lt;/em&gt;.&lt;/p&gt;
-    
-    </summary>
-    
-    
-    
-      <category term="Hexo" scheme="https://lnxpgn.github.io/tags/Hexo/"/>
-    
-      <category term="Markdown" scheme="https://lnxpgn.github.io/tags/Markdown/"/>
     
   </entry>
   
