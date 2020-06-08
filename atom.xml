@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   <link href="https://pubsubhubbub.appspot.com/" rel="hub"/>
   <link href="https://lnxpgn.github.io/"/>
-  <updated>2020-05-30T16:00:00.000Z</updated>
+  <updated>2020-06-07T16:00:00.000Z</updated>
   <id>https://lnxpgn.github.io/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Weekly - issue 5</title>
+    <link href="https://lnxpgn.github.io/2020/06/08/issue-5-202006-1/"/>
+    <id>https://lnxpgn.github.io/2020/06/08/issue-5-202006-1/</id>
+    <published>2020-06-07T16:00:00.000Z</published>
+    <updated>2020-06-07T16:00:00.000Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h3 id=&quot;VIBE&quot;&gt;&lt;a href=&quot;https://github.com/mkocabas/VIBE&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;VIBE&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;Official implementation of CVPR2020 paper &amp;quot;VIBE: Video Inference for Human Body Pose and Shape Estimation&amp;quot;.&lt;/p&gt;&lt;p&gt;&lt;img src=&quot;images/vibe.gif&quot; alt=&quot;VIBE&quot;&gt;&lt;/p&gt;&lt;h3 id=&quot;Finding-secrets-by-decompiling-Python-bytecode-in-public-repositories&quot;&gt;&lt;a href=&quot;https://blog.jse.li/posts/pyc/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Finding secrets by decompiling Python bytecode in public repositories&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;Since &lt;code&gt;v3.2&lt;/code&gt;, Python moved &lt;code&gt;.pyc&lt;/code&gt; byte-code files to a directory &lt;code&gt;__pycache__&lt;/code&gt;. Many text editors and IDEs, such as PyCharm, hide the directory, making it easy to forget that they even exist. If you stored keys, passwords in a file &lt;code&gt;keys.py&lt;/code&gt;, and ignored &lt;code&gt;keys.py&lt;/code&gt; in the &lt;code&gt;.gitignore&lt;/code&gt; file, but forgot &lt;code&gt;__pycache__&lt;/code&gt;, then pushed the code to the public repository. Someone can decompile the &lt;code&gt;.pyc&lt;/code&gt; files and find the keys, passwords.&lt;/p&gt;&lt;h3 id=&quot;A-collection-of-useful-gitignore-templates&quot;&gt;&lt;a href=&quot;https://github.com/github/gitignore&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;A collection of useful .gitignore templates&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;This is GitHub’s collection of &lt;code&gt;.gitignore&lt;/code&gt; file templates.&lt;/p&gt;&lt;h3 id=&quot;Choose-an-open-source-license&quot;&gt;&lt;a href=&quot;https://choosealicense.com/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Choose an open source license&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;A site to provide non-judgmental guidance on choosing a license for your open source project. The GitHub repository: &lt;a href=&quot;https://github.com/github/choosealicense.com&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;https://github.com/github/choosealicense.com&lt;/a&gt;.&lt;/p&gt;&lt;h3 id=&quot;PureCSS-Gaze&quot;&gt;&lt;a href=&quot;https://diana-adrianne.com/purecss-gaze/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;PureCSS Gaze&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;A pure CSS oil painting.&lt;/p&gt;&lt;p&gt;&lt;img src=&quot;images/pure-css-gaze.png&quot; alt=&quot;PureCSS Gaze&quot;&gt;&lt;/p&gt;&lt;h3 id=&quot;CSS-Transform-Functions-Visualizer&quot;&gt;&lt;a href=&quot;https://css-transform.moro.es/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;CSS Transform Functions Visualizer&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;CSS Transform Playground. Online tool to visualize 2D &amp;amp; 3D CSS3 Transform functions.&lt;/p&gt;&lt;p&gt;&lt;img src=&quot;images/css-transform-functions-visualizer.png&quot; alt=&quot;CSS Transform Functions Visualizer&quot;&gt;&lt;/p&gt;
+        
+      
+    
+    </summary>
+    
+    
+    
+      <category term="Weekly" scheme="https://lnxpgn.github.io/tags/Weekly/"/>
+    
+  </entry>
   
   <entry>
     <title>Weekly - issue 4</title>
@@ -222,33 +247,6 @@
       <category term="Translation" scheme="https://lnxpgn.github.io/tags/Translation/"/>
     
       <category term="翻译" scheme="https://lnxpgn.github.io/tags/%E7%BF%BB%E8%AF%91/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>如何使用CSS垂直对齐元素</title>
-    <link href="https://lnxpgn.github.io/2016/03/06/how-to-vertically-align-elements-using-css/"/>
-    <id>https://lnxpgn.github.io/2016/03/06/how-to-vertically-align-elements-using-css/</id>
-    <published>2016-03-06T15:18:36.000Z</published>
-    <updated>2020-05-07T16:00:00.000Z</updated>
-    
-    <summary type="html">
-    
-      &lt;p&gt;任何一个Web开发人员都会遇到垂直对齐这个老问题。我在Web领域工作了将近一年，已经被客户问了多次“把这个对齐到窗口中央”或“把那个放到那个的中部”。使用CSS容易实现水平对齐：&lt;/p&gt;&lt;p&gt;对于块级元素（block-level element）&lt;/p&gt;&lt;figure class=&quot;highlight css&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;selector-tag&quot;&gt;display&lt;/span&gt;: &lt;span class=&quot;selector-tag&quot;&gt;block&lt;/span&gt;; &lt;span class=&quot;selector-tag&quot;&gt;margin&lt;/span&gt;: 0 &lt;span class=&quot;selector-tag&quot;&gt;auto&lt;/span&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;p&gt;对于内联元素（inline element，也叫行内元素）&lt;/p&gt;&lt;figure class=&quot;highlight css&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;selector-tag&quot;&gt;display&lt;/span&gt;: &lt;span class=&quot;selector-tag&quot;&gt;inline-block&lt;/span&gt;; &lt;span class=&quot;selector-tag&quot;&gt;text-align&lt;/span&gt;: &lt;span class=&quot;selector-tag&quot;&gt;center&lt;/span&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;p&gt;为什么垂直对齐不能这么简单？问题在于网站传统上并不是为了垂直对齐，网页是横向缩放的，高度改变以适应内容。我们幸运的是CSS有多种方法可以绕过这个问题，有些方法好于其他，有些则是十分糟糕，不应该使用。记住这些都是相对的（有时是绝对的），一个可以在某种情况下解决问题的方法可能不能解决另外一种情况的问题。&lt;/p&gt;
-    
-    </summary>
-    
-    
-    
-      <category term="Translation" scheme="https://lnxpgn.github.io/tags/Translation/"/>
-    
-      <category term="翻译" scheme="https://lnxpgn.github.io/tags/%E7%BF%BB%E8%AF%91/"/>
-    
-      <category term="CSS" scheme="https://lnxpgn.github.io/tags/CSS/"/>
-    
-      <category term="Vertically Align" scheme="https://lnxpgn.github.io/tags/Vertically-Align/"/>
-    
-      <category term="垂直对齐" scheme="https://lnxpgn.github.io/tags/%E5%9E%82%E7%9B%B4%E5%AF%B9%E9%BD%90/"/>
     
   </entry>
   
