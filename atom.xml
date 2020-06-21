@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   <link href="https://pubsubhubbub.appspot.com/" rel="hub"/>
   <link href="https://lnxpgn.github.io/"/>
-  <updated>2020-06-07T16:00:00.000Z</updated>
+  <updated>2020-06-20T16:00:00.000Z</updated>
   <id>https://lnxpgn.github.io/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Weekly - issue 6</title>
+    <link href="https://lnxpgn.github.io/2020/06/21/issue-6-202006-2/"/>
+    <id>https://lnxpgn.github.io/2020/06/21/issue-6-202006-2/</id>
+    <published>2020-06-20T16:00:00.000Z</published>
+    <updated>2020-06-20T16:00:00.000Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h3 id=&quot;Box-shadow-generator&quot;&gt;&lt;a href=&quot;https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Background_and_Borders/Box-shadow_generator&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Box-shadow generator&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;&lt;img src=&quot;/images/box-shadow-generator.png&quot; alt=&quot;Box-shadow generator&quot;&gt;&lt;/p&gt;&lt;h3 id=&quot;Researchers-and-Founders&quot;&gt;&lt;a href=&quot;https://blog.samaltman.com/researchers-and-founders&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Researchers and Founders&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;If you want to be one of the best people in the two groups:&lt;/p&gt;&lt;ul&gt;&lt;li&gt;Think about the most important problems in your field and try to fix them;&lt;/li&gt;&lt;li&gt;Work hard;&lt;/li&gt;&lt;li&gt;Focus on the next step and the future;&lt;/li&gt;&lt;li&gt;Push you towards action;&lt;/li&gt;&lt;li&gt;Think independently;&lt;/li&gt;&lt;/ul&gt;&lt;h3 id=&quot;CSS-Grid-Layout-Generator&quot;&gt;&lt;a href=&quot;https://css-grid-layout-generator.pw/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;CSS Grid Layout Generator&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;Build complex CSS grid layouts — visually.&lt;/p&gt;&lt;p&gt;&lt;img src=&quot;/images/css-grid-layout-generator.png&quot; alt=&quot;CSS Grid Layout Generator&quot;&gt;&lt;/p&gt;
+        
+      
+    
+    </summary>
+    
+    
+    
+      <category term="Weekly" scheme="https://lnxpgn.github.io/tags/Weekly/"/>
+    
+  </entry>
   
   <entry>
     <title>Weekly - issue 5</title>
@@ -222,31 +247,6 @@
       <category term="HTTP/2" scheme="https://lnxpgn.github.io/tags/HTTP-2/"/>
     
       <category term="Optimization" scheme="https://lnxpgn.github.io/tags/Optimization/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Web开发者的简单颜色指南</title>
-    <link href="https://lnxpgn.github.io/2016/04/18/a-simple-web-developer-guide-to-color/"/>
-    <id>https://lnxpgn.github.io/2016/04/18/a-simple-web-developer-guide-to-color/</id>
-    <published>2016-04-18T08:55:15.000Z</published>
-    <updated>2020-05-07T16:00:00.000Z</updated>
-    
-    <summary type="html">
-    
-      &lt;p&gt;我从来不是一个颜色理论的爱好者，我想是因为我对它一直不太抱希望。我乐意坐在那儿，拿着色环，选取互补色(complementary colors)、分散的互补色(split-complementary colors)、三色(triad colors)等配色方案，让朋友、家人、客户印象深刻。&lt;/p&gt;&lt;p&gt;说实话，颜色理论对我很遥远，尝试在项目中使用颜色时我从未发现它有用。有点讽刺，我发现，颜色的选择、运用得越好，背后的理论我越有更好的认识。&lt;/p&gt;&lt;p&gt;刚起步时理论并没有真正得帮助，对吧？这就是为什么，在这篇文章里，你不会看到一个单一的色环，相反，我会展示一个简单的你能用在下一个Web项目的颜色工作流。&lt;/p&gt;
-    
-    </summary>
-    
-    
-    
-      <category term="Web Design" scheme="https://lnxpgn.github.io/tags/Web-Design/"/>
-    
-      <category term="网页设计" scheme="https://lnxpgn.github.io/tags/%E7%BD%91%E9%A1%B5%E8%AE%BE%E8%AE%A1/"/>
-    
-      <category term="Translation" scheme="https://lnxpgn.github.io/tags/Translation/"/>
-    
-      <category term="翻译" scheme="https://lnxpgn.github.io/tags/%E7%BF%BB%E8%AF%91/"/>
     
   </entry>
   
