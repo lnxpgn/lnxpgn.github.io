@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   <link href="https://pubsubhubbub.appspot.com/" rel="hub"/>
   <link href="https://lnxpgn.github.io/"/>
-  <updated>2020-06-20T16:00:00.000Z</updated>
+  <updated>2021-04-09T16:00:00.000Z</updated>
   <id>https://lnxpgn.github.io/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Weekly - issue 7</title>
+    <link href="https://lnxpgn.github.io/2021/04/10/issue-7-202104-1/"/>
+    <id>https://lnxpgn.github.io/2021/04/10/issue-7-202104-1/</id>
+    <published>2021-04-09T16:00:00.000Z</published>
+    <updated>2021-04-09T16:00:00.000Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h3 id=&quot;Flex-Cheatsheet&quot;&gt;&lt;a href=&quot;http://yoksel.github.io/flex-cheatsheet/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Flex Cheatsheet&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;Interactive Flex demos.&lt;/p&gt;&lt;h3 id=&quot;React-D3-js&quot;&gt;&lt;a href=&quot;https://wattenberger.com/blog/react-and-d3&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;React + D3.js&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;Using D3.js inside of a React application to visualize data.&lt;/p&gt;&lt;h3 id=&quot;Security-txt&quot;&gt;&lt;a href=&quot;https://securitytxt.org/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Security.txt&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;A proposed standard which allows websites to define security policies.&lt;/p&gt;&lt;h3 id=&quot;Tig&quot;&gt;&lt;a href=&quot;https://github.com/jonas/tig/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Tig&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;Text-mode interface for Git.&lt;/p&gt;&lt;h3 id=&quot;Fraidycat&quot;&gt;&lt;a href=&quot;https://fraidyc.at/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Fraidycat&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;Fraidycat is a desktop app or browser extension for Firefox or Chrome. You can use it to follow people (hundreds) on whatever platform they choose - Twitter, a blog, YouTube, even on a public TiddlyWiki.&lt;/p&gt;&lt;h3 id=&quot;ts-Command&quot;&gt;&lt;a href=&quot;https://www.putorius.net/ts-command-add-convert-timestamps-linux.html&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;ts Command&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;Add or convert timestamps for any output in Linux.&lt;/p&gt;&lt;h3 id=&quot;The-Strange-Roots&quot;&gt;&lt;a href=&quot;https://www.thestrangeroots.com/posts/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;The Strange Roots&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;The origin of words used in technology and computer science.&lt;/p&gt;&lt;h3 id=&quot;TheOldNet-Browser-Proxy&quot;&gt;&lt;a href=&quot;https://theoldnet.com/docs/httpproxy/index.html&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;TheOldNet Browser Proxy&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;Return a website from the &lt;a href=&quot;https://web.archive.org&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;archive&lt;/a&gt; instead of a live, present day website.&lt;/p&gt;&lt;p&gt;If you set the proxy port to &lt;code&gt;1996&lt;/code&gt;, it will return the &lt;code&gt;1996&lt;/code&gt; version of the website.&lt;/p&gt;
+        
+      
+    
+    </summary>
+    
+    
+    
+      <category term="Weekly" scheme="https://lnxpgn.github.io/tags/Weekly/"/>
+    
+  </entry>
   
   <entry>
     <title>Weekly - issue 6</title>
@@ -224,29 +249,6 @@
     
     
       <category term="Java" scheme="https://lnxpgn.github.io/tags/Java/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>HTTP 1.1/2 optimization</title>
-    <link href="https://lnxpgn.github.io/2018/05/18/http-optimization/"/>
-    <id>https://lnxpgn.github.io/2018/05/18/http-optimization/</id>
-    <published>2018-05-18T05:55:10.000Z</published>
-    <updated>2018-05-18T05:55:10.000Z</updated>
-    
-    <summary type="html">
-    
-      &lt;h2 id=&quot;Major-features-of-HTTP-1-1-and-HTTP-2&quot;&gt;Major features of HTTP/1.1 and HTTP/2&lt;/h2&gt;&lt;p&gt;&lt;img src=&quot;/images/http.png&quot; alt=&quot;HTTP/1.1 and HTTP/2&quot;&gt;&lt;/p&gt;
-    
-    </summary>
-    
-    
-    
-      <category term="HTTP" scheme="https://lnxpgn.github.io/tags/HTTP/"/>
-    
-      <category term="HTTP/2" scheme="https://lnxpgn.github.io/tags/HTTP-2/"/>
-    
-      <category term="Optimization" scheme="https://lnxpgn.github.io/tags/Optimization/"/>
     
   </entry>
   

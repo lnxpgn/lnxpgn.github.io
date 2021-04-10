@@ -9,8 +9,29 @@
     <atom:link href="/rss.xml" rel="self" type="application/rss+xml"/>
     <atom:link href="https://pubsubhubbub.appspot.com/" rel="hub"/>
     <description>lnxpgn&#39;s tech blog</description>
-    <pubDate>Sat, 20 Jun 2020 16:00:00 GMT</pubDate>
+    <pubDate>Fri, 09 Apr 2021 16:00:00 GMT</pubDate>
     <generator>http://hexo.io/</generator>
+    
+    <item>
+      <title>Weekly - issue 7</title>
+      <link>https://lnxpgn.github.io/2021/04/10/issue-7-202104-1/</link>
+      <guid>https://lnxpgn.github.io/2021/04/10/issue-7-202104-1/</guid>
+      <pubDate>Fri, 09 Apr 2021 16:00:00 GMT</pubDate>
+      <description>
+      
+        
+        
+          
+          
+            &lt;h3 id=&quot;Flex-Cheatsheet&quot;&gt;&lt;a href=&quot;http://yoksel.github.io/flex-cheatsheet/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Flex Cheatsheet&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;Interactive Flex demos.&lt;/p&gt;&lt;h3 id=&quot;React-D3-js&quot;&gt;&lt;a href=&quot;https://wattenberger.com/blog/react-and-d3&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;React + D3.js&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;Using D3.js inside of a React application to visualize data.&lt;/p&gt;&lt;h3 id=&quot;Security-txt&quot;&gt;&lt;a href=&quot;https://securitytxt.org/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Security.txt&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;A proposed standard which allows websites to define security policies.&lt;/p&gt;&lt;h3 id=&quot;Tig&quot;&gt;&lt;a href=&quot;https://github.com/jonas/tig/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Tig&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;Text-mode interface for Git.&lt;/p&gt;&lt;h3 id=&quot;Fraidycat&quot;&gt;&lt;a href=&quot;https://fraidyc.at/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Fraidycat&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;Fraidycat is a desktop app or browser extension for Firefox or Chrome. You can use it to follow people (hundreds) on whatever platform they choose - Twitter, a blog, YouTube, even on a public TiddlyWiki.&lt;/p&gt;&lt;h3 id=&quot;ts-Command&quot;&gt;&lt;a href=&quot;https://www.putorius.net/ts-command-add-convert-timestamps-linux.html&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;ts Command&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;Add or convert timestamps for any output in Linux.&lt;/p&gt;&lt;h3 id=&quot;The-Strange-Roots&quot;&gt;&lt;a href=&quot;https://www.thestrangeroots.com/posts/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;The Strange Roots&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;The origin of words used in technology and computer science.&lt;/p&gt;&lt;h3 id=&quot;TheOldNet-Browser-Proxy&quot;&gt;&lt;a href=&quot;https://theoldnet.com/docs/httpproxy/index.html&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;TheOldNet Browser Proxy&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;Return a website from the &lt;a href=&quot;https://web.archive.org&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;archive&lt;/a&gt; instead of a live, present day website.&lt;/p&gt;&lt;p&gt;If you set the proxy port to &lt;code&gt;1996&lt;/code&gt;, it will return the &lt;code&gt;1996&lt;/code&gt; version of the website.&lt;/p&gt;
+          
+        
+      
+      </description>
+      
+      
+      <comments>https://lnxpgn.github.io/2021/04/10/issue-7-202104-1/#disqus_thread</comments>
+    </item>
     
     <item>
       <title>Weekly - issue 6</title>
@@ -181,21 +202,6 @@
       
       
       <comments>https://lnxpgn.github.io/2018/12/17/make-a-right-choice-among-java-collections/#disqus_thread</comments>
-    </item>
-    
-    <item>
-      <title>HTTP 1.1/2 optimization</title>
-      <link>https://lnxpgn.github.io/2018/05/18/http-optimization/</link>
-      <guid>https://lnxpgn.github.io/2018/05/18/http-optimization/</guid>
-      <pubDate>Fri, 18 May 2018 05:55:10 GMT</pubDate>
-      <description>
-      
-        &lt;h2 id=&quot;Major-features-of-HTTP-1-1-and-HTTP-2&quot;&gt;Major features of HTTP/1.1 and HTTP/2&lt;/h2&gt;&lt;p&gt;&lt;img src=&quot;/images/http.png&quot; alt=&quot;HTTP/1.1 and HTTP/2&quot;&gt;&lt;/p&gt;
-      
-      </description>
-      
-      
-      <comments>https://lnxpgn.github.io/2018/05/18/http-optimization/#disqus_thread</comments>
     </item>
     
   </channel>
