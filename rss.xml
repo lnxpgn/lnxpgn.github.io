@@ -9,8 +9,29 @@
     <atom:link href="/rss.xml" rel="self" type="application/rss+xml"/>
     <atom:link href="https://pubsubhubbub.appspot.com/" rel="hub"/>
     <description>lnxpgn&#39;s tech blog</description>
-    <pubDate>Fri, 09 Apr 2021 16:00:00 GMT</pubDate>
+    <pubDate>Sat, 17 Apr 2021 16:00:00 GMT</pubDate>
     <generator>http://hexo.io/</generator>
+    
+    <item>
+      <title>Weekly - issue 8</title>
+      <link>https://lnxpgn.github.io/2021/04/18/issue-8-202104-2/</link>
+      <guid>https://lnxpgn.github.io/2021/04/18/issue-8-202104-2/</guid>
+      <pubDate>Sat, 17 Apr 2021 16:00:00 GMT</pubDate>
+      <description>
+      
+        
+        
+          
+          
+            &lt;h3 id=&quot;Linaria&quot;&gt;&lt;a href=&quot;https://github.com/callstack/linaria&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Linaria&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;A tool to extract the CSS from CSS-in-JS components at build time.&lt;/p&gt;&lt;h3 id=&quot;HTML-Boilerplate&quot;&gt;&lt;a href=&quot;https://www.matuzo.at/blog/html-boilerplate/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;HTML Boilerplate&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;A HTML boilerplate.&lt;/p&gt;
+          
+        
+      
+      </description>
+      
+      
+      <comments>https://lnxpgn.github.io/2021/04/18/issue-8-202104-2/#disqus_thread</comments>
+    </item>
     
     <item>
       <title>Weekly - issue 7</title>
@@ -187,21 +208,6 @@
       
       
       <comments>https://lnxpgn.github.io/2020/01/20/know-javascript/#disqus_thread</comments>
-    </item>
-    
-    <item>
-      <title>Make a right choice among Java collections</title>
-      <link>https://lnxpgn.github.io/2018/12/17/make-a-right-choice-among-java-collections/</link>
-      <guid>https://lnxpgn.github.io/2018/12/17/make-a-right-choice-among-java-collections/</guid>
-      <pubDate>Mon, 17 Dec 2018 12:38:37 GMT</pubDate>
-      <description>
-      
-        &lt;p&gt;&lt;img src=&quot;/images/java-collections.png&quot; alt=&quot;Java Collections&quot;&gt;&lt;/p&gt;
-      
-      </description>
-      
-      
-      <comments>https://lnxpgn.github.io/2018/12/17/make-a-right-choice-among-java-collections/#disqus_thread</comments>
     </item>
     
   </channel>

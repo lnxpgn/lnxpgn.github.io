@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   <link href="https://pubsubhubbub.appspot.com/" rel="hub"/>
   <link href="https://lnxpgn.github.io/"/>
-  <updated>2021-04-09T16:00:00.000Z</updated>
+  <updated>2021-04-17T16:00:00.000Z</updated>
   <id>https://lnxpgn.github.io/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Weekly - issue 8</title>
+    <link href="https://lnxpgn.github.io/2021/04/18/issue-8-202104-2/"/>
+    <id>https://lnxpgn.github.io/2021/04/18/issue-8-202104-2/</id>
+    <published>2021-04-17T16:00:00.000Z</published>
+    <updated>2021-04-17T16:00:00.000Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h3 id=&quot;Linaria&quot;&gt;&lt;a href=&quot;https://github.com/callstack/linaria&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Linaria&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;A tool to extract the CSS from CSS-in-JS components at build time.&lt;/p&gt;&lt;h3 id=&quot;HTML-Boilerplate&quot;&gt;&lt;a href=&quot;https://www.matuzo.at/blog/html-boilerplate/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;HTML Boilerplate&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;A HTML boilerplate.&lt;/p&gt;
+        
+      
+    
+    </summary>
+    
+    
+    
+      <category term="Weekly" scheme="https://lnxpgn.github.io/tags/Weekly/"/>
+    
+  </entry>
   
   <entry>
     <title>Weekly - issue 7</title>
@@ -230,25 +255,6 @@
       <category term="Know" scheme="https://lnxpgn.github.io/tags/Know/"/>
     
       <category term="JavaScript" scheme="https://lnxpgn.github.io/tags/JavaScript/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Make a right choice among Java collections</title>
-    <link href="https://lnxpgn.github.io/2018/12/17/make-a-right-choice-among-java-collections/"/>
-    <id>https://lnxpgn.github.io/2018/12/17/make-a-right-choice-among-java-collections/</id>
-    <published>2018-12-17T12:38:37.000Z</published>
-    <updated>2018-12-17T12:38:37.000Z</updated>
-    
-    <summary type="html">
-    
-      &lt;p&gt;&lt;img src=&quot;/images/java-collections.png&quot; alt=&quot;Java Collections&quot;&gt;&lt;/p&gt;
-    
-    </summary>
-    
-    
-    
-      <category term="Java" scheme="https://lnxpgn.github.io/tags/Java/"/>
     
   </entry>
   
