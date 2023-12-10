@@ -1,0 +1,894 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0"
+  xmlns:atom="http://www.w3.org/2005/Atom"
+  xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>竹里馆</title>
+    <link>https://lnxpgn.github.io/</link>
+    
+    <atom:link href="https://lnxpgn.github.io/rss.xml" rel="self" type="application/rss+xml"/>
+    <atom:link href="https://pubsubhubbub.appspot.com/" rel="hub"/>
+    <description>Sharing what I&#39;m working on, challenges to overcome and things I&#39;m discovering about programming.
+I am looking for full-time or part-time remote work opportunities. Does anyone have any information they can share? I would appreciate any leads.</description>
+    <pubDate>Sat, 09 Dec 2023 10:30:22 GMT</pubDate>
+    <generator>http://hexo.io/</generator>
+    
+    <item>
+      <title>Python Modules and Packages</title>
+      <link>https://lnxpgn.github.io/2023/12/09/python-modules-and-packages/</link>
+      <guid>https://lnxpgn.github.io/2023/12/09/python-modules-and-packages/</guid>
+      <pubDate>Fri, 08 Dec 2023 16:00:00 GMT</pubDate>
+      
+      <description>&lt;h3 id=&quot;Modules&quot;&gt;&lt;a href=&quot;#Modules&quot; class=&quot;headerlink&quot; title=&quot;Modules&quot;&gt;&lt;/a&gt;Modules&lt;/h3&gt;&lt;p&gt;As your program gets longer, you can split it into several files for easier maintenance, you may also want to share a handy function across several programs.&lt;/p&gt;
+&lt;p&gt;To support this, Python has a way to put definitions in a file, such a file is called a module, the file name is the module name with the suffix &lt;code&gt;.py&lt;/code&gt; appended.&lt;/p&gt;</description>
+      
+      
+      
+      
+      <category domain="https://lnxpgn.github.io/categories/Tech/">Tech</category>
+      
+      
+      <category domain="https://lnxpgn.github.io/tags/Python/">Python</category>
+      
+      
+      <comments>https://lnxpgn.github.io/2023/12/09/python-modules-and-packages/#disqus_thread</comments>
+      
+    </item>
+    
+    <item>
+      <title>Getting Started with Zig for Developers Experienced with Other Languages</title>
+      <link>https://lnxpgn.github.io/2023/12/03/zig/</link>
+      <guid>https://lnxpgn.github.io/2023/12/03/zig/</guid>
+      <pubDate>Sat, 02 Dec 2023 16:00:00 GMT</pubDate>
+      
+      <description>&lt;p&gt;The content is based on &lt;a href=&quot;https://ziglang.org/documentation/master/&quot;&gt;the official Zig documentation&lt;/a&gt;.&lt;/p&gt;
+&lt;h2 id=&quot;Hello-World&quot;&gt;&lt;a href=&quot;#Hello-World&quot; class=&quot;headerlink&quot; title=&quot;Hello, World&quot;&gt;&lt;/a&gt;Hello, World&lt;/h2&gt;&lt;pre class=&quot;line-numbers language-zig&quot; data-language=&quot;zig&quot;&gt;&lt;code class=&quot;language-zig&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;const&lt;/span&gt; std &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token builtin&quot;&gt;@import&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;std&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+
+&lt;span class=&quot;token keyword&quot;&gt;pub&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;fn&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;main&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token class-name&quot;&gt;&lt;span class=&quot;token operator&quot;&gt;!&lt;/span&gt;&lt;span class=&quot;token builtin-type keyword&quot;&gt;void&lt;/span&gt;&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;&amp;#123;&lt;/span&gt;
+    &lt;span class=&quot;token keyword&quot;&gt;const&lt;/span&gt; stdout &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; std&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;io&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;getStdOut&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;writer&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;token keyword&quot;&gt;try&lt;/span&gt; stdout&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;Hello, &amp;#123;s&amp;#125;!&#92;n&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;#123;&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;world&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;#125;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;&amp;#125;&lt;/span&gt;&lt;span aria-hidden=&quot;true&quot; class=&quot;line-numbers-rows&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;code&gt;!void&lt;/code&gt; tells the Zig compiler that the function will either return an error or a value. It is an error union, the full form is &lt;code&gt;&amp;lt;error set type&amp;gt;!&amp;lt;any data type&amp;gt;&lt;/code&gt;, combining an &lt;em&gt;Error Set Type&lt;/em&gt; (An error set is like an enum) and any other data type.&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;!void&lt;/code&gt; , the error set type is not explicitly written on the left side of the &lt;code&gt;!&lt;/code&gt; operator. &lt;/p&gt;
+&lt;p&gt;The &lt;a href=&quot;https://ziglang.org/documentation/master/#try&quot;&gt;try&lt;/a&gt; expression evaluates the result of &lt;code&gt;stdout.print&lt;/code&gt;. If the result is an error, then the &lt;code&gt;try&lt;/code&gt; expression will return from &lt;code&gt;main&lt;/code&gt; with the error. Otherwise, the program will continue. &lt;/p&gt;
+&lt;pre class=&quot;line-numbers language-zig&quot; data-language=&quot;zig&quot;&gt;&lt;code class=&quot;language-zig&quot;&gt;&lt;span class=&quot;token comment&quot;&gt;// top-level declarations are order-independent&lt;/span&gt;
+&lt;span class=&quot;token keyword&quot;&gt;const&lt;/span&gt; print &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; std&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;debug&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;print&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;token keyword&quot;&gt;const&lt;/span&gt; std &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token builtin&quot;&gt;@import&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;std&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+
+&lt;span class=&quot;token comment&quot;&gt;// std.debug.print cannot fail, so the return type is void, not !void&lt;/span&gt;
+&lt;span class=&quot;token keyword&quot;&gt;pub&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;fn&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;main&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token class-name&quot;&gt;&lt;span class=&quot;token builtin-type keyword&quot;&gt;void&lt;/span&gt;&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;&amp;#123;&lt;/span&gt;
+    &lt;span class=&quot;token comment&quot;&gt;// must have &quot;.&amp;#123;&amp;#125;&quot;, std.debug.print needs two arguments&lt;/span&gt;
+    &lt;span class=&quot;token function&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;Hello, world&#92;n&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;#123;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;#125;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;&amp;#125;&lt;/span&gt;&lt;span aria-hidden=&quot;true&quot; class=&quot;line-numbers-rows&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;</description>
+      
+      
+      
+      
+      <category domain="https://lnxpgn.github.io/categories/Tech/">Tech</category>
+      
+      
+      <category domain="https://lnxpgn.github.io/tags/Zig/">Zig</category>
+      
+      
+      <comments>https://lnxpgn.github.io/2023/12/03/zig/#disqus_thread</comments>
+      
+    </item>
+    
+    <item>
+      <title>How to Deploy Python Web Applications?</title>
+      <link>https://lnxpgn.github.io/2023/11/26/how-to-deploy-python-web-applications/</link>
+      <guid>https://lnxpgn.github.io/2023/11/26/how-to-deploy-python-web-applications/</guid>
+      <pubDate>Sat, 25 Nov 2023 16:00:00 GMT</pubDate>
+      
+        
+        
+          
+          
+      <description>&lt;p&gt;The deployment mainly involves these parts:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;p&gt;Web applications&lt;/p&gt;
+&lt;p&gt;Most of the time they are written using Python web frameworks, like Django, Flask, FastAPI.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Web servers&lt;/p&gt;
+&lt;p&gt;Like Gunicorn, Uvicorn. Their major feature is to handle HTTP&amp;#x2F;HTTPS protocol.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Specifications&lt;/p&gt;
+&lt;p&gt;They describe how a web server communicates with web applications.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;WSGI (Web Server Gateway Interface)&lt;/p&gt;
+&lt;p&gt;It provides a standard for synchronous Python apps.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;ASGI (Asynchronous Server Gateway Interface)&lt;/p&gt;
+&lt;p&gt;It provides a standard for both asynchronous and synchronous apps, with a WSGI backwards-compatibility implementation.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;A TLS termination proxy&lt;/p&gt;
+&lt;p&gt;In the product environment, you may need a TLS termination proxy, like Nginx, Caddy.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;A monitoring tool&lt;/p&gt;
+&lt;p&gt;In the product environment, you may need a tool to make sure the web server is run on startup and restart it after failures, like Supervisor, Systemd, Docker, Kubernetes.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Web Servers&lt;/th&gt;
+&lt;th&gt;WSGI&lt;/th&gt;
+&lt;th&gt;ASGI&lt;/th&gt;
+&lt;th&gt;HTTP&amp;#x2F;2&lt;/th&gt;
+&lt;th&gt;HTTP&amp;#x2F;3&lt;/th&gt;
+&lt;th&gt;WebSocket&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;&lt;tr&gt;
+&lt;td&gt;Gunicorn&lt;/td&gt;
+&lt;td&gt;Y&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Apache + mod_wsgi&lt;/td&gt;
+&lt;td&gt;Y&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Daphne&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;Y&lt;/td&gt;
+&lt;td&gt;Y&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;Y&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Hypercorn&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;Y&lt;/td&gt;
+&lt;td&gt;Y&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;Y&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Uvicorn&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;Y&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;Y&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;&lt;/table&gt;
+&lt;blockquote&gt;
+&lt;p&gt;uWSGI is in maintenance mode.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Web Servers&lt;/th&gt;
+&lt;th&gt;Django&lt;/th&gt;
+&lt;th&gt;Flask&lt;/th&gt;
+&lt;th&gt;FastAPI&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;&lt;tr&gt;
+&lt;td&gt;Gunicorn&lt;/td&gt;
+&lt;td&gt;Y&lt;/td&gt;
+&lt;td&gt;Y&lt;/td&gt;
+&lt;td&gt;Y (Gunicorn + Uvicorn)&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Apache + mod_wsgi&lt;/td&gt;
+&lt;td&gt;Y&lt;/td&gt;
+&lt;td&gt;Y&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Daphne&lt;/td&gt;
+&lt;td&gt;Y&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Hypercorn&lt;/td&gt;
+&lt;td&gt;Y&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Uvicorn&lt;/td&gt;
+&lt;td&gt;Y&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;Y&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;&lt;/table&gt;
+&lt;blockquote&gt;
+&lt;p&gt;The web servers used by Django, Flask and FastAPI are selected based on recommendations in their official documentation.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;If you’d like to use an ASGI server for Flask you will need to utilize WSGI to ASGI middleware.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Uvicorn has a Gunicorn-compatible worker class, when you use Gunicorn with Uvicorn for FastAPI, Gunicorn acts as a process manager, it would transmit the communication to the worker processes running the Uvicorn class.&lt;/p&gt;
+&lt;/blockquote&gt;
+</description>
+          
+        
+      
+      
+      
+      
+      <category domain="https://lnxpgn.github.io/categories/Tech/">Tech</category>
+      
+      
+      <category domain="https://lnxpgn.github.io/tags/Python/">Python</category>
+      
+      
+      <comments>https://lnxpgn.github.io/2023/11/26/how-to-deploy-python-web-applications/#disqus_thread</comments>
+      
+    </item>
+    
+    <item>
+      <title>Weekly - issue 45</title>
+      <link>https://lnxpgn.github.io/2023/11/19/issue-45-202311-2/</link>
+      <guid>https://lnxpgn.github.io/2023/11/19/issue-45-202311-2/</guid>
+      <pubDate>Sat, 18 Nov 2023 16:00:00 GMT</pubDate>
+      
+        
+        
+          
+          
+      <description>&lt;h3 id=&quot;Using-Colors-in-Terminal-Output&quot;&gt;&lt;a href=&quot;#Using-Colors-in-Terminal-Output&quot; class=&quot;headerlink&quot; title=&quot;Using Colors in Terminal Output&quot;&gt;&lt;/a&gt;Using Colors in Terminal Output&lt;/h3&gt;&lt;p&gt;&lt;a href=&quot;https://handwiki.org/wiki/ANSI_escape_code&quot;&gt;ANSI escape sequences&lt;/a&gt; is a standard to control cursor location, color, font styling, and other options on terminal emulators. &lt;/p&gt;
+&lt;p&gt;The sequences are grouped by their sequence type. CSI (Control Sequence Introducer) is one of the groups, their sequence starting with &lt;code&gt;ESC [&lt;/code&gt;. SGR (Select Graphic Rendition) is a part of CSI, it sets display attributes.&lt;/p&gt;
+&lt;p&gt;The form of SGR:&lt;/p&gt;
+&lt;pre class=&quot;line-numbers language-bash&quot; data-language=&quot;bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;ESC &lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt; n m
+
+&lt;span class=&quot;token comment&quot;&gt;# In terminal, we can write&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;&#92;&lt;/span&gt;e&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;nm
+&lt;span class=&quot;token comment&quot;&gt;# or&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;&#92;&lt;/span&gt;x1b&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;nm&lt;span aria-hidden=&quot;true&quot; class=&quot;line-numbers-rows&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;code&gt;ESC&lt;/code&gt; is a character in the ASCII table.&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;n&lt;/code&gt; consists of one or more decimal digits, separated by &lt;code&gt;;&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;The sequence ends with &lt;code&gt;m&lt;/code&gt;.&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Sequence&lt;/th&gt;
+&lt;th&gt;Description&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;&lt;tr&gt;
+&lt;td&gt;ESC [ 30…37 m&lt;/td&gt;
+&lt;td&gt;Set ANSI text color&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;ESC [ 38 ; 5 ; n m&lt;/td&gt;
+&lt;td&gt;Set text color, 256-color, n is color index from 0 to 255&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;ESC [ 38 ; 2 ; r ; g ; b m&lt;/td&gt;
+&lt;td&gt;Set text color, 24-bit true color, r, g, b are from 0 to 255&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;ESC [ 39 m&lt;/td&gt;
+&lt;td&gt;Reset text color to default&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;ESC [ 40…47 m&lt;/td&gt;
+&lt;td&gt;Set ANSI background color&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;ESC [ 48 ; 5 ; n m&lt;/td&gt;
+&lt;td&gt;Set background color, 256-color, n is color index from 0 to 255&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;ESC [ 48 ; 2 ; r ; g ; b m&lt;/td&gt;
+&lt;td&gt;Set background color, 24-bit true color, r, g, b are from 0 to 255&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;ESC [ 49 m&lt;/td&gt;
+&lt;td&gt;Reset background color to default&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;ESC [ 90…97 m&lt;/td&gt;
+&lt;td&gt;Set bright ANSI text color&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;ESC [ 100…107 m&lt;/td&gt;
+&lt;td&gt;Set bright ANSI background color&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;ESC [ 1 m&lt;/td&gt;
+&lt;td&gt;Bold&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;ESC [ 0 m&lt;/td&gt;
+&lt;td&gt;Reset&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;&lt;/table&gt;
+&lt;p&gt;ANSI colors:&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Text Color&lt;/th&gt;
+&lt;th&gt;Background Color&lt;/th&gt;
+&lt;th&gt;Color Name&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;&lt;tr&gt;
+&lt;td&gt;30&lt;/td&gt;
+&lt;td&gt;40&lt;/td&gt;
+&lt;td&gt;black&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;31&lt;/td&gt;
+&lt;td&gt;41&lt;/td&gt;
+&lt;td&gt;red&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;32&lt;/td&gt;
+&lt;td&gt;42&lt;/td&gt;
+&lt;td&gt;green&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;33&lt;/td&gt;
+&lt;td&gt;43&lt;/td&gt;
+&lt;td&gt;yellow&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;34&lt;/td&gt;
+&lt;td&gt;44&lt;/td&gt;
+&lt;td&gt;blue&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;35&lt;/td&gt;
+&lt;td&gt;45&lt;/td&gt;
+&lt;td&gt;magenta&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;36&lt;/td&gt;
+&lt;td&gt;46&lt;/td&gt;
+&lt;td&gt;cyan&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;37&lt;/td&gt;
+&lt;td&gt;47&lt;/td&gt;
+&lt;td&gt;white&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;&lt;/table&gt;
+&lt;pre class=&quot;line-numbers language-bash&quot; data-language=&quot;bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;&lt;span class=&quot;token comment&quot;&gt;# red A&lt;/span&gt;
+&lt;span class=&quot;token builtin class-name&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&#39;&#92;e[31mA&#39;&lt;/span&gt;
+
+&lt;span class=&quot;token comment&quot;&gt;# white A, red background&lt;/span&gt;
+&lt;span class=&quot;token builtin class-name&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&#39;&#92;e[37;41mA&#39;&lt;/span&gt;
+
+&lt;span class=&quot;token comment&quot;&gt;# bright and bold A, red background&lt;/span&gt;
+&lt;span class=&quot;token builtin class-name&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&#39;&#92;e[1;97;41mA&#39;&lt;/span&gt;
+
+&lt;span class=&quot;token comment&quot;&gt;# red A, green B&lt;/span&gt;
+&lt;span class=&quot;token builtin class-name&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&#39;&#92;e[31mA&#92;e[0B&#92;e[32mB&#39;&lt;/span&gt;&lt;span aria-hidden=&quot;true&quot; class=&quot;line-numbers-rows&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;To print 256 text and background colors:&lt;/p&gt;
+&lt;pre class=&quot;line-numbers language-python&quot; data-language=&quot;python&quot;&gt;&lt;code class=&quot;language-python&quot;&gt;&lt;span class=&quot;token comment&quot;&gt;#!/usr/bin/env python3&lt;/span&gt;
+
+&lt;span class=&quot;token comment&quot;&gt;# text colors&lt;/span&gt;
+&lt;span class=&quot;token keyword&quot;&gt;for&lt;/span&gt; i &lt;span class=&quot;token keyword&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;token builtin&quot;&gt;range&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;16&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;
+    &lt;span class=&quot;token keyword&quot;&gt;for&lt;/span&gt; j &lt;span class=&quot;token keyword&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;token builtin&quot;&gt;range&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;16&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;
+        code &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token builtin&quot;&gt;str&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;i &lt;span class=&quot;token operator&quot;&gt;*&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;16&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;+&lt;/span&gt; j&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+        &lt;span class=&quot;token keyword&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string-interpolation&quot;&gt;&lt;span class=&quot;token string&quot;&gt;f&quot;&#92;x1b[38;5;&lt;/span&gt;&lt;span class=&quot;token interpolation&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;#123;&lt;/span&gt;code&lt;span class=&quot;token punctuation&quot;&gt;&amp;#125;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;m&lt;/span&gt;&lt;span class=&quot;token interpolation&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;#123;&lt;/span&gt;code&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;ljust&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;4&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;#125;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; end&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&#39; &#39;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;token keyword&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;&#92;x1b[0m&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+
+&lt;span class=&quot;token comment&quot;&gt;# background colors&lt;/span&gt;
+&lt;span class=&quot;token keyword&quot;&gt;for&lt;/span&gt; i &lt;span class=&quot;token keyword&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;token builtin&quot;&gt;range&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;16&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;
+    &lt;span class=&quot;token keyword&quot;&gt;for&lt;/span&gt; j &lt;span class=&quot;token keyword&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;token builtin&quot;&gt;range&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;16&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;
+        code &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token builtin&quot;&gt;str&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;i &lt;span class=&quot;token operator&quot;&gt;*&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;16&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;+&lt;/span&gt; j&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+        &lt;span class=&quot;token keyword&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string-interpolation&quot;&gt;&lt;span class=&quot;token string&quot;&gt;f&quot;&#92;x1b[48;5;&lt;/span&gt;&lt;span class=&quot;token interpolation&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;#123;&lt;/span&gt;code&lt;span class=&quot;token punctuation&quot;&gt;&amp;#125;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;m&lt;/span&gt;&lt;span class=&quot;token interpolation&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;#123;&lt;/span&gt;code&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;ljust&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;4&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;#125;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; end&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&#39; &#39;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;token keyword&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;&#92;x1b[0m&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span aria-hidden=&quot;true&quot; class=&quot;line-numbers-rows&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&quot;Discovering-Recently-Installed-Commands-In-Zsh&quot;&gt;&lt;a href=&quot;#Discovering-Recently-Installed-Commands-In-Zsh&quot; class=&quot;headerlink&quot; title=&quot;Discovering Recently Installed Commands In Zsh&quot;&gt;&lt;/a&gt;Discovering Recently Installed Commands In Zsh&lt;/h3&gt;&lt;p&gt;When using Zsh (with &lt;a href=&quot;https://ohmyz.sh/&quot;&gt;Oh My ZSH&lt;/a&gt;), the newly installed commands will not be automatically completed without opening new terminal tab or window. We can run the command to fix it:&lt;/p&gt;
+&lt;pre class=&quot;line-numbers language-bash&quot; data-language=&quot;bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;rehash
+&lt;span class=&quot;token comment&quot;&gt;# or&lt;/span&gt;
+&lt;span class=&quot;token builtin class-name&quot;&gt;hash&lt;/span&gt; &lt;span class=&quot;token parameter variable&quot;&gt;-rf&lt;/span&gt;&lt;span aria-hidden=&quot;true&quot; class=&quot;line-numbers-rows&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+</description>
+          
+        
+      
+      
+      
+      
+      <category domain="https://lnxpgn.github.io/categories/Weekly/">Weekly</category>
+      
+      
+      <category domain="https://lnxpgn.github.io/tags/Weekly/">Weekly</category>
+      
+      <category domain="https://lnxpgn.github.io/tags/Shell/">Shell</category>
+      
+      
+      <comments>https://lnxpgn.github.io/2023/11/19/issue-45-202311-2/#disqus_thread</comments>
+      
+    </item>
+    
+    <item>
+      <title>Weekly - issue 44</title>
+      <link>https://lnxpgn.github.io/2023/11/05/issue-44-202311-1/</link>
+      <guid>https://lnxpgn.github.io/2023/11/05/issue-44-202311-1/</guid>
+      <pubDate>Sat, 04 Nov 2023 16:00:00 GMT</pubDate>
+      
+        
+        
+          
+          
+      <description>&lt;h3 id=&quot;How-to-know-which-program-sent-a-network-request&quot;&gt;&lt;a href=&quot;#How-to-know-which-program-sent-a-network-request&quot; class=&quot;headerlink&quot; title=&quot;How to know which program sent a network request&quot;&gt;&lt;/a&gt;How to know which program sent a network request&lt;/h3&gt;&lt;pre class=&quot;line-numbers language-bash&quot; data-language=&quot;bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;&lt;span class=&quot;token function&quot;&gt;sudo&lt;/span&gt; tcpdump &lt;span class=&quot;token parameter variable&quot;&gt;-i&lt;/span&gt; any &lt;span class=&quot;token parameter variable&quot;&gt;-n&lt;/span&gt; &lt;span class=&quot;token parameter variable&quot;&gt;-k&lt;/span&gt; INPD port &lt;span class=&quot;token number&quot;&gt;53&lt;/span&gt;&lt;span aria-hidden=&quot;true&quot; class=&quot;line-numbers-rows&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;We can also write captured network packets to a file, then read it later.&lt;/p&gt;
+&lt;pre class=&quot;line-numbers language-bash&quot; data-language=&quot;bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;&lt;span class=&quot;token function&quot;&gt;sudo&lt;/span&gt; tcpdump &lt;span class=&quot;token parameter variable&quot;&gt;-i&lt;/span&gt; any &lt;span class=&quot;token parameter variable&quot;&gt;-n&lt;/span&gt; &lt;span class=&quot;token parameter variable&quot;&gt;-k&lt;/span&gt; INPD port &lt;span class=&quot;token number&quot;&gt;53&lt;/span&gt; &lt;span class=&quot;token parameter variable&quot;&gt;-w&lt;/span&gt; /&lt;span class=&quot;token operator&quot;&gt;&amp;lt;&lt;/span&gt;file path&lt;span class=&quot;token operator&quot;&gt;&gt;&lt;/span&gt;/tcpdump-output.pcap
+
+tcpdump &lt;span class=&quot;token parameter variable&quot;&gt;-n&lt;/span&gt; &lt;span class=&quot;token parameter variable&quot;&gt;-k&lt;/span&gt; INPD &lt;span class=&quot;token parameter variable&quot;&gt;-r&lt;/span&gt; /&lt;span class=&quot;token operator&quot;&gt;&amp;lt;&lt;/span&gt;file path&lt;span class=&quot;token operator&quot;&gt;&gt;&lt;/span&gt;/tcpdump-output.pcap&lt;span aria-hidden=&quot;true&quot; class=&quot;line-numbers-rows&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;code&gt;-i any&lt;/code&gt;, &lt;em&gt;tcpdump&lt;/em&gt; listens on all interfaces.&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;-n&lt;/code&gt;, &lt;em&gt;tcpdump&lt;/em&gt; doesn’t convert addresses (e.g., host addresses, port numbers) to names.&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;-k&lt;/code&gt;, control the display of packet metadata via an optional argument (e.g., &lt;code&gt;INPD&lt;/code&gt;).&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;port 53&lt;/code&gt;, a packet filter expression. Here we only capture DNS packets.&lt;/p&gt;
+&lt;p&gt;The metadata arguments:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;&lt;code&gt;I&lt;/code&gt;: interface name.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;code&gt;N&lt;/code&gt;: process name.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;code&gt;P&lt;/code&gt;: process ID.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;code&gt;D&lt;/code&gt;: direction.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;The sample output of &lt;em&gt;tcpdump&lt;/em&gt;:&lt;/p&gt;
+&lt;pre class=&quot;line-numbers language-none&quot;&gt;&lt;code class=&quot;language-none&quot;&gt;10:57:45.835947 (eth0, proc dig:3437, out) IP 192.168.1.20.57959 &amp;gt; 192.168.1.1.53: 33994+ [1au] A? gitlab.com. (39)
+10:57:45.842205 (eth0, proc dig:3437, in) IP 192.168.1.1.53 &amp;gt; 192.168.1.20.57959: 33994 1&amp;#x2F;0&amp;#x2F;0 A 172.65.251.78 (44)&lt;span aria-hidden=&quot;true&quot; class=&quot;line-numbers-rows&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;The sample packets generated by a shell command &lt;code&gt;dig gitlab.com&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;eth0, proc dig:3437, out&lt;/code&gt;, &lt;code&gt;eth0, proc dig:3437, in&lt;/code&gt; are what we want.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;&lt;code&gt;eth0&lt;/code&gt; is the interface name&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;code&gt;dig&lt;/code&gt; is the process name&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;code&gt;3437&lt;/code&gt; is the process ID&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;code&gt;out&lt;/code&gt; indicates the network request is send by the device&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;code&gt;in&lt;/code&gt; indicates the network request is received by the device&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&quot;Python-subprocess-and-stderr&quot;&gt;&lt;a href=&quot;#Python-subprocess-and-stderr&quot; class=&quot;headerlink&quot; title=&quot;Python subprocess and stderr&quot;&gt;&lt;/a&gt;&lt;a href=&quot;https://zaitcev.livejournal.com/264423.html&quot;&gt;Python subprocess and stderr&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;Pipe output of &lt;code&gt;cmd1&lt;/code&gt; into &lt;code&gt;cmd2&lt;/code&gt; and capture the &lt;em&gt;stderr&lt;/em&gt;.&lt;/p&gt;
+&lt;pre class=&quot;line-numbers language-python&quot; data-language=&quot;python&quot;&gt;&lt;code class=&quot;language-python&quot;&gt;p1 &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; subprocess&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;Popen&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;cmd1&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+  stdout&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;subprocess&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;PIPE&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; stderr&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;subprocess&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;PIPE&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; close_fds&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token boolean&quot;&gt;True&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+p2 &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; subprocess&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;Popen&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;cmd2&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; stdin&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;p1&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;stdout&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+  stdout&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;subprocess&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;PIPE&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; stderr&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;subprocess&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;PIPE&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; close_fds&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token boolean&quot;&gt;True&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+p1&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;stdout&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;close&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+p1_stderr &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; p1&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;communicate&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+p2_stderr &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; p2&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;communicate&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;token keyword&quot;&gt;return&lt;/span&gt; p1&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;returncode &lt;span class=&quot;token keyword&quot;&gt;or&lt;/span&gt; p2&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;returncode&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; p1_stderr&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; p2_stderr&lt;span aria-hidden=&quot;true&quot; class=&quot;line-numbers-rows&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;The above saves the &lt;code&gt;p1.stdout&lt;/code&gt; in memory, if the amount piped becomes large enough, we should use the following code:&lt;/p&gt;
+&lt;pre class=&quot;line-numbers language-python&quot; data-language=&quot;python&quot;&gt;&lt;code class=&quot;language-python&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;with&lt;/span&gt; tempfile&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;TemporaryFile&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;as&lt;/span&gt; errfile&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;
+    p1 &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; subprocess&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;Popen&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;cmd1&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+      stdout&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;subprocess&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;PIPE&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; stderr&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;errfile&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; close_fds&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token boolean&quot;&gt;True&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+    p2 &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; subprocess&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;Popen&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;cmd2&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; stdin&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;p1&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;stdout&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+      stdout&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;subprocess&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;PIPE&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; stderr&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;errfile&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; close_fds&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token boolean&quot;&gt;True&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+    p1&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;stdout&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;close&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+    p2&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;communicate&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+    p1&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;wait&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+    errfile&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;seek&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+    px_stderr &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; errfile&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;read&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;token keyword&quot;&gt;return&lt;/span&gt; p1&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;returncode &lt;span class=&quot;token keyword&quot;&gt;or&lt;/span&gt; p2&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;returncode&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; px_stderr&lt;span aria-hidden=&quot;true&quot; class=&quot;line-numbers-rows&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+</description>
+          
+        
+      
+      
+      
+      
+      <category domain="https://lnxpgn.github.io/categories/Weekly/">Weekly</category>
+      
+      
+      <category domain="https://lnxpgn.github.io/tags/Python/">Python</category>
+      
+      <category domain="https://lnxpgn.github.io/tags/Weekly/">Weekly</category>
+      
+      <category domain="https://lnxpgn.github.io/tags/Network/">Network</category>
+      
+      
+      <comments>https://lnxpgn.github.io/2023/11/05/issue-44-202311-1/#disqus_thread</comments>
+      
+    </item>
+    
+    <item>
+      <title>Weekly - issue 43</title>
+      <link>https://lnxpgn.github.io/2023/10/29/issue-43-202310-4/</link>
+      <guid>https://lnxpgn.github.io/2023/10/29/issue-43-202310-4/</guid>
+      <pubDate>Sat, 28 Oct 2023 16:00:00 GMT</pubDate>
+      
+        
+        
+          
+          
+      <description>&lt;h3 id=&quot;How-to-Benchmark-a-Python-Statement&quot;&gt;&lt;a href=&quot;#How-to-Benchmark-a-Python-Statement&quot; class=&quot;headerlink&quot; title=&quot;How to Benchmark a Python Statement&quot;&gt;&lt;/a&gt;&lt;a href=&quot;https://superfastpython.com/benchmark-python-statement/&quot;&gt;How to Benchmark a Python Statement&lt;/a&gt;&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;&lt;code&gt;time.perf_counter()&lt;/code&gt;&lt;/p&gt;
+&lt;pre class=&quot;line-numbers language-python&quot; data-language=&quot;python&quot;&gt;&lt;code class=&quot;language-python&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;from&lt;/span&gt; time &lt;span class=&quot;token keyword&quot;&gt;import&lt;/span&gt; perf_counter
+
+&lt;span class=&quot;token comment&quot;&gt;# record start time&lt;/span&gt;
+time_start &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; perf_counter&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+
+&lt;span class=&quot;token comment&quot;&gt;# execute the statement&lt;/span&gt;
+data &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;i&lt;span class=&quot;token operator&quot;&gt;*&lt;/span&gt;i &lt;span class=&quot;token keyword&quot;&gt;for&lt;/span&gt; i &lt;span class=&quot;token keyword&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;token builtin&quot;&gt;range&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;100000000&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;
+
+&lt;span class=&quot;token comment&quot;&gt;# record end time&lt;/span&gt;
+time_end &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; perf_counter&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+
+&lt;span class=&quot;token comment&quot;&gt;# calculate the duration&lt;/span&gt;
+time_duration &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; time_end &lt;span class=&quot;token operator&quot;&gt;-&lt;/span&gt; time_start
+
+&lt;span class=&quot;token comment&quot;&gt;# report the duration&lt;/span&gt;
+&lt;span class=&quot;token keyword&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string-interpolation&quot;&gt;&lt;span class=&quot;token string&quot;&gt;f&#39;Took &lt;/span&gt;&lt;span class=&quot;token interpolation&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;#123;&lt;/span&gt;time_duration&lt;span class=&quot;token punctuation&quot;&gt;&amp;#125;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt; seconds&#39;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span aria-hidden=&quot;true&quot; class=&quot;line-numbers-rows&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;code&gt;timeit&lt;/code&gt;&lt;/p&gt;
+&lt;pre class=&quot;line-numbers language-python&quot; data-language=&quot;python&quot;&gt;&lt;code class=&quot;language-python&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;from&lt;/span&gt; timeit &lt;span class=&quot;token keyword&quot;&gt;import&lt;/span&gt; timeit
+
+&lt;span class=&quot;token comment&quot;&gt;# benchmark the statement&lt;/span&gt;
+time_duration &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; timeit&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&#39;[i*i for i in range(100000000)]&#39;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; number&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+
+&lt;span class=&quot;token comment&quot;&gt;# report the duration&lt;/span&gt;
+&lt;span class=&quot;token keyword&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string-interpolation&quot;&gt;&lt;span class=&quot;token string&quot;&gt;f&#39;Took &lt;/span&gt;&lt;span class=&quot;token interpolation&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;#123;&lt;/span&gt;time_duration&lt;span class=&quot;token punctuation&quot;&gt;&amp;#125;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt; seconds&#39;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span aria-hidden=&quot;true&quot; class=&quot;line-numbers-rows&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;OR&lt;/p&gt;
+&lt;pre class=&quot;line-numbers language-bash&quot; data-language=&quot;bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;&lt;span class=&quot;token comment&quot;&gt;# The command executes the statement one time and&lt;/span&gt;
+&lt;span class=&quot;token comment&quot;&gt;# reports the best time (smallest time) over 3 repetitions of executing the statement&lt;/span&gt;
+python &lt;span class=&quot;token parameter variable&quot;&gt;-m&lt;/span&gt; timeit &lt;span class=&quot;token parameter variable&quot;&gt;-n&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;1&lt;/span&gt; &lt;span class=&quot;token parameter variable&quot;&gt;-r&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;3&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;[i*i for i in range(100000000)]&quot;&lt;/span&gt;&lt;span aria-hidden=&quot;true&quot; class=&quot;line-numbers-rows&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&quot;How-to-Share-Large-Data-Between-Processes-in-Python&quot;&gt;&lt;a href=&quot;#How-to-Share-Large-Data-Between-Processes-in-Python&quot; class=&quot;headerlink&quot; title=&quot;How to Share Large Data Between Processes in Python&quot;&gt;&lt;/a&gt;&lt;a href=&quot;https://superfastpython.com/multiprocessing-share-large-data-between-processes/&quot;&gt;How to Share Large Data Between Processes in Python&lt;/a&gt;&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;Inherit a copy of the structure in each process&lt;/p&gt;
+&lt;p&gt;It is the fastest way.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Pass a copy of the structure to each task via an argument&lt;/p&gt;
+&lt;p&gt;It is the slowest way.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Initialize process workers with a copy of the structure once&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+          
+        
+      
+      
+      
+      
+      <category domain="https://lnxpgn.github.io/categories/Weekly/">Weekly</category>
+      
+      
+      <category domain="https://lnxpgn.github.io/tags/Python/">Python</category>
+      
+      <category domain="https://lnxpgn.github.io/tags/Weekly/">Weekly</category>
+      
+      
+      <comments>https://lnxpgn.github.io/2023/10/29/issue-43-202310-4/#disqus_thread</comments>
+      
+    </item>
+    
+    <item>
+      <title>Weekly - issue 42</title>
+      <link>https://lnxpgn.github.io/2023/10/21/issue-42-202310-3/</link>
+      <guid>https://lnxpgn.github.io/2023/10/21/issue-42-202310-3/</guid>
+      <pubDate>Fri, 20 Oct 2023 16:00:00 GMT</pubDate>
+      
+        
+        
+          
+          
+      <description>&lt;h3 id=&quot;How-to-copy-files-from-a-Docker-container-to-the-host&quot;&gt;&lt;a href=&quot;#How-to-copy-files-from-a-Docker-container-to-the-host&quot; class=&quot;headerlink&quot; title=&quot;How to copy files from a Docker container to the host&quot;&gt;&lt;/a&gt;&lt;a href=&quot;https://kerkour.com/docker-copy-file-from-container-to-host&quot;&gt;How to copy files from a Docker container to the host&lt;/a&gt;&lt;/h3&gt;&lt;pre class=&quot;line-numbers language-bash&quot; data-language=&quot;bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;&lt;span class=&quot;token function&quot;&gt;docker&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;cp&lt;/span&gt; my_container:/home/user/file.jpg file.jpg&lt;span aria-hidden=&quot;true&quot; class=&quot;line-numbers-rows&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&quot;Upsert-in-SQL&quot;&gt;&lt;a href=&quot;#Upsert-in-SQL&quot; class=&quot;headerlink&quot; title=&quot;Upsert in SQL&quot;&gt;&lt;/a&gt;&lt;a href=&quot;https://antonz.org/sql-upsert/&quot;&gt;Upsert in SQL&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;Upsert is an operation that inserts new records into the database and updates existing ones.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;MySQL &amp;#x2F; MariaDB&lt;/p&gt;
+&lt;pre class=&quot;line-numbers language-sql&quot; data-language=&quot;sql&quot;&gt;&lt;code class=&quot;language-sql&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;INSERT&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token keyword&quot;&gt;ON&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;DUPLICATE&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;KEY&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;UPDATE&lt;/span&gt;&lt;span aria-hidden=&quot;true&quot; class=&quot;line-numbers-rows&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;SQLite&lt;/p&gt;
+&lt;pre class=&quot;line-numbers language-sql&quot; data-language=&quot;sql&quot;&gt;&lt;code class=&quot;language-sql&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;INSERT&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token keyword&quot;&gt;ON&lt;/span&gt; CONFLICT&lt;span aria-hidden=&quot;true&quot; class=&quot;line-numbers-rows&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;PostgreSQL&lt;/p&gt;
+&lt;pre class=&quot;line-numbers language-sql&quot; data-language=&quot;sql&quot;&gt;&lt;code class=&quot;language-sql&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;INSERT&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token keyword&quot;&gt;ON&lt;/span&gt; CONFLICT
+
+&lt;span class=&quot;token comment&quot;&gt;-- Only PostgreSQL 15+&lt;/span&gt;
+&lt;span class=&quot;token keyword&quot;&gt;MERGE&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token keyword&quot;&gt;INTO&lt;/span&gt;&lt;span aria-hidden=&quot;true&quot; class=&quot;line-numbers-rows&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;SQL Server (2008+) &amp;#x2F; Oracle (11+)&lt;/p&gt;
+&lt;pre class=&quot;line-numbers language-sql&quot; data-language=&quot;sql&quot;&gt;&lt;code class=&quot;language-sql&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;MERGE&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token keyword&quot;&gt;INTO&lt;/span&gt;&lt;span aria-hidden=&quot;true&quot; class=&quot;line-numbers-rows&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+          
+        
+      
+      
+      
+      
+      <category domain="https://lnxpgn.github.io/categories/Weekly/">Weekly</category>
+      
+      
+      <category domain="https://lnxpgn.github.io/tags/Weekly/">Weekly</category>
+      
+      <category domain="https://lnxpgn.github.io/tags/Container/">Container</category>
+      
+      <category domain="https://lnxpgn.github.io/tags/SQL/">SQL</category>
+      
+      
+      <comments>https://lnxpgn.github.io/2023/10/21/issue-42-202310-3/#disqus_thread</comments>
+      
+    </item>
+    
+    <item>
+      <title>Weekly - issue 41</title>
+      <link>https://lnxpgn.github.io/2023/10/15/issue-41-202310-2/</link>
+      <guid>https://lnxpgn.github.io/2023/10/15/issue-41-202310-2/</guid>
+      <pubDate>Sat, 14 Oct 2023 16:00:00 GMT</pubDate>
+      
+        
+        
+          
+          
+      <description>&lt;h3 id=&quot;双面镜的原理&quot;&gt;&lt;a href=&quot;#双面镜的原理&quot; class=&quot;headerlink&quot; title=&quot;双面镜的原理&quot;&gt;&lt;/a&gt;&lt;a href=&quot;http://www.guokr.com/article/464477/&quot;&gt;双面镜的原理&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;常见的镜子，反射层都镀在后表面，有灰扑扑的“背面”，光线照到玻璃的后表面会反射回来。&lt;/p&gt;
+&lt;p&gt;如果把指尖按在镜子上（玻璃的前表面），眼睛看到“镜子后面”先有一个同样厚度的玻璃，然后才是手指的图像，手指和镜像手指之间会有一段距离，不会贴在一起。&lt;/p&gt;
+&lt;p&gt;反射层镀在后表面有一个缺陷 —— 光线照到玻璃的前表面的时候也会多少反射一些，同时还会有折射，这会稍微影响镜像的质量。对于一些精度要求高的地方，使用前表面反光镜。把手指贴到前表面反光镜上，手指和镜像手指则会贴到一起。&lt;/p&gt;
+&lt;p&gt;普通的镜子，其反射层会把光线几乎全部反射。但如果把全反射层换成只可以反射 50%－70% 光的半反射层，就是双面镜。让镜子起到“双面不同”作用的，是两侧的光强差距：对光亮的房间来说，反射回来的光线更抢眼，镜子就只是镜子；但对昏暗的房间里，对面过来的光线更抢眼，所以镜子就成了玻璃。&lt;/p&gt;
+&lt;p&gt;一句话总结双面镜：亮处看不到暗处，暗处可以看到亮处。&lt;/p&gt;
+&lt;h3 id=&quot;Mastering-curl-interactive-text-guide&quot;&gt;&lt;a href=&quot;#Mastering-curl-interactive-text-guide&quot; class=&quot;headerlink&quot; title=&quot;Mastering curl: interactive text guide&quot;&gt;&lt;/a&gt;&lt;a href=&quot;https://antonz.org/mastering-curl/&quot;&gt;Mastering curl: interactive text guide&lt;/a&gt;&lt;/h3&gt;&lt;pre class=&quot;line-numbers language-bash&quot; data-language=&quot;bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;&lt;span class=&quot;token comment&quot;&gt;# To specify query parts separately&lt;/span&gt;
+&lt;span class=&quot;token function&quot;&gt;curl&lt;/span&gt; http://httpbin/get --url-query &lt;span class=&quot;token string&quot;&gt;&quot;name=Alice&quot;&lt;/span&gt; --url-query &lt;span class=&quot;token string&quot;&gt;&quot;age=25&quot;&lt;/span&gt;
+
+&lt;span class=&quot;token comment&quot;&gt;# URL globbing&lt;/span&gt;
+&lt;span class=&quot;token comment&quot;&gt;# This command requests three different paths (al, bt, gm),&lt;/span&gt;
+&lt;span class=&quot;token comment&quot;&gt;# each with two different parameters (num=1 and num=2),&lt;/span&gt;
+&lt;span class=&quot;token comment&quot;&gt;# for a total of six URLs&lt;/span&gt;
+&lt;span class=&quot;token function&quot;&gt;curl&lt;/span&gt; --output-dir /tmp &lt;span class=&quot;token parameter variable&quot;&gt;-o&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;out_#1_#2.txt&quot;&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;&#92;&lt;/span&gt;
+  http://httpbin/anything/&lt;span class=&quot;token punctuation&quot;&gt;&amp;#123;&lt;/span&gt;al,bt,gm&lt;span class=&quot;token punctuation&quot;&gt;&amp;#125;&lt;/span&gt;?num&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;1&lt;/span&gt;-2&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;
+
+&lt;span class=&quot;token comment&quot;&gt;# To extract specific information about the response&lt;/span&gt;
+&lt;span class=&quot;token function&quot;&gt;curl&lt;/span&gt; &lt;span class=&quot;token parameter variable&quot;&gt;-w&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;&lt;span class=&quot;token entity&quot; title=&quot;&#92;n&quot;&gt;&#92;n&lt;/span&gt;status: %&amp;#123;response_code&amp;#125;&lt;span class=&quot;token entity&quot; title=&quot;&#92;n&quot;&gt;&#92;n&lt;/span&gt;type: %&amp;#123;content_type&amp;#125;&quot;&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;&#92;&lt;/span&gt;
+  http://httpbin/status/429
+
+&lt;span class=&quot;token comment&quot;&gt;# Upload file&lt;/span&gt;
+&lt;span class=&quot;token function&quot;&gt;curl&lt;/span&gt; &lt;span class=&quot;token parameter variable&quot;&gt;-T&lt;/span&gt; /tmp/hello.txt http://httpbin/put
+
+&lt;span class=&quot;token comment&quot;&gt;# To limit bandwidth usage.&lt;/span&gt;
+&lt;span class=&quot;token comment&quot;&gt;# It accepts anything from bytes to petabytes&lt;/span&gt;
+&lt;span class=&quot;token function&quot;&gt;curl&lt;/span&gt; --limit-rate 3k http://httpbin/get
+
+&lt;span class=&quot;token comment&quot;&gt;# Limit the number of concurrent requests.&lt;/span&gt;
+&lt;span class=&quot;token comment&quot;&gt;# It accepts seconds, minutes, hours or days&lt;/span&gt;
+&lt;span class=&quot;token function&quot;&gt;curl&lt;/span&gt; &lt;span class=&quot;token parameter variable&quot;&gt;--rate&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;3&lt;/span&gt;/s http://httpbin/anything/&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;1&lt;/span&gt;-9&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;.txt
+
+&lt;span class=&quot;token comment&quot;&gt;# Curl supports two different conditions: file timestamp and etag.&lt;/span&gt;
+&lt;span class=&quot;token comment&quot;&gt;# Download the data only if the remote resource is newer&lt;/span&gt;
+&lt;span class=&quot;token comment&quot;&gt;# -i, include the HTTP response headers in the output&lt;/span&gt;
+&lt;span class=&quot;token function&quot;&gt;curl&lt;/span&gt; &lt;span class=&quot;token parameter variable&quot;&gt;-i&lt;/span&gt; --time-cond &lt;span class=&quot;token string&quot;&gt;&quot;Aug 30, 2023&quot;&lt;/span&gt; http://httpbin/etag/etag
+&lt;span class=&quot;token comment&quot;&gt;# Or older&lt;/span&gt;
+&lt;span class=&quot;token function&quot;&gt;curl&lt;/span&gt; &lt;span class=&quot;token parameter variable&quot;&gt;-i&lt;/span&gt; --time-cond &lt;span class=&quot;token string&quot;&gt;&quot;-Aug 30, 2023&quot;&lt;/span&gt; http://httpbin/etag/etag
+&lt;span class=&quot;token comment&quot;&gt;# To checks an etag, curl must first to save it&lt;/span&gt;
+&lt;span class=&quot;token function&quot;&gt;curl&lt;/span&gt; --etag-save /tmp/etags http://httpbin/etag/etag
+&lt;span class=&quot;token function&quot;&gt;curl&lt;/span&gt; &lt;span class=&quot;token parameter variable&quot;&gt;-i&lt;/span&gt; --etag-compare /tmp/etags http://httpbin/etag/etag
+
+&lt;span class=&quot;token comment&quot;&gt;# HTTP POST&lt;/span&gt;
+&lt;span class=&quot;token function&quot;&gt;curl&lt;/span&gt; &lt;span class=&quot;token parameter variable&quot;&gt;-d&lt;/span&gt; &lt;span class=&quot;token assign-left variable&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;alice &lt;span class=&quot;token parameter variable&quot;&gt;-d&lt;/span&gt; &lt;span class=&quot;token assign-left variable&quot;&gt;age&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;25&lt;/span&gt; http://httpbin/post
+&lt;span class=&quot;token function&quot;&gt;curl&lt;/span&gt; &lt;span class=&quot;token parameter variable&quot;&gt;-d&lt;/span&gt; @/tmp/data.txt &lt;span class=&quot;token parameter variable&quot;&gt;-H&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;content-type: text/plain&quot;&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;&#92;&lt;/span&gt;
+  http://httpbin/post
+&lt;span class=&quot;token function&quot;&gt;curl&lt;/span&gt; &lt;span class=&quot;token parameter variable&quot;&gt;--json&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&#39;&amp;#123;&quot;name&quot;: &quot;alice&quot;&amp;#125;&#39;&lt;/span&gt; http://httpbin/post
+&lt;span class=&quot;token function&quot;&gt;curl&lt;/span&gt; &lt;span class=&quot;token parameter variable&quot;&gt;--json&lt;/span&gt; @xx.json http://httpbin/post
+&lt;span class=&quot;token function&quot;&gt;cat&lt;/span&gt; xx.json &lt;span class=&quot;token operator&quot;&gt;|&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;curl&lt;/span&gt; &lt;span class=&quot;token parameter variable&quot;&gt;--json&lt;/span&gt; @- http://httpbin/post
+&lt;span class=&quot;token comment&quot;&gt;# To URL-encode data&lt;/span&gt;
+&lt;span class=&quot;token function&quot;&gt;curl&lt;/span&gt; --data-urlencode &lt;span class=&quot;token string&quot;&gt;&quot;Name: Alice Barton&quot;&lt;/span&gt; http://httpbin/post
+&lt;span class=&quot;token comment&quot;&gt;# multipart/form-data&lt;/span&gt;
+&lt;span class=&quot;token function&quot;&gt;curl&lt;/span&gt; &lt;span class=&quot;token parameter variable&quot;&gt;-F&lt;/span&gt; &lt;span class=&quot;token assign-left variable&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;Alice &lt;span class=&quot;token parameter variable&quot;&gt;-F&lt;/span&gt; &lt;span class=&quot;token assign-left variable&quot;&gt;age&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;25&lt;/span&gt; &lt;span class=&quot;token parameter variable&quot;&gt;-F&lt;/span&gt; &lt;span class=&quot;token assign-left variable&quot;&gt;photo&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;@/tmp/alice.png &lt;span class=&quot;token punctuation&quot;&gt;&#92;&lt;/span&gt;
+  http://httpbin/post
+
+&lt;span class=&quot;token comment&quot;&gt;# Curl does not follow redirects by default.&lt;/span&gt;
+&lt;span class=&quot;token comment&quot;&gt;# To make curl follow redirects, use --follow (-L)&lt;/span&gt;
+&lt;span class=&quot;token comment&quot;&gt;# To protect against endless loop redirects, use --max-redirs&lt;/span&gt;
+&lt;span class=&quot;token function&quot;&gt;curl&lt;/span&gt; &lt;span class=&quot;token parameter variable&quot;&gt;-L&lt;/span&gt; --max-redirs &lt;span class=&quot;token number&quot;&gt;3&lt;/span&gt; http://httpbin/redirect/10
+
+&lt;span class=&quot;token comment&quot;&gt;# Curl ignores cookies by default.&lt;/span&gt;
+&lt;span class=&quot;token comment&quot;&gt;# To enable them, use the --cookie (-b) option.&lt;/span&gt;
+&lt;span class=&quot;token comment&quot;&gt;# Specify a file to read from or use a blank string&lt;/span&gt;
+&lt;span class=&quot;token function&quot;&gt;curl&lt;/span&gt; &lt;span class=&quot;token parameter variable&quot;&gt;-b&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;&quot;&lt;/span&gt; &lt;span class=&quot;token parameter variable&quot;&gt;-c&lt;/span&gt; /tmp/cookies http://httpbin/cookies
+&lt;span class=&quot;token comment&quot;&gt;# Tell curl a new cookie session starts by using -j,&lt;/span&gt;
+&lt;span class=&quot;token comment&quot;&gt;# --junk-session-cookies&lt;/span&gt;
+&lt;span class=&quot;token comment&quot;&gt;# A new session begins.&lt;/span&gt;
+&lt;span class=&quot;token comment&quot;&gt;# It is the equivalent of closing a browser and starting it up again.&lt;/span&gt;
+&lt;span class=&quot;token function&quot;&gt;curl&lt;/span&gt; &lt;span class=&quot;token parameter variable&quot;&gt;-j&lt;/span&gt; &lt;span class=&quot;token parameter variable&quot;&gt;-b&lt;/span&gt; /tmp/cookies http://httpbin/get
+
+&lt;span class=&quot;token comment&quot;&gt;# This tells curl to store HSTS-enabled servers in the specified file&lt;/span&gt;
+&lt;span class=&quot;token comment&quot;&gt;# and automatically convert http → https when accessing them.&lt;/span&gt;
+&lt;span class=&quot;token function&quot;&gt;curl&lt;/span&gt; &lt;span class=&quot;token parameter variable&quot;&gt;--hsts&lt;/span&gt; /tmp/hsts http://httpbin/get&lt;span aria-hidden=&quot;true&quot; class=&quot;line-numbers-rows&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+</description>
+          
+        
+      
+      
+      
+      
+      <category domain="https://lnxpgn.github.io/categories/Weekly/">Weekly</category>
+      
+      
+      <category domain="https://lnxpgn.github.io/tags/Weekly/">Weekly</category>
+      
+      <category domain="https://lnxpgn.github.io/tags/curl/">curl</category>
+      
+      <category domain="https://lnxpgn.github.io/tags/%E7%A7%91%E5%AD%A6/">科学</category>
+      
+      
+      <comments>https://lnxpgn.github.io/2023/10/15/issue-41-202310-2/#disqus_thread</comments>
+      
+    </item>
+    
+    <item>
+      <title>Weekly - issue 40</title>
+      <link>https://lnxpgn.github.io/2023/10/08/issue-40-202310-1/</link>
+      <guid>https://lnxpgn.github.io/2023/10/08/issue-40-202310-1/</guid>
+      <pubDate>Sat, 07 Oct 2023 16:00:00 GMT</pubDate>
+      
+        
+        
+          
+          
+      <description>&lt;h3 id=&quot;How-to-detect-disabled-JavaScript&quot;&gt;&lt;a href=&quot;#How-to-detect-disabled-JavaScript&quot; class=&quot;headerlink&quot; title=&quot;How to detect disabled JavaScript&quot;&gt;&lt;/a&gt;How to detect disabled JavaScript&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;Use the &lt;a href=&quot;https://developer.mozilla.org/en-US/docs/Web/HTML/Element/noscript&quot;&gt;Noscript&lt;/a&gt; element&lt;/p&gt;
+&lt;pre class=&quot;line-numbers language-markup&quot; data-language=&quot;markup&quot;&gt;&lt;code class=&quot;language-markup&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&lt;/span&gt;noscript&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;
+  &lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&lt;/span&gt;h1&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;No JavaScript!&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;/&lt;/span&gt;h1&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;/&lt;/span&gt;noscript&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;span aria-hidden=&quot;true&quot; class=&quot;line-numbers-rows&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Use the &lt;a href=&quot;https://developer.mozilla.org/en-US/docs/Web/CSS/@media/scripting&quot;&gt;scripting&lt;/a&gt; CSS media feature&lt;/p&gt;
+&lt;pre class=&quot;line-numbers language-css&quot; data-language=&quot;css&quot;&gt;&lt;code class=&quot;language-css&quot;&gt;&lt;span class=&quot;token comment&quot;&gt;/* Scripting is completely unavailable on the current document */&lt;/span&gt;
+&lt;span class=&quot;token atrule&quot;&gt;&lt;span class=&quot;token rule&quot;&gt;@media&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token property&quot;&gt;scripting&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; none&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;&amp;#123;&lt;/span&gt;
+  &lt;span class=&quot;token comment&quot;&gt;/* ... */&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;&amp;#125;&lt;/span&gt;
+
+&lt;span class=&quot;token comment&quot;&gt;/* Scripting is enabled during the initial page load, but not afterwards */&lt;/span&gt;
+&lt;span class=&quot;token atrule&quot;&gt;&lt;span class=&quot;token rule&quot;&gt;@media&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token property&quot;&gt;scripting&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; initial-only&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;&amp;#123;&lt;/span&gt;
+  &lt;span class=&quot;token comment&quot;&gt;/* ... */&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;&amp;#125;&lt;/span&gt;
+
+&lt;span class=&quot;token comment&quot;&gt;/* Scripting is supported and active on the current document */&lt;/span&gt;
+&lt;span class=&quot;token atrule&quot;&gt;&lt;span class=&quot;token rule&quot;&gt;@media&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token property&quot;&gt;scripting&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; enabled&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;&amp;#123;&lt;/span&gt;
+  &lt;span class=&quot;token comment&quot;&gt;/* ... */&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;&amp;#125;&lt;/span&gt;&lt;span aria-hidden=&quot;true&quot; class=&quot;line-numbers-rows&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;This is an &lt;strong&gt;experimental&lt;/strong&gt; technology. Some browsers don’t support it.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&quot;CSS高宽不等图片固定比例布局的三重进化&quot;&gt;&lt;a href=&quot;#CSS高宽不等图片固定比例布局的三重进化&quot; class=&quot;headerlink&quot; title=&quot;CSS高宽不等图片固定比例布局的三重进化&quot;&gt;&lt;/a&gt;&lt;a href=&quot;https://www.zhangxinxu.com/wordpress/2023/07/css-image-aspect-ratio-layout/&quot;&gt;CSS高宽不等图片固定比例布局的三重进化&lt;/a&gt;&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;百分比 padding&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;aspect-ratio 属性&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;cqw 单位&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+          
+        
+      
+      
+      
+      
+      <category domain="https://lnxpgn.github.io/categories/Weekly/">Weekly</category>
+      
+      
+      <category domain="https://lnxpgn.github.io/tags/CSS/">CSS</category>
+      
+      <category domain="https://lnxpgn.github.io/tags/Weekly/">Weekly</category>
+      
+      
+      <comments>https://lnxpgn.github.io/2023/10/08/issue-40-202310-1/#disqus_thread</comments>
+      
+    </item>
+    
+    <item>
+      <title>Spring Boot + MyBatis 多模块项目中新增不同包名的子模块</title>
+      <link>https://lnxpgn.github.io/2023/10/02/add-submodules-with-different-package-names-in-multi-module-spring-boot-project/</link>
+      <guid>https://lnxpgn.github.io/2023/10/02/add-submodules-with-different-package-names-in-multi-module-spring-boot-project/</guid>
+      <pubDate>Sun, 01 Oct 2023 16:00:00 GMT</pubDate>
+      
+        
+        
+          
+          
+      <description>&lt;p&gt;项目的目录结构：&lt;/p&gt;
+&lt;pre class=&quot;line-numbers language-none&quot;&gt;&lt;code class=&quot;language-none&quot;&gt;.
+├── pom.xml
+├── ModuleA
+│   ├── pom.xml
+│   ├── src
+│   │   ├── main
+│   │   │   ├── java
+│   │   │   │   └── com
+│   │   │   │       └── XX
+│   │   │   │           ├── App.java
+├── ModuleB
+├── ModuleC
+│   ├── pom.xml&lt;span aria-hidden=&quot;true&quot; class=&quot;line-numbers-rows&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;项目有三个子模块 &lt;code&gt;ModuleA&lt;/code&gt;，&lt;code&gt;ModuleB&lt;/code&gt;，&lt;code&gt;ModuleC&lt;/code&gt;。&lt;/p&gt;
+&lt;p&gt;启动类位于 &lt;code&gt;ModuleA&lt;/code&gt; 的 &lt;code&gt;App.java&lt;/code&gt;，&lt;code&gt;ModuleA&lt;/code&gt;, &lt;code&gt;ModuleB&lt;/code&gt; 子模块的包名均始于 &lt;code&gt;com.XX&lt;/code&gt;，&lt;code&gt;ModuleC&lt;/code&gt; 是新增子模块，包名始于 &lt;code&gt;com.YY&lt;/code&gt;。&lt;/p&gt;
+&lt;p&gt;项目的 &lt;code&gt;pom.xml&lt;/code&gt;（顶层目录的）：&lt;/p&gt;
+&lt;pre class=&quot;line-numbers language-markup&quot; data-language=&quot;markup&quot;&gt;&lt;code class=&quot;language-markup&quot;&gt;&lt;span class=&quot;token comment&quot;&gt;&amp;lt;!-- 其他部分 --&gt;&lt;/span&gt;
+
+&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&lt;/span&gt;groupId&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;com.XX&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;/&lt;/span&gt;groupId&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&lt;/span&gt;artifactId&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;ZZ&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;/&lt;/span&gt;artifactId&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&lt;/span&gt;version&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;1.0&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;/&lt;/span&gt;version&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;
+
+&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&lt;/span&gt;modules&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;
+    &lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&lt;/span&gt;module&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;ModuleA&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;/&lt;/span&gt;module&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;
+    &lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&lt;/span&gt;module&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;ModuleB&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;/&lt;/span&gt;module&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;
+    &lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&lt;/span&gt;module&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;ModuleC&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;/&lt;/span&gt;module&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;/&lt;/span&gt;modules&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;
+
+&lt;span class=&quot;token comment&quot;&gt;&amp;lt;!-- 其他部分 --&gt;&lt;/span&gt;&lt;span aria-hidden=&quot;true&quot; class=&quot;line-numbers-rows&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;code&gt;ModuleC/pom.xml&lt;/code&gt;: &lt;/p&gt;
+&lt;pre class=&quot;line-numbers language-markup&quot; data-language=&quot;markup&quot;&gt;&lt;code class=&quot;language-markup&quot;&gt;&lt;span class=&quot;token comment&quot;&gt;&amp;lt;!-- 其他部分 --&gt;&lt;/span&gt;
+
+&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&lt;/span&gt;parent&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;
+    &lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&lt;/span&gt;groupId&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;com.XX&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;/&lt;/span&gt;groupId&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;
+    &lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&lt;/span&gt;artifactId&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;ZZ&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;/&lt;/span&gt;artifactId&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;
+    &lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&lt;/span&gt;version&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;1.0&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;/&lt;/span&gt;version&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;/&lt;/span&gt;parent&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;
+
+&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&lt;/span&gt;groupId&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;com.YY&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;/&lt;/span&gt;groupId&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&lt;/span&gt;artifactId&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;ModuleC&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;/&lt;/span&gt;artifactId&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;
+
+&lt;span class=&quot;token comment&quot;&gt;&amp;lt;!-- 其他部分 --&gt;&lt;/span&gt;&lt;span aria-hidden=&quot;true&quot; class=&quot;line-numbers-rows&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;启动类所在的子模块 &lt;code&gt;ModuleA&lt;/code&gt; 使用了新增的子模块 &lt;code&gt;ModuleC&lt;/code&gt;. &lt;code&gt;ModuleA/pom.xml&lt;/code&gt;:&lt;/p&gt;
+&lt;pre class=&quot;line-numbers language-markup&quot; data-language=&quot;markup&quot;&gt;&lt;code class=&quot;language-markup&quot;&gt;&lt;span class=&quot;token comment&quot;&gt;&amp;lt;!-- 其他部分 --&gt;&lt;/span&gt;
+
+&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&lt;/span&gt;dependencies&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;
+    &lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&lt;/span&gt;dependency&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;
+        &lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&lt;/span&gt;groupId&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;com.YY&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;/&lt;/span&gt;groupId&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;
+        &lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&lt;/span&gt;artifactId&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;ModuleC&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;/&lt;/span&gt;artifactId&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;
+        &lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&lt;/span&gt;version&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;1.0&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;/&lt;/span&gt;version&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;
+    &lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;/&lt;/span&gt;dependency&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;/&lt;/span&gt;dependencies&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;
+
+&lt;span class=&quot;token comment&quot;&gt;&amp;lt;!-- 其他部分 --&gt;&lt;/span&gt;&lt;span aria-hidden=&quot;true&quot; class=&quot;line-numbers-rows&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;code&gt;App.java&lt;/code&gt;:&lt;/p&gt;
+&lt;pre class=&quot;line-numbers language-java&quot; data-language=&quot;java&quot;&gt;&lt;code class=&quot;language-java&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;package&lt;/span&gt; &lt;span class=&quot;token namespace&quot;&gt;com&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token constant&quot;&gt;XX&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+
+&lt;span class=&quot;token comment&quot;&gt;// ...&lt;/span&gt;
+&lt;span class=&quot;token keyword&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;token import&quot;&gt;&lt;span class=&quot;token namespace&quot;&gt;org&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;springframework&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;boot&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;autoconfigure&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token class-name&quot;&gt;SpringBootApplication&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;token keyword&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;token import&quot;&gt;&lt;span class=&quot;token namespace&quot;&gt;org&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;mybatis&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;spring&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;annotation&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token class-name&quot;&gt;MapperScan&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;token keyword&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;token import&quot;&gt;&lt;span class=&quot;token namespace&quot;&gt;org&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;springframework&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;context&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;annotation&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token class-name&quot;&gt;ComponentScan&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+
+&lt;span class=&quot;token comment&quot;&gt;// ...&lt;/span&gt;
+&lt;span class=&quot;token annotation punctuation&quot;&gt;@SpringBootApplication&lt;/span&gt;
+&lt;span class=&quot;token annotation punctuation&quot;&gt;@ComponentScan&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;basePackages &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;&amp;#123;&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;com.XX&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;com.YY&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;#125;&lt;/span&gt;&lt;span</description>
+          
+        
+      
+      
+      
+      
+      <category domain="https://lnxpgn.github.io/categories/Tech/">Tech</category>
+      
+      
+      <category domain="https://lnxpgn.github.io/tags/Spring-Boot/">Spring Boot</category>
+      
+      <category domain="https://lnxpgn.github.io/tags/MyBatis/">MyBatis</category>
+      
+      
+      <comments>https://lnxpgn.github.io/2023/10/02/add-submodules-with-different-package-names-in-multi-module-spring-boot-project/#disqus_thread</comments>
+      
+    </item>
+    
+  </channel>
+</rss>
