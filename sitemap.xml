@@ -2,6 +2,24 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://lnxpgn.github.io/2023/12/25/issue-47-202312-2/</loc>
+    
+    <lastmod>2023-12-24</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://lnxpgn.github.io/2023/09/10/issue-37-202309-1/</loc>
+    
+    <lastmod>2023-12-23</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://lnxpgn.github.io/2023/12/17/issue-46-202312-1/</loc>
     
     <lastmod>2023-12-17</lastmod>
@@ -57,15 +75,6 @@
   
   <url>
     <loc>https://lnxpgn.github.io/2023/12/09/python-modules-and-packages/</loc>
-    
-    <lastmod>2023-12-09</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://lnxpgn.github.io/2023/09/10/issue-37-202309-1/</loc>
     
     <lastmod>2023-12-09</lastmod>
     
@@ -553,7 +562,7 @@
 
   <url>
     <loc>https://lnxpgn.github.io/</loc>
-    <lastmod>2023-12-17</lastmod>
+    <lastmod>2023-12-24</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
@@ -561,609 +570,609 @@
   
   <url>
     <loc>https://lnxpgn.github.io/tags/Web/</loc>
-    <lastmod>2023-12-17</lastmod>
+    <lastmod>2023-12-24</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://lnxpgn.github.io/tags/Translation/</loc>
-    <lastmod>2023-12-17</lastmod>
+    <lastmod>2023-12-24</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://lnxpgn.github.io/tags/%E7%BF%BB%E8%AF%91/</loc>
-    <lastmod>2023-12-17</lastmod>
+    <lastmod>2023-12-24</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://lnxpgn.github.io/tags/Spring-Boot/</loc>
-    <lastmod>2023-12-17</lastmod>
+    <lastmod>2023-12-24</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://lnxpgn.github.io/tags/MyBatis/</loc>
-    <lastmod>2023-12-17</lastmod>
+    <lastmod>2023-12-24</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://lnxpgn.github.io/tags/Hexo/</loc>
-    <lastmod>2023-12-17</lastmod>
+    <lastmod>2023-12-24</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://lnxpgn.github.io/tags/Markdown/</loc>
-    <lastmod>2023-12-17</lastmod>
+    <lastmod>2023-12-24</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://lnxpgn.github.io/tags/Python/</loc>
-    <lastmod>2023-12-17</lastmod>
+    <lastmod>2023-12-24</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://lnxpgn.github.io/tags/CSS/</loc>
-    <lastmod>2023-12-17</lastmod>
+    <lastmod>2023-12-24</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://lnxpgn.github.io/tags/HTTP/</loc>
-    <lastmod>2023-12-17</lastmod>
+    <lastmod>2023-12-24</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://lnxpgn.github.io/tags/HTTP-2/</loc>
-    <lastmod>2023-12-17</lastmod>
+    <lastmod>2023-12-24</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://lnxpgn.github.io/tags/Optimization/</loc>
-    <lastmod>2023-12-17</lastmod>
+    <lastmod>2023-12-24</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://lnxpgn.github.io/tags/Weekly/</loc>
-    <lastmod>2023-12-17</lastmod>
+    <lastmod>2023-12-24</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://lnxpgn.github.io/tags/iFixit/</loc>
-    <lastmod>2023-12-17</lastmod>
+    <lastmod>2023-12-24</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://lnxpgn.github.io/tags/AI/</loc>
-    <lastmod>2023-12-17</lastmod>
+    <lastmod>2023-12-24</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://lnxpgn.github.io/tags/Linux/</loc>
-    <lastmod>2023-12-17</lastmod>
+    <lastmod>2023-12-24</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://lnxpgn.github.io/tags/Startup/</loc>
-    <lastmod>2023-12-17</lastmod>
+    <lastmod>2023-12-24</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://lnxpgn.github.io/tags/IndexedDB/</loc>
-    <lastmod>2023-12-17</lastmod>
+    <lastmod>2023-12-24</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://lnxpgn.github.io/tags/Machine-Learning/</loc>
-    <lastmod>2023-12-17</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://lnxpgn.github.io/tags/Git/</loc>
-    <lastmod>2023-12-17</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://lnxpgn.github.io/tags/Privacy/</loc>
-    <lastmod>2023-12-17</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://lnxpgn.github.io/tags/Web3/</loc>
-    <lastmod>2023-12-17</lastmod>
+    <lastmod>2023-12-24</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://lnxpgn.github.io/tags/Kubernetes/</loc>
-    <lastmod>2023-12-17</lastmod>
+    <lastmod>2023-12-24</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://lnxpgn.github.io/tags/JSON/</loc>
-    <lastmod>2023-12-17</lastmod>
+    <lastmod>2023-12-24</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://lnxpgn.github.io/tags/PostgreSQL/</loc>
-    <lastmod>2023-12-17</lastmod>
+    <lastmod>2023-12-24</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://lnxpgn.github.io/tags/Git/</loc>
+    <lastmod>2023-12-24</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://lnxpgn.github.io/tags/Privacy/</loc>
+    <lastmod>2023-12-24</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://lnxpgn.github.io/tags/Web3/</loc>
+    <lastmod>2023-12-24</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://lnxpgn.github.io/tags/Algorithm/</loc>
-    <lastmod>2023-12-17</lastmod>
+    <lastmod>2023-12-24</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://lnxpgn.github.io/tags/Container/</loc>
-    <lastmod>2023-12-17</lastmod>
+    <lastmod>2023-12-24</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://lnxpgn.github.io/tags/C/</loc>
-    <lastmod>2023-12-17</lastmod>
+    <lastmod>2023-12-24</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://lnxpgn.github.io/tags/endoflife-date/</loc>
-    <lastmod>2023-12-17</lastmod>
+    <lastmod>2023-12-24</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://lnxpgn.github.io/tags/TLS/</loc>
-    <lastmod>2023-12-17</lastmod>
+    <lastmod>2023-12-24</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://lnxpgn.github.io/tags/Design-Patterns/</loc>
-    <lastmod>2023-12-17</lastmod>
+    <lastmod>2023-12-24</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://lnxpgn.github.io/tags/Vim/</loc>
-    <lastmod>2023-12-17</lastmod>
+    <lastmod>2023-12-24</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://lnxpgn.github.io/tags/RESTful/</loc>
-    <lastmod>2023-12-17</lastmod>
+    <lastmod>2023-12-24</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://lnxpgn.github.io/tags/Command-Line/</loc>
-    <lastmod>2023-12-17</lastmod>
+    <lastmod>2023-12-24</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://lnxpgn.github.io/tags/Personal-Growth/</loc>
-    <lastmod>2023-12-17</lastmod>
+    <lastmod>2023-12-24</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://lnxpgn.github.io/tags/Side-Project/</loc>
-    <lastmod>2023-12-17</lastmod>
+    <lastmod>2023-12-24</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://lnxpgn.github.io/tags/Book/</loc>
-    <lastmod>2023-12-17</lastmod>
+    <lastmod>2023-12-24</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://lnxpgn.github.io/tags/Diff/</loc>
-    <lastmod>2023-12-17</lastmod>
+    <lastmod>2023-12-24</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://lnxpgn.github.io/tags/Java/</loc>
-    <lastmod>2023-12-17</lastmod>
+    <lastmod>2023-12-24</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://lnxpgn.github.io/tags/Node-js/</loc>
-    <lastmod>2023-12-17</lastmod>
+    <lastmod>2023-12-24</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://lnxpgn.github.io/tags/%E8%AF%97%E8%AF%8D/</loc>
-    <lastmod>2023-12-17</lastmod>
+    <lastmod>2023-12-24</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://lnxpgn.github.io/tags/React-Native/</loc>
-    <lastmod>2023-12-17</lastmod>
+    <lastmod>2023-12-24</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://lnxpgn.github.io/tags/Mojo/</loc>
-    <lastmod>2023-12-17</lastmod>
+    <lastmod>2023-12-24</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://lnxpgn.github.io/tags/HTTP-3/</loc>
-    <lastmod>2023-12-17</lastmod>
+    <lastmod>2023-12-24</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://lnxpgn.github.io/tags/%E7%A1%AC%E7%9B%98/</loc>
-    <lastmod>2023-12-17</lastmod>
+    <lastmod>2023-12-24</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://lnxpgn.github.io/tags/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E7%A8%8B/</loc>
-    <lastmod>2023-12-17</lastmod>
+    <lastmod>2023-12-24</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://lnxpgn.github.io/tags/Warehouse/</loc>
-    <lastmod>2023-12-17</lastmod>
+    <lastmod>2023-12-24</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://lnxpgn.github.io/tags/React/</loc>
-    <lastmod>2023-12-17</lastmod>
+    <lastmod>2023-12-24</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://lnxpgn.github.io/tags/Shell/</loc>
-    <lastmod>2023-12-17</lastmod>
+    <lastmod>2023-12-24</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://lnxpgn.github.io/tags/Blockchain/</loc>
-    <lastmod>2023-12-17</lastmod>
+    <lastmod>2023-12-24</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://lnxpgn.github.io/tags/Business/</loc>
-    <lastmod>2023-12-17</lastmod>
+    <lastmod>2023-12-24</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://lnxpgn.github.io/tags/Monitoring/</loc>
-    <lastmod>2023-12-17</lastmod>
+    <lastmod>2023-12-24</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://lnxpgn.github.io/tags/Wealth/</loc>
-    <lastmod>2023-12-17</lastmod>
+    <lastmod>2023-12-24</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://lnxpgn.github.io/tags/curl/</loc>
-    <lastmod>2023-12-17</lastmod>
+    <lastmod>2023-12-24</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://lnxpgn.github.io/tags/%E9%9B%B6%E6%8B%B7%E8%B4%9D/</loc>
-    <lastmod>2023-12-17</lastmod>
+    <lastmod>2023-12-24</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://lnxpgn.github.io/tags/DNS/</loc>
-    <lastmod>2023-12-17</lastmod>
+    <lastmod>2023-12-24</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://lnxpgn.github.io/tags/JavaScript/</loc>
-    <lastmod>2023-12-17</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://lnxpgn.github.io/tags/SOCODE-PRO/</loc>
-    <lastmod>2023-12-17</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://lnxpgn.github.io/tags/Regular-Expression/</loc>
-    <lastmod>2023-12-17</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://lnxpgn.github.io/tags/SSH/</loc>
-    <lastmod>2023-12-17</lastmod>
+    <lastmod>2023-12-24</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://lnxpgn.github.io/tags/SVG/</loc>
-    <lastmod>2023-12-17</lastmod>
+    <lastmod>2023-12-24</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://lnxpgn.github.io/tags/SOCODE-PRO/</loc>
+    <lastmod>2023-12-24</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://lnxpgn.github.io/tags/Regular-Expression/</loc>
+    <lastmod>2023-12-24</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://lnxpgn.github.io/tags/SSH/</loc>
+    <lastmod>2023-12-24</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://lnxpgn.github.io/tags/C/</loc>
-    <lastmod>2023-12-17</lastmod>
+    <lastmod>2023-12-24</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://lnxpgn.github.io/tags/WebGL/</loc>
-    <lastmod>2023-12-17</lastmod>
+    <lastmod>2023-12-24</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://lnxpgn.github.io/tags/Network/</loc>
-    <lastmod>2023-12-17</lastmod>
+    <lastmod>2023-12-24</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://lnxpgn.github.io/tags/Font/</loc>
-    <lastmod>2023-12-17</lastmod>
+    <lastmod>2023-12-24</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://lnxpgn.github.io/tags/%E5%9B%9B%E8%88%8D%E4%BA%94%E5%85%A5/</loc>
-    <lastmod>2023-12-17</lastmod>
+    <lastmod>2023-12-24</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://lnxpgn.github.io/tags/Visualization/</loc>
-    <lastmod>2023-12-17</lastmod>
+    <lastmod>2023-12-24</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://lnxpgn.github.io/tags/Matplotlib/</loc>
-    <lastmod>2023-12-17</lastmod>
+    <lastmod>2023-12-24</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://lnxpgn.github.io/tags/HTML/</loc>
-    <lastmod>2023-12-17</lastmod>
+    <lastmod>2023-12-24</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://lnxpgn.github.io/tags/Health/</loc>
-    <lastmod>2023-12-17</lastmod>
+    <lastmod>2023-12-24</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://lnxpgn.github.io/tags/%E5%81%A5%E5%BA%B7/</loc>
-    <lastmod>2023-12-17</lastmod>
+    <lastmod>2023-12-24</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://lnxpgn.github.io/tags/Microservices/</loc>
-    <lastmod>2023-12-17</lastmod>
+    <lastmod>2023-12-24</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://lnxpgn.github.io/tags/NLP/</loc>
-    <lastmod>2023-12-17</lastmod>
+    <lastmod>2023-12-24</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://lnxpgn.github.io/tags/Prometheus/</loc>
-    <lastmod>2023-12-17</lastmod>
+    <lastmod>2023-12-24</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://lnxpgn.github.io/tags/MySQL/</loc>
-    <lastmod>2023-12-17</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://lnxpgn.github.io/tags/%E7%A7%91%E5%AD%A6/</loc>
-    <lastmod>2023-12-17</lastmod>
+    <lastmod>2023-12-24</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://lnxpgn.github.io/tags/SQL/</loc>
-    <lastmod>2023-12-17</lastmod>
+    <lastmod>2023-12-24</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://lnxpgn.github.io/tags/%E7%A7%91%E5%AD%A6/</loc>
+    <lastmod>2023-12-24</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://lnxpgn.github.io/tags/Open-Source-License/</loc>
-    <lastmod>2023-12-17</lastmod>
+    <lastmod>2023-12-24</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://lnxpgn.github.io/tags/Fraidycat/</loc>
-    <lastmod>2023-12-17</lastmod>
+    <lastmod>2023-12-24</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://lnxpgn.github.io/tags/The-Strange-Roots/</loc>
-    <lastmod>2023-12-17</lastmod>
+    <lastmod>2023-12-24</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://lnxpgn.github.io/tags/TheOldNet/</loc>
-    <lastmod>2023-12-17</lastmod>
+    <lastmod>2023-12-24</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://lnxpgn.github.io/tags/Golang/</loc>
-    <lastmod>2023-12-17</lastmod>
+    <lastmod>2023-12-24</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://lnxpgn.github.io/tags/Firefox/</loc>
-    <lastmod>2023-12-17</lastmod>
+    <lastmod>2023-12-24</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://lnxpgn.github.io/tags/Scrapy/</loc>
-    <lastmod>2023-12-17</lastmod>
+    <lastmod>2023-12-24</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://lnxpgn.github.io/tags/Crawler/</loc>
-    <lastmod>2023-12-17</lastmod>
+    <lastmod>2023-12-24</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://lnxpgn.github.io/tags/%E7%88%AC%E8%99%AB/</loc>
-    <lastmod>2023-12-17</lastmod>
+    <lastmod>2023-12-24</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://lnxpgn.github.io/tags/Zig/</loc>
-    <lastmod>2023-12-17</lastmod>
+    <lastmod>2023-12-24</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
@@ -1172,14 +1181,14 @@
   
   <url>
     <loc>https://lnxpgn.github.io/categories/Tech/</loc>
-    <lastmod>2023-12-17</lastmod>
+    <lastmod>2023-12-24</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://lnxpgn.github.io/categories/Weekly/</loc>
-    <lastmod>2023-12-17</lastmod>
+    <lastmod>2023-12-24</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>

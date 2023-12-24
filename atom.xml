@@ -6,7 +6,7 @@
   <link href="https://lnxpgn.github.io/atom.xml" rel="self"/>
   <link href="https://pubsubhubbub.appspot.com/" rel="hub"/>
   <link href="https://lnxpgn.github.io/"/>
-  <updated>2023-12-17T12:02:07.842Z</updated>
+  <updated>2023-12-24T18:02:28.066Z</updated>
   <id>https://lnxpgn.github.io/</id>
   
   <author>
@@ -15,6 +15,144 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Weekly - issue 47</title>
+    <link href="https://lnxpgn.github.io/2023/12/25/issue-47-202312-2/"/>
+    <id>https://lnxpgn.github.io/2023/12/25/issue-47-202312-2/</id>
+    <published>2023-12-24T16:00:00.000Z</published>
+    <updated>2023-12-24T18:02:28.066Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h3 id=&quot;How-to-Install-Fonts-on-Debian-Linux-12&quot;&gt;&lt;a href=&quot;#How-to-Install-Fonts-on-Debian-Linux-12&quot; class=&quot;headerlink&quot; title=&quot;How to Install Fonts on Debian Linux 12&quot;&gt;&lt;/a&gt;How to Install Fonts on Debian Linux 12&lt;/h3&gt;&lt;p&gt;The GNOME &amp;#x2F; KDE fonts manager provide a user-friendly way to manage and install fonts, we will show how to install fonts manually.&lt;/p&gt;
+&lt;p&gt;For most uses, we’ll install TrueType (TTF) and OpenType (OTF) fonts.&lt;/p&gt;
+&lt;p&gt;Fonts will be place into:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;&lt;code&gt;/usr/local/share/fonts&lt;/code&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;System-Wide&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;code&gt;~/.local/share/fonts&lt;/code&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;User-Specific&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;code&gt;~/.fonts&lt;/code&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;User-Specific&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;The manual installation process:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;p&gt;Make sure the &lt;code&gt;fontconfig&lt;/code&gt; package is installed&lt;/p&gt;
+&lt;pre class=&quot;line-numbers language-bash&quot; data-language=&quot;bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;&lt;span class=&quot;token builtin class-name&quot;&gt;command&lt;/span&gt; &lt;span class=&quot;token parameter variable&quot;&gt;-v&lt;/span&gt; fc-cache &lt;span class=&quot;token operator&quot;&gt;&gt;&lt;/span&gt; /dev/null &lt;span class=&quot;token operator&quot;&gt;||&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;sudo&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;apt-get&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;install&lt;/span&gt; &lt;span class=&quot;token parameter variable&quot;&gt;-y&lt;/span&gt; fontconfig&lt;span aria-hidden=&quot;true&quot; class=&quot;line-numbers-rows&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;The commands &lt;code&gt;fc-cache&lt;/code&gt; and &lt;code&gt;fc-list&lt;/code&gt; come from the package.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Download the font&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Make sure the font files have the permission &lt;code&gt;644&lt;/code&gt; (&lt;code&gt;-rw-r--r--&lt;/code&gt;)&lt;/p&gt;
+&lt;pre class=&quot;line-numbers language-bash&quot; data-language=&quot;bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;&lt;span class=&quot;token function&quot;&gt;chmod&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;644&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;&amp;lt;&lt;/span&gt;font file&lt;span class=&quot;token operator&quot;&gt;&gt;&lt;/span&gt;
+
+&lt;span class=&quot;token comment&quot;&gt;# OR&lt;/span&gt;
+
+&lt;span class=&quot;token function&quot;&gt;chmod&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;644&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;&amp;lt;&lt;/span&gt;font directory&lt;span class=&quot;token operator&quot;&gt;&gt;&lt;/span&gt;/*&lt;span aria-hidden=&quot;true&quot; class=&quot;line-numbers-rows&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Copy font files to the system-wide or the user-specific directory&lt;/p&gt;
+&lt;p&gt;If using the user-specific font directories, they don’t exist by default, we’ll use one of them and create it:&lt;/p&gt;
+&lt;pre class=&quot;line-numbers language-bash&quot; data-language=&quot;bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;&lt;span class=&quot;token function&quot;&gt;mkdir&lt;/span&gt; &lt;span class=&quot;token parameter variable&quot;&gt;-p&lt;/span&gt; ~/.local/share/fonts
+
+&lt;span class=&quot;token comment&quot;&gt;# OR&lt;/span&gt;
+
+&lt;span class=&quot;token function&quot;&gt;mkdir&lt;/span&gt; ~/.fonts&lt;span aria-hidden=&quot;true&quot; class=&quot;line-numbers-rows&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;If the font have multiple files, we can create a subdirectory, then copy font files to it.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Build font information cache files&lt;/p&gt;
+&lt;pre class=&quot;line-numbers language-bash&quot; data-language=&quot;bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;&lt;span class=&quot;token comment&quot;&gt;# No root privileges required&lt;/span&gt;
+fc-cache &lt;span class=&quot;token parameter variable&quot;&gt;-f&lt;/span&gt;&lt;span aria-hidden=&quot;true&quot; class=&quot;line-numbers-rows&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;Normally Debian is watching these font directories and will automatically generate the cache, we don’t need to run the command.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Check the result&lt;/p&gt;
+&lt;pre class=&quot;line-numbers language-bash&quot; data-language=&quot;bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;fc-list &lt;span class=&quot;token operator&quot;&gt;|&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;grep&lt;/span&gt; &lt;span class=&quot;token parameter variable&quot;&gt;-i&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;&amp;lt;&lt;/span&gt;font name&lt;span class=&quot;token operator&quot;&gt;&gt;&lt;/span&gt;&lt;span aria-hidden=&quot;true&quot; class=&quot;line-numbers-rows&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;For example:&lt;/p&gt;
+&lt;pre class=&quot;line-numbers language-bash&quot; data-language=&quot;bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;fc-list &lt;span class=&quot;token operator&quot;&gt;|&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;grep&lt;/span&gt; &lt;span class=&quot;token parameter variable&quot;&gt;-i&lt;/span&gt; dejavu&lt;span aria-hidden=&quot;true&quot; class=&quot;line-numbers-rows&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id=&quot;First-Impressions-with-Google’s-Gemini&quot;&gt;&lt;a href=&quot;#First-Impressions-with-Google’s-Gemini&quot; class=&quot;headerlink&quot; title=&quot;First Impressions with Google’s Gemini&quot;&gt;&lt;/a&gt;&lt;a href=&quot;https://blog.roboflow.com/first-impressions-with-google-gemini/&quot;&gt;First Impressions with Google’s Gemini&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;Gemini is a Large Multimodal Model (LMM) developed by Google.&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;p&gt;Visual Question Answering (VQA)&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;Ask “How many coins do I have?” in an image&lt;/p&gt;
+&lt;p&gt;Pass: Gemini, LLaVA, BakLLaVA, Qwen-VL, and CogVLM&lt;/p&gt;
+&lt;p&gt;Failed: GPT-4 with Vision&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Ask if the LMM could identify which movie was featured in an image&lt;/p&gt;
+&lt;p&gt;Pass: Gemini, Qwen-VL and GPT-4 with Vision&lt;/p&gt;
+&lt;p&gt;Failed: LLaVA, BakLLaVA, and CogVLM&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Ask “What is the price of Pastrami Pizza?” in a menu&lt;/p&gt;
+&lt;p&gt;Pass: Gemini, CogVLM, and GPT-4 with Vision&lt;/p&gt;
+&lt;p&gt;Failed: LLaVA, BakLLaVA, and Qwen-VL&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Optical Character Recognition (OCR)&lt;/p&gt;
+&lt;p&gt;Ask “Read the serial number.” in an image of a tire.&lt;/p&gt;
+&lt;p&gt;Pass: Qwen-VL, CogVLM, and GPT-4 with Vision&lt;/p&gt;
+&lt;p&gt;Failed: Gemini, LLaVA and BakLLaVA&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Document OCR&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;Ask “Read text from the picture.”&lt;/p&gt;
+&lt;p&gt;Pass: Qwen-VL, CogVLM, and GPT-4 with Vision&lt;/p&gt;
+&lt;p&gt;Failed: Gemini (almost correct)&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Ask “How much tax did I pay?” in a receipt image&lt;/p&gt;
+&lt;p&gt;Pass: Gemini&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Object Detection&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;Ask “Find the dog.” in an image&lt;/p&gt;
+&lt;p&gt;Pass: Qwen-VL, CogVLM&lt;/p&gt;
+&lt;p&gt;Failed: Gemini&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Look for the Christmas tree in an image&lt;/p&gt;
+&lt;p&gt;Pass: Qwen-VL, CogVLM&lt;/p&gt;
+&lt;p&gt;Failed: Gemini&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+</summary>
+        
+      
+    
+    
+    
+    <category term="Weekly" scheme="https://lnxpgn.github.io/categories/Weekly/"/>
+    
+    
+    <category term="Weekly" scheme="https://lnxpgn.github.io/tags/Weekly/"/>
+    
+    <category term="AI" scheme="https://lnxpgn.github.io/tags/AI/"/>
+    
+    <category term="Linux" scheme="https://lnxpgn.github.io/tags/Linux/"/>
+    
+  </entry>
   
   <entry>
     <title>Weekly - issue 46</title>
@@ -746,66 +884,6 @@ python &lt;span class=&quot;token parameter variable&quot;&gt;-m&lt;/span&gt; ti
     <category term="curl" scheme="https://lnxpgn.github.io/tags/curl/"/>
     
     <category term="科学" scheme="https://lnxpgn.github.io/tags/%E7%A7%91%E5%AD%A6/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Weekly - issue 40</title>
-    <link href="https://lnxpgn.github.io/2023/10/08/issue-40-202310-1/"/>
-    <id>https://lnxpgn.github.io/2023/10/08/issue-40-202310-1/</id>
-    <published>2023-10-07T16:00:00.000Z</published>
-    <updated>2023-12-08T09:15:04.947Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h3 id=&quot;How-to-detect-disabled-JavaScript&quot;&gt;&lt;a href=&quot;#How-to-detect-disabled-JavaScript&quot; class=&quot;headerlink&quot; title=&quot;How to detect disabled JavaScript&quot;&gt;&lt;/a&gt;How to detect disabled JavaScript&lt;/h3&gt;&lt;ul&gt;
-&lt;li&gt;&lt;p&gt;Use the &lt;a href=&quot;https://developer.mozilla.org/en-US/docs/Web/HTML/Element/noscript&quot;&gt;Noscript&lt;/a&gt; element&lt;/p&gt;
-&lt;pre class=&quot;line-numbers language-markup&quot; data-language=&quot;markup&quot;&gt;&lt;code class=&quot;language-markup&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&lt;/span&gt;noscript&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;
-  &lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&lt;/span&gt;h1&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;No JavaScript!&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;/&lt;/span&gt;h1&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;
-&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;/&lt;/span&gt;noscript&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;span aria-hidden=&quot;true&quot; class=&quot;line-numbers-rows&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;Use the &lt;a href=&quot;https://developer.mozilla.org/en-US/docs/Web/CSS/@media/scripting&quot;&gt;scripting&lt;/a&gt; CSS media feature&lt;/p&gt;
-&lt;pre class=&quot;line-numbers language-css&quot; data-language=&quot;css&quot;&gt;&lt;code class=&quot;language-css&quot;&gt;&lt;span class=&quot;token comment&quot;&gt;/* Scripting is completely unavailable on the current document */&lt;/span&gt;
-&lt;span class=&quot;token atrule&quot;&gt;&lt;span class=&quot;token rule&quot;&gt;@media&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token property&quot;&gt;scripting&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; none&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;&amp;#123;&lt;/span&gt;
-  &lt;span class=&quot;token comment&quot;&gt;/* ... */&lt;/span&gt;
-&lt;span class=&quot;token punctuation&quot;&gt;&amp;#125;&lt;/span&gt;
-
-&lt;span class=&quot;token comment&quot;&gt;/* Scripting is enabled during the initial page load, but not afterwards */&lt;/span&gt;
-&lt;span class=&quot;token atrule&quot;&gt;&lt;span class=&quot;token rule&quot;&gt;@media&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token property&quot;&gt;scripting&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; initial-only&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;&amp;#123;&lt;/span&gt;
-  &lt;span class=&quot;token comment&quot;&gt;/* ... */&lt;/span&gt;
-&lt;span class=&quot;token punctuation&quot;&gt;&amp;#125;&lt;/span&gt;
-
-&lt;span class=&quot;token comment&quot;&gt;/* Scripting is supported and active on the current document */&lt;/span&gt;
-&lt;span class=&quot;token atrule&quot;&gt;&lt;span class=&quot;token rule&quot;&gt;@media&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token property&quot;&gt;scripting&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; enabled&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;&amp;#123;&lt;/span&gt;
-  &lt;span class=&quot;token comment&quot;&gt;/* ... */&lt;/span&gt;
-&lt;span class=&quot;token punctuation&quot;&gt;&amp;#125;&lt;/span&gt;&lt;span aria-hidden=&quot;true&quot; class=&quot;line-numbers-rows&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;This is an &lt;strong&gt;experimental&lt;/strong&gt; technology. Some browsers don’t support it.&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3 id=&quot;CSS高宽不等图片固定比例布局的三重进化&quot;&gt;&lt;a href=&quot;#CSS高宽不等图片固定比例布局的三重进化&quot; class=&quot;headerlink&quot; title=&quot;CSS高宽不等图片固定比例布局的三重进化&quot;&gt;&lt;/a&gt;&lt;a href=&quot;https://www.zhangxinxu.com/wordpress/2023/07/css-image-aspect-ratio-layout/&quot;&gt;CSS高宽不等图片固定比例布局的三重进化&lt;/a&gt;&lt;/h3&gt;&lt;ul&gt;
-&lt;li&gt;&lt;p&gt;百分比 padding&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;aspect-ratio 属性&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;cqw 单位&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-</summary>
-        
-      
-    
-    
-    
-    <category term="Weekly" scheme="https://lnxpgn.github.io/categories/Weekly/"/>
-    
-    
-    <category term="CSS" scheme="https://lnxpgn.github.io/tags/CSS/"/>
-    
-    <category term="Weekly" scheme="https://lnxpgn.github.io/tags/Weekly/"/>
     
   </entry>
   
