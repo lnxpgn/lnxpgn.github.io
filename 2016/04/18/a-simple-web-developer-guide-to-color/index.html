@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang=zh>
+<head>
+    <!-- so meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5" />
+    <meta name="description" content="我从来不是一个颜色理论的爱好者，我想是因为我对它一直不太抱希望。我乐意坐在那儿，拿着色环，选取互补色(complementary colors)、分散的互补色(split-complementary colors)、三色(triad colors)等配色方案，让朋友、家人、客户印象深刻。 说实话，颜色理论对我很遥远，尝试在项目中使用颜色时我从未发现它有用。有点讽刺，我发现，颜色的选择、运用得越好，">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Web开发者的简单颜色指南">
+<meta property="og:url" content="https://lnxpgn.github.io/2016/04/18/a-simple-web-developer-guide-to-color/index.html">
+<meta property="og:site_name" content="竹里馆">
+<meta property="og:description" content="我从来不是一个颜色理论的爱好者，我想是因为我对它一直不太抱希望。我乐意坐在那儿，拿着色环，选取互补色(complementary colors)、分散的互补色(split-complementary colors)、三色(triad colors)等配色方案，让朋友、家人、客户印象深刻。 说实话，颜色理论对我很遥远，尝试在项目中使用颜色时我从未发现它有用。有点讽刺，我发现，颜色的选择、运用得越好，">
+<meta property="og:locale">
+<meta property="og:image" content="https://lnxpgn.github.io/images/01-dribble-designspiration-screenshot-opt.jpg">
+<meta property="og:image" content="https://lnxpgn.github.io/images/02-color-characteristics-opt.jpg">
+<meta property="og:image" content="https://lnxpgn.github.io/images/03-dribbble-color-results-opt.jpg">
+<meta property="og:image" content="https://lnxpgn.github.io/images/04-colour-lovers-palettes-opt.jpg">
+<meta property="og:image" content="https://lnxpgn.github.io/images/05-simple-color-schemes-opt.jpg">
+<meta property="og:image" content="https://lnxpgn.github.io/images/06-base-rgb-opt.jpg">
+<meta property="og:image" content="https://lnxpgn.github.io/images/07-complimentary-opt.jpg">
+<meta property="og:image" content="https://lnxpgn.github.io/images/08-triad-opt.jpg">
+<meta property="og:image" content="https://lnxpgn.github.io/images/09-color-scheme-opt.jpg">
+<meta property="og:image" content="https://lnxpgn.github.io/images/10-greys-opt.jpg">
+<meta property="og:image" content="https://lnxpgn.github.io/images/11-color-palette-opt.jpg">
+<meta property="og:image" content="https://lnxpgn.github.io/images/12-colour-in-practice-greyscale-opt.jpg">
+<meta property="og:image" content="https://lnxpgn.github.io/images/13-color-in-practice-opt.jpg">
+<meta property="og:image" content="https://lnxpgn.github.io/images/14-color-palette-extended-opt.jpg">
+<meta property="article:published_time" content="2016-04-18T08:55:15.000Z">
+<meta property="article:modified_time" content="2020-05-07T16:00:00.000Z">
+<meta property="article:author" content="lnxpgn">
+<meta property="article:tag" content="Web">
+<meta property="article:tag" content="Translation">
+<meta property="article:tag" content="翻译">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://lnxpgn.github.io/images/01-dribble-designspiration-screenshot-opt.jpg">
+    
+    
+      
+        
+          <link rel="shortcut icon" href="/images/favicon.ico">
+        
+      
+      
+        
+          <link rel="icon" type="image/png" href="/images/favicon-192x192.png" sizes="192x192">
+        
+      
+      
+        
+          <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+        
+      
+    
+    <!-- title -->
+    <title>Web开发者的简单颜色指南</title>
+    <!-- async scripts -->
+    <!-- Google Analytics -->
+
+
+    <!-- Umami Analytics -->
+
+
+    <!-- styles -->
+    
+<link rel="stylesheet" href="/css/style.css">
+
+    <!-- persian styles -->
+    
+    <!-- rss -->
+    
+    
+	<!-- mathjax -->
+	
+<meta name="generator" content="Hexo 7.3.0"><link rel="alternate" href="/atom.xml" title="竹里馆" type="application/atom+xml">
+<link rel="alternate" href="/rss.xml" title="竹里馆" type="application/rss+xml">
+</head>
+
+<body class="max-width mx-auto px3 ltr">
+    
+      <div id="header-post">
+  <a id="menu-icon" href="#" aria-label="Menu"><i class="fa-solid fa-bars fa-lg"></i></a>
+  <a id="menu-icon-tablet" href="#" aria-label="Menu"><i class="fa-solid fa-bars fa-lg"></i></a>
+  <a id="top-icon-tablet" href="#" aria-label="Top" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');" style="display:none;"><i class="fa-solid fa-chevron-up fa-lg"></i></a>
+  <span id="menu">
+    <span id="nav">
+      <ul>
+        <!--
+       --><li><a href="/">Home</a></li><!--
+     --><!--
+       --><li><a href="/archives/">Writing</a></li><!--
+     --><!--
+       --><li><a href="/categories/">Categories</a></li><!--
+     --><!--
+       --><li><a href="/tags/">Tags</a></li><!--
+     --><!--
+       --><li><a href="/about/">About</a></li><!--
+     -->
+      </ul>
+    </span>
+    <br/>
+    <span id="actions">
+      <ul>
+        
+        <li><a class="icon" aria-label="Previous post" href="/2018/05/18/http-optimization/"><i class="fa-solid fa-chevron-left" aria-hidden="true" onmouseover="$('#i-prev').toggle();" onmouseout="$('#i-prev').toggle();"></i></a></li>
+        
+        
+        <li><a class="icon" aria-label="Next post" href="/2016/03/06/how-to-vertically-align-elements-using-css/"><i class="fa-solid fa-chevron-right" aria-hidden="true" onmouseover="$('#i-next').toggle();" onmouseout="$('#i-next').toggle();"></i></a></li>
+        
+        <li><a class="icon" aria-label="Back to top" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fa-solid fa-chevron-up" aria-hidden="true" onmouseover="$('#i-top').toggle();" onmouseout="$('#i-top').toggle();"></i></a></li>
+        <li><a class="icon" aria-label="Share post" href="#"><i class="fa-solid fa-share-alt" aria-hidden="true" onmouseover="$('#i-share').toggle();" onmouseout="$('#i-share').toggle();" onclick="$('#share').toggle();return false;"></i></a></li>
+      </ul>
+      <span id="i-prev" class="info" style="display:none;">Previous post</span>
+      <span id="i-next" class="info" style="display:none;">Next post</span>
+      <span id="i-top" class="info" style="display:none;">Back to top</span>
+      <span id="i-share" class="info" style="display:none;">Share post</span>
+    </span>
+    <br/>
+    <div id="share" style="display: none">
+      <ul>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.facebook.com/sharer.php?u=https://lnxpgn.github.io/2016/04/18/a-simple-web-developer-guide-to-color/"><i class="fab fa-facebook " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://twitter.com/share?url=https://lnxpgn.github.io/2016/04/18/a-simple-web-developer-guide-to-color/&text=Web开发者的简单颜色指南"><i class="fab fa-twitter " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.linkedin.com/shareArticle?url=https://lnxpgn.github.io/2016/04/18/a-simple-web-developer-guide-to-color/&title=Web开发者的简单颜色指南"><i class="fab fa-linkedin " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://pinterest.com/pin/create/bookmarklet/?url=https://lnxpgn.github.io/2016/04/18/a-simple-web-developer-guide-to-color/&is_video=false&description=Web开发者的简单颜色指南"><i class="fab fa-pinterest " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=Web开发者的简单颜色指南&body=Check out this article: https://lnxpgn.github.io/2016/04/18/a-simple-web-developer-guide-to-color/"><i class="fa-solid fa-envelope " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://getpocket.com/save?url=https://lnxpgn.github.io/2016/04/18/a-simple-web-developer-guide-to-color/&title=Web开发者的简单颜色指南"><i class="fab fa-get-pocket " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://reddit.com/submit?url=https://lnxpgn.github.io/2016/04/18/a-simple-web-developer-guide-to-color/&title=Web开发者的简单颜色指南"><i class="fab fa-reddit " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.stumbleupon.com/submit?url=https://lnxpgn.github.io/2016/04/18/a-simple-web-developer-guide-to-color/&title=Web开发者的简单颜色指南"><i class="fab fa-stumbleupon " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://digg.com/submit?url=https://lnxpgn.github.io/2016/04/18/a-simple-web-developer-guide-to-color/&title=Web开发者的简单颜色指南"><i class="fab fa-digg " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.tumblr.com/share/link?url=https://lnxpgn.github.io/2016/04/18/a-simple-web-developer-guide-to-color/&name=Web开发者的简单颜色指南&description=&lt;p&gt;我从来不是一个颜色理论的爱好者，我想是因为我对它一直不太抱希望。我乐意坐在那儿，拿着色环，选取互补色(complementary colors)、分散的互补色(split-complementary colors)、三色(triad colors)等配色方案，让朋友、家人、客户印象深刻。&lt;/p&gt;
+&lt;p&gt;说实话，颜色理论对我很遥远，尝试在项目中使用颜色时我从未发现它有用。有点讽刺，我发现，颜色的选择、运用得越好，背后的理论我越有更好的认识。&lt;/p&gt;
+&lt;p&gt;刚起步时理论并没有真正得帮助，对吧？这就是为什么，在这篇文章里，你不会看到一个单一的色环，相反，我会展示一个简单的你能用在下一个Web项目的颜色工作流。&lt;/p&gt;"><i class="fab fa-tumblr " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://news.ycombinator.com/submitlink?u=https://lnxpgn.github.io/2016/04/18/a-simple-web-developer-guide-to-color/&t=Web开发者的简单颜色指南"><i class="fab fa-hacker-news " aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+    
+    
+      <div id="toc">
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%80%89%E6%8B%A9%E5%9F%BA%E6%9C%AC%E8%89%B2"><span class="toc-number">1.</span> <span class="toc-text">选择基本色</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%A6%82%E4%BD%95%E9%80%89%E6%8B%A9%E8%B5%B7%E5%A7%8B%E8%89%B2"><span class="toc-number">1.1.</span> <span class="toc-text">如何选择起始色</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%80%89%E6%8B%A9%EF%BC%88%E5%A5%BD%E7%9A%84%EF%BC%89%E5%9F%BA%E6%9C%AC%E8%89%B2"><span class="toc-number">2.</span> <span class="toc-text">选择（好的）基本色</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%88%9B%E5%BB%BA%E8%89%B2%E5%BD%A9%E8%A1%94%E6%8E%A5%E7%9A%84%E8%B0%83%E8%89%B2%E6%9D%BF"><span class="toc-number">3.</span> <span class="toc-text">创建色彩衔接的调色板</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AF%BB%E6%89%BE%E5%BC%BA%E8%B0%83%E8%89%B2"><span class="toc-number">3.1.</span> <span class="toc-text">寻找强调色</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%B7%BB%E5%8A%A0%E7%81%B0%E8%89%B2"><span class="toc-number">3.2.</span> <span class="toc-text">添加灰色</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%88%9B%E5%BB%BA%E5%92%8C%E8%B0%90%E7%9A%84%E7%81%B0%E8%89%B2"><span class="toc-number">3.3.</span> <span class="toc-text">创建和谐的灰色</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%9E%A7%EF%BC%81%E6%88%91%E4%BB%AC%E5%81%9A%E5%88%B0%E4%BA%86%EF%BC%81"><span class="toc-number">4.</span> <span class="toc-text">瞧！我们做到了！</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%BA%94%E7%94%A8%E9%85%8D%E8%89%B2%E6%96%B9%E6%A1%88"><span class="toc-number">5.</span> <span class="toc-text">应用配色方案</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%BB%93%E8%AF%AD"><span class="toc-number">6.</span> <span class="toc-text">结语</span></a></li></ol>
+      </div>
+    
+  </span>
+</div>
+
+    
+    <div class="content index py4 ">
+        
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+  <header>
+    
+    <h1 class="posttitle p-name" itemprop="name headline">
+        Web开发者的简单颜色指南
+    </h1>
+
+
+
+    <div class="meta">
+      <!-- <span class="author p-author h-card" itemprop="author" itemscope itemtype="http://schema.org/Person">
+        <span class="p-name" itemprop="name">lnxpgn</span>
+      </span> -->
+      
+    <div class="postdate">
+      
+        <time datetime="2016-04-18T08:55:15.000Z" class="dt-published" itemprop="datePublished">2016-04-18</time>
+        
+      
+    </div>
+
+
+      
+    <div class="article-category">
+        <i class="fa-solid fa-archive"></i>
+        <a class="category-link" href="/categories/Tech/">Tech</a>
+    </div>
+
+
+      
+    <div class="article-tag">
+        <i class="fa-solid fa-tag"></i>
+        <a class="p-category" href="/tags/Translation/" rel="tag">Translation</a>, <a class="p-category" href="/tags/Web/" rel="tag">Web</a>, <a class="p-category" href="/tags/%E7%BF%BB%E8%AF%91/" rel="tag">翻译</a>
+    </div>
+
+
+    </div>
+  </header>
+  
+
+  <div class="content e-content" itemprop="articleBody">
+    <p>我从来不是一个颜色理论的爱好者，我想是因为我对它一直不太抱希望。我乐意坐在那儿，拿着色环，选取互补色(complementary colors)、分散的互补色(split-complementary colors)、三色(triad colors)等配色方案，让朋友、家人、客户印象深刻。</p>
+<p>说实话，颜色理论对我很遥远，尝试在项目中使用颜色时我从未发现它有用。有点讽刺，我发现，颜色的选择、运用得越好，背后的理论我越有更好的认识。</p>
+<p>刚起步时理论并没有真正得帮助，对吧？这就是为什么，在这篇文章里，你不会看到一个单一的色环，相反，我会展示一个简单的你能用在下一个Web项目的颜色工作流。</p>
+<span id="more"></span>
+<p>当然，过程中你是在潜意识地学习理论。为了好玩，我建议几个月后回来再重温一下。</p>
+<p>随后你会有更深刻的理解，我保证。</p>
+<p>译者注：</p>
+<p>颜色理论基础相关：<a target="_blank" rel="noopener" href="http://www.ruanyifeng.com/blog/2008/07/color_theory.html">关于颜色理论</a>，<a target="_blank" rel="noopener" href="http://mmmono.com/item/255724/">三分钟帮你快速入门极简色彩学</a></p>
+<h2 id="选择基本色"><a href="#选择基本色" class="headerlink" title="选择基本色"></a>选择基本色</h2><p>我们总是能看到象<a target="_blank" rel="noopener" href="http://www.rit-mcsl.org/fairchild/WhyIsColor/files/ExamplePage.pdf">一千万种颜色</a>这样可笑的事情。想想，一千万种。</p>
+<p>众多颜色中，只需选一种用于我们的品牌，它也是网站的基本色。</p>
+<p>其他颜色均基于基本色，所以这很重要。</p>
+<h3 id="如何选择起始色"><a href="#如何选择起始色" class="headerlink" title="如何选择起始色"></a>如何选择起始色</h3><p>随意选取一种颜色很简单，但我们不这样做。对于任何与客户打交道的项目，你应该尽可能地证明你的选择，不这样，你喜爱的颜色可能与他们喜爱的相抵触。他们是客户，他们付钱，他们会赢。</p>
+<p>不要过虑。确保你有选择的理由，会让你好看点。</p>
+<p><strong>选择起始色的小贴士</strong></p>
+<ul>
+<li><strong>用你有的颜色</strong><br>如果客户有已确立颜色的LOGO，这个颜色通常是你的起始色。</li>
+<li><strong>排除竞争对手的颜色</strong><br>如果你的一个主要竞争对手有一个有影响力的品牌颜色，不要拷贝即使你能改进。</li>
+<li><strong>考虑你的目标受众</strong><br>殡仪馆网站的颜色与儿童俱乐部的是非常不同的。想想谁会使用网站，想让他们有什么样的感受（兴奋，严肃，关爱等）。</li>
+<li><strong>不要落入思维定势</strong><br>如果你为年轻女孩设计网站，不是非要使用粉红色。避免使用老一套来取得认可。</li>
+<li><strong>玩个文字游戏</strong><br>如果你在纠结，写下任何与客户业务相关的词语，这个词语列表应该可以给你一些有关颜色的主意。如果你还是实在纠结，登上讲解颜色的网站，看下哪个最合适。</li>
+</ul>
+<p>现在你心中应该有了一个基本色。它应该是一种简单的颜色，象红色，绿色，蓝色，黄色或粉红色。接下来我们说说色度。</p>
+<p>假设你选择了蓝色（好选择！）</p>
+<h2 id="选择（好的）基本色"><a href="#选择（好的）基本色" class="headerlink" title="选择（好的）基本色"></a>选择（好的）基本色</h2><p>我们象艺术家一样去剽窃，使用其他人的选择，而不是为了寻找一种好色度的蓝色，被Photoshop的颜色拾取器所困扰。</p>
+<p>首先，到<a target="_blank" rel="noopener" href="https://dribbble.com/colors/">Dribbble</a>和<a target="_blank" rel="noopener" href="http://designspiration.net/">Designspiration</a>，点击它们的”Colors”链接。</p>
+<p>会显示相似的屏幕:<br><img src="/images/01-dribble-designspiration-screenshot-opt.jpg" alt="image"><br><em>使用灵感网站为你的设计寻找一种合适的颜色（<a target="_blank" rel="noopener" href="https://media-mediatemple.netdna-ssl.com/wp-content/uploads/2016/03/01-dribble-designspiration-screenshot-opt.jpg">大图</a>）</em></p>
+<p>你可以把这作为寻找一个合适色度的蓝色的下一步。</p>
+<p>对于一个清新、充满活力的品牌，选择一个更浅、更明亮的蓝色（前5个中的一个），对于较商业、严肃一点的，底部的5个是更好的选择。<br><img src="/images/02-color-characteristics-opt.jpg" alt="image"><br><em>不同色度的蓝色有着不同的特质，选择要明智！（<a target="_blank" rel="noopener" href="https://media-mediatemple.netdna-ssl.com/wp-content/uploads/2016/03/02-color-characteristics-opt.jpg">大图</a>）</em></p>
+<p>选择一种色度，查看使用这种颜色的网站的实际设计，然后你可以使用<a target="_blank" rel="noopener" href="https://css-tricks.com/grabbing-hex-codes-for-colors/">CSS-Tricks的颜色拾取技术</a>从浏览器中提取精确的颜色值。<br><img src="/images/03-dribbble-color-results-opt.jpg" alt="image"><br><em>这么多的蓝色！你的工作就是挑一个最适合你品牌的。简单得很！（<a target="_blank" rel="noopener" href="https://media-mediatemple.netdna-ssl.com/wp-content/uploads/2016/03/03-dribbble-color-results-opt.jpg">大图</a>）</em></p>
+<p>你不仅会看到不同版本的基本色，也很容易看到与之匹配的颜色。</p>
+<h2 id="创建色彩衔接的调色板"><a href="#创建色彩衔接的调色板" class="headerlink" title="创建色彩衔接的调色板"></a>创建色彩衔接的调色板</h2><p>好了，你应该有了一个颜色的16进制值。我的是<code>#30c9e8</code>。现在我们使用这个颜色建一个调色板。会比你想像的容易。</p>
+<p>当想到创建配色方案时，你可能有这样的想象：<br><img src="/images/04-colour-lovers-palettes-opt.jpg" alt="image"><br><em>你可能见过这种调色板（<a target="_blank" rel="noopener" href="https://media-mediatemple.netdna-ssl.com/wp-content/uploads/2016/03/04-colour-lovers-palettes-opt.jpg">大图</a>）</em></p>
+<p>这种调色板的主要问题是应用到实际设计时不太实际。很多调色板有比你想要的多得多的颜色，尤其是考虑到平均一个配色方案只需要3个中性色：</p>
+<ul>
+<li>白色</li>
+<li>深灰色</li>
+<li>浅灰色（可选）</li>
+</ul>
+<p>如果你试着添加5或6个中性色，就凌乱了。</p>
+<p>真正需要的两种颜色：</p>
+<ul>
+<li>一个基本色（我们的例子中是<code>#30c9e8</code>）</li>
+<li>一个强调色（马上就讲到这个）</li>
+</ul>
+<p>比起大肆使用互补色系，分散互补色系，三色系或其他色系，仅用这5种颜色创建网站，会得到更好的效果。<br><img src="/images/05-simple-color-schemes-opt.jpg" alt="image"><br><em>象<a target="_blank" rel="noopener" href="https://thoughtbot.com/">Thoughtbot</a>和<a target="_blank" rel="noopener" href="http://tedtoddinsurance.com/">TedTodd</a>，一个好看的网站不需要复杂的配色方案。（<a target="_blank" rel="noopener" href="https://media-mediatemple.netdna-ssl.com/wp-content/uploads/2016/03/05-simple-color-schemes-opt.jpg">大图</a>）</em></p>
+<h3 id="寻找强调色"><a href="#寻找强调色" class="headerlink" title="寻找强调色"></a>寻找强调色</h3><p>强调色在网站上会少量使用，通常用在行为召唤（如：购买、下载按钮，译者注）页面元素上，所以需要引人注目。</p>
+<p>下一步，把基本色的16进制值输入<a target="_blank" rel="noopener" href="http://paletton.com/">Paletton</a> 的颜色值方框中：<br><img src="/images/06-base-rgb-opt.jpg" alt="image"><br><em>在Paletton上输入你的基本色（<a target="_blank" rel="noopener" href="https://media-mediatemple.netdna-ssl.com/wp-content/uploads/2016/03/06-base-rgb-opt.jpg">大图</a>）</em></p>
+<p>这里，可用两种方式找到强调色。</p>
+<p>首先，点击“Add Complementary”按钮，橙色就是你的强调色！<br><img src="/images/07-complimentary-opt.jpg" alt="image"><br><em>Paletton自动生成一个好的强调色（<a target="_blank" rel="noopener" href="https://media-mediatemple.netdna-ssl.com/wp-content/uploads/2016/03/07-complimentary-opt.jpg">大图</a>）</em></p>
+<p>或者，如果你不喜欢生成的颜色，可以点击位于顶部的几个按钮来发现更好的。<br><img src="/images/08-triad-opt.jpg" alt="image"><br><em>点击以发现喜欢的色系（<a target="_blank" rel="noopener" href="https://media-mediatemple.netdna-ssl.com/wp-content/uploads/2016/03/08-triad-opt.jpg">大图</a>）</em></p>
+<p>就本人而言，我十分喜欢三色系按钮（Triad按钮）生成的红色，所以我会用在我们的配色方案中。Paletton在背后所做的事情当然有科学理论依据，但是，现在先放一放。稍后你会学到其理论，所有的事情都会变得清晰。</p>
+<p>已经有了漂亮的基本色，醒目的强调色，让我们加入白色，因为白色一直都好搭配。下面是我们现在的配色方案：<br><img src="/images/09-color-scheme-opt.jpg" alt="image"><br><em>目前的调色板，正在成形（<a target="_blank" rel="noopener" href="https://media-mediatemple.netdna-ssl.com/wp-content/uploads/2016/03/09-color-scheme-opt.jpg">大图</a>）</em></p>
+<p>现在缺失的是一些灰色。</p>
+<h3 id="添加灰色"><a href="#添加灰色" class="headerlink" title="添加灰色"></a>添加灰色</h3><p>我的大多数项目中，我发现两种色度的灰色永远有用，一种是深灰，一种是浅灰。你会经常用到它们。</p>
+<p>深灰一般用于文本，当需要与白色区域有些细微差别时用到浅灰（一般是背景）。</p>
+<p>可以通过两种方式选择灰色：</p>
+<ul>
+<li>再次用到<a target="_blank" rel="noopener" href="https://dribbble.com/colors/">Dribbble</a>和<a target="_blank" rel="noopener" href="http://designspiration.net/">Designspiration</a>，从之前匹配基本色的搜索结果中找一个不错的灰色。但在搜索条中输入<code>blue website</code>，会有更多有关灰色的结果；</li>
+<li>如果有Photoshop或类似的软件，可以用<a target="_blank" rel="noopener" href="http://methodandcraft.com/videos/creating-harmonious-color-schemes">Erica Schoonmaker的技术</a> 和基本色来调和灰色。</li>
+</ul>
+<h3 id="创建和谐的灰色"><a href="#创建和谐的灰色" class="headerlink" title="创建和谐的灰色"></a>创建和谐的灰色</h3><p>为通过Erica的方法取得我们发亮的新和谐灰，先随便选两个默认的灰色，然后采取如下步骤：</p>
+<ol>
+<li>创建两个色度的灰色，<code>#424242</code>和<code>#fafafa</code></li>
+<li>在两个色度上插入一个颜色填充层</li>
+<li>把填充层的颜色改成基本色（<code>#30c9e8</code>）</li>
+<li>设置图层的混合模式为叠加，把不透明度降到5%到40%间（本例是40%）</li>
+<li>使用颜色拾取器并拷贝新的颜色</li>
+</ol>
+<p><em>Vimeo video: <a target="_blank" rel="noopener" href="https://vimeo.com/159766011">nice-greys</a></em>, <em>Youtube video(译者加): <a target="_blank" rel="noopener" href="https://www.youtube.com/watch?v=tcKR_8FXuuQ">Creating Harmonious Color Schemes</a></em></p>
+<p>我需要指出当叠加的颜色是蓝色时这个方法工作得格外好，对于其他颜色，要么把不透明度降到5%至10%，要么坚持原来的灰色。<br><img src="/images/10-greys-opt.jpg" alt="image"><br><em>挑选调和了基本色的灰色是个造就大不同的小事（<a target="_blank" rel="noopener" href="https://media-mediatemple.netdna-ssl.com/wp-content/uploads/2016/03/10-greys-opt.jpg">大图</a>）</em></p>
+<h2 id="瞧！我们做到了！"><a href="#瞧！我们做到了！" class="headerlink" title="瞧！我们做到了！"></a>瞧！我们做到了！</h2><p>我们的配色方案完成了，相信你会感到自豪。<br><img src="/images/11-color-palette-opt.jpg" alt="image"><br><em>漂亮的配色方案，能用了</em>（<a target="_blank" rel="noopener" href="https://media-mediatemple.netdna-ssl.com/wp-content/uploads/2016/03/11-color-palette-opt.jpg">大图</a>）</p>
+<h2 id="应用配色方案"><a href="#应用配色方案" class="headerlink" title="应用配色方案"></a>应用配色方案</h2><p>现在我们已经得到了配色方案，到用的时候了。这完全是另一个话题。但为让你有所了解，这里有一个灰度设计稿和一个着色后的版本。</p>
+<p>小贴士：如果你纠结于颜色，一个不错的技巧是先用灰度模式创建网站的布局，弄清层次结构，再试用颜色。<br><img src="/images/12-colour-in-practice-greyscale-opt.jpg" alt="image"><br><em>以灰度模式布局网站有利于应用配色方案</em>（<a target="_blank" rel="noopener" href="https://media-mediatemple.netdna-ssl.com/wp-content/uploads/2016/03/12-colour-in-practice-greyscale-opt.jpg">大图</a>）<br><img src="/images/13-color-in-practice-opt.jpg" alt="image"><br><em>着色后的版本</em>（<a target="_blank" rel="noopener" href="https://media-mediatemple.netdna-ssl.com/wp-content/uploads/2016/03/13-color-in-practice-opt.jpg">大图</a>）</p>
+<p>如你所见，蓝色是这里的特征色，大面积地使用，也用在图标中。</p>
+<p>我们的强调色，红色，相对于基本色它引人注目，小面积地使用，用在按钮上和图标中。这个红色用的越少，越显得夺目。</p>
+<p>深灰用在文本，LOGO和图标的轮廓。图标中别不放这种颜色，小细节造就大不同。</p>
+<p>背景使用白色和浅灰色。浅灰色根本不需要，但我发现这是另外一个能让网站赏心悦目的小细节。</p>
+<p>当使用颜色和文本时，确保背景和文本有足够的对比是很重要的，这有助于色盲和低视力者阅读你网站上的文字。有许多工具可用于查寻遵守<a target="_blank" rel="noopener" href="http://webaim.org/blog/wcag-2-0-and-link-colors/">WCAG准则</a>的颜色。两个流行的工具是<a target="_blank" rel="noopener" href="http://webaim.org/resources/contrastchecker/">WebAim Color Contrast Checker</a>和<a target="_blank" rel="noopener" href="http://lea.verou.me/">Lea Verou</a>写的<a target="_blank" rel="noopener" href="http://leaverou.github.io/contrast-ratio/">Contrast Ratio</a> 。</p>
+<h2 id="结语"><a href="#结语" class="headerlink" title="结语"></a>结语</h2><p>如你所见，除了今天创建的调色板中的颜色，我们真得不需要太多，但也不意味着局限于此！<br><img src="/images/14-color-palette-extended-opt.jpg" alt="image"><br><em>使用上述技术，当你需要时，你能扩展你的调色板来掌控更多的颜色（<a target="_blank" rel="noopener" href="https://media-mediatemple.netdna-ssl.com/wp-content/uploads/2016/03/14-color-palette-extended-opt.jpg">大图</a>）</em></p>
+<p>设计时，你或许判定引入更多颜色进调色板是适当的，这绝对可以！只要细心，能用上述步骤找出更多能与你的配色方案一起工作的颜色。</p>
+<p>美妙的地方在于这事你做的越多，选择颜色时你干得越好，你会知道哪些能一起工作，哪些不能。有时上述方法产出的结果不尽于人意，所以随时调整。学习颜色理论，却不见理论，玩儿得开心！</p>
+<p>原文：<a target="_blank" rel="noopener" href="https://www.smashingmagazine.com/2016/04/web-developer-guide-color/">A Simple Web Developer’s Guide To Color</a></p>
+
+  </div>
+</article>
+
+
+
+        
+          <div id="footer-post-container">
+  <div id="footer-post">
+
+    <div id="nav-footer" style="display: none">
+      <ul>
+        
+          <li><a href="/">Home</a></li>
+        
+          <li><a href="/archives/">Writing</a></li>
+        
+          <li><a href="/categories/">Categories</a></li>
+        
+          <li><a href="/tags/">Tags</a></li>
+        
+          <li><a href="/about/">About</a></li>
+        
+      </ul>
+    </div>
+
+    
+    
+      <div id="toc-footer" style="display: none">
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%80%89%E6%8B%A9%E5%9F%BA%E6%9C%AC%E8%89%B2"><span class="toc-number">1.</span> <span class="toc-text">选择基本色</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%A6%82%E4%BD%95%E9%80%89%E6%8B%A9%E8%B5%B7%E5%A7%8B%E8%89%B2"><span class="toc-number">1.1.</span> <span class="toc-text">如何选择起始色</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%80%89%E6%8B%A9%EF%BC%88%E5%A5%BD%E7%9A%84%EF%BC%89%E5%9F%BA%E6%9C%AC%E8%89%B2"><span class="toc-number">2.</span> <span class="toc-text">选择（好的）基本色</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%88%9B%E5%BB%BA%E8%89%B2%E5%BD%A9%E8%A1%94%E6%8E%A5%E7%9A%84%E8%B0%83%E8%89%B2%E6%9D%BF"><span class="toc-number">3.</span> <span class="toc-text">创建色彩衔接的调色板</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AF%BB%E6%89%BE%E5%BC%BA%E8%B0%83%E8%89%B2"><span class="toc-number">3.1.</span> <span class="toc-text">寻找强调色</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%B7%BB%E5%8A%A0%E7%81%B0%E8%89%B2"><span class="toc-number">3.2.</span> <span class="toc-text">添加灰色</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%88%9B%E5%BB%BA%E5%92%8C%E8%B0%90%E7%9A%84%E7%81%B0%E8%89%B2"><span class="toc-number">3.3.</span> <span class="toc-text">创建和谐的灰色</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%9E%A7%EF%BC%81%E6%88%91%E4%BB%AC%E5%81%9A%E5%88%B0%E4%BA%86%EF%BC%81"><span class="toc-number">4.</span> <span class="toc-text">瞧！我们做到了！</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%BA%94%E7%94%A8%E9%85%8D%E8%89%B2%E6%96%B9%E6%A1%88"><span class="toc-number">5.</span> <span class="toc-text">应用配色方案</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%BB%93%E8%AF%AD"><span class="toc-number">6.</span> <span class="toc-text">结语</span></a></li></ol>
+      </div>
+    
+
+    <div id="share-footer" style="display: none">
+      <ul>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.facebook.com/sharer.php?u=https://lnxpgn.github.io/2016/04/18/a-simple-web-developer-guide-to-color/"><i class="fab fa-facebook fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://twitter.com/share?url=https://lnxpgn.github.io/2016/04/18/a-simple-web-developer-guide-to-color/&text=Web开发者的简单颜色指南"><i class="fab fa-twitter fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.linkedin.com/shareArticle?url=https://lnxpgn.github.io/2016/04/18/a-simple-web-developer-guide-to-color/&title=Web开发者的简单颜色指南"><i class="fab fa-linkedin fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://pinterest.com/pin/create/bookmarklet/?url=https://lnxpgn.github.io/2016/04/18/a-simple-web-developer-guide-to-color/&is_video=false&description=Web开发者的简单颜色指南"><i class="fab fa-pinterest fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=Web开发者的简单颜色指南&body=Check out this article: https://lnxpgn.github.io/2016/04/18/a-simple-web-developer-guide-to-color/"><i class="fa-solid fa-envelope fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://getpocket.com/save?url=https://lnxpgn.github.io/2016/04/18/a-simple-web-developer-guide-to-color/&title=Web开发者的简单颜色指南"><i class="fab fa-get-pocket fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://reddit.com/submit?url=https://lnxpgn.github.io/2016/04/18/a-simple-web-developer-guide-to-color/&title=Web开发者的简单颜色指南"><i class="fab fa-reddit fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.stumbleupon.com/submit?url=https://lnxpgn.github.io/2016/04/18/a-simple-web-developer-guide-to-color/&title=Web开发者的简单颜色指南"><i class="fab fa-stumbleupon fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://digg.com/submit?url=https://lnxpgn.github.io/2016/04/18/a-simple-web-developer-guide-to-color/&title=Web开发者的简单颜色指南"><i class="fab fa-digg fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.tumblr.com/share/link?url=https://lnxpgn.github.io/2016/04/18/a-simple-web-developer-guide-to-color/&name=Web开发者的简单颜色指南&description=&lt;p&gt;我从来不是一个颜色理论的爱好者，我想是因为我对它一直不太抱希望。我乐意坐在那儿，拿着色环，选取互补色(complementary colors)、分散的互补色(split-complementary colors)、三色(triad colors)等配色方案，让朋友、家人、客户印象深刻。&lt;/p&gt;
+&lt;p&gt;说实话，颜色理论对我很遥远，尝试在项目中使用颜色时我从未发现它有用。有点讽刺，我发现，颜色的选择、运用得越好，背后的理论我越有更好的认识。&lt;/p&gt;
+&lt;p&gt;刚起步时理论并没有真正得帮助，对吧？这就是为什么，在这篇文章里，你不会看到一个单一的色环，相反，我会展示一个简单的你能用在下一个Web项目的颜色工作流。&lt;/p&gt;"><i class="fab fa-tumblr fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://news.ycombinator.com/submitlink?u=https://lnxpgn.github.io/2016/04/18/a-simple-web-developer-guide-to-color/&t=Web开发者的简单颜色指南"><i class="fab fa-hacker-news fa-lg" aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+
+    <div id="actions-footer">
+        <a id="menu" class="icon" href="#" onclick="$('#nav-footer').toggle();return false;"><i class="fa-solid fa-bars fa-lg" aria-hidden="true"></i> Menu</a>
+        
+          <a id="toc" class="icon" href="#" onclick="$('#toc-footer').toggle();return false;"><i class="fa-solid fa-list fa-lg" aria-hidden="true"></i> TOC</a>
+        
+        <a id="share" class="icon" href="#" onclick="$('#share-footer').toggle();return false;"><i class="fa-solid fa-share-alt fa-lg" aria-hidden="true"></i> Share</a>
+        <a id="top" style="display:none" class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fa-solid fa-chevron-up fa-lg" aria-hidden="true"></i> Top</a>
+    </div>
+
+  </div>
+</div>
+
+        
+        <footer id="footer">
+  <div class="footer-left">
+    Copyright &copy;
+    
+    
+    2015-2025
+    lnxpgn
+  </div>
+  <div class="footer-right">
+    <nav>
+      <ul>
+        <!--
+       --><li><a href="/">Home</a></li><!--
+     --><!--
+       --><li><a href="/archives/">Writing</a></li><!--
+     --><!--
+       --><li><a href="/categories/">Categories</a></li><!--
+     --><!--
+       --><li><a href="/tags/">Tags</a></li><!--
+     --><!--
+       --><li><a href="/about/">About</a></li><!--
+     -->
+      </ul>
+    </nav>
+  </div>
+</footer>
+
+    </div>
+    <!-- styles -->
+
+
+
+  <link rel="preload" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" crossorigin="anonymous" onload="this.onload=null;this.rel='stylesheet'"/>
+
+
+  <link
+    rel="stylesheet"
+    href="/css/prism-default-line-numbers.css"/>
+
+
+    <!-- jquery -->
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" crossorigin="anonymous"></script>
+
+
+
+
+<!-- clipboard -->
+
+  
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.7/clipboard.min.js" crossorigin="anonymous"></script>
+  
+  <script type="text/javascript">
+  $(function() {
+    // copy-btn HTML
+    var btn = "<span class=\"btn-copy tooltipped tooltipped-sw\" aria-label=\"Copy to clipboard!\">";
+    btn += '<i class="fa-regular fa-clone"></i>';
+    btn += '</span>';
+    // mount it!
+    $(".highlight table").before(btn);
+    var clip = new ClipboardJS('.btn-copy', {
+      text: function(trigger) {
+        return Array.from(trigger.nextElementSibling.querySelectorAll('.code')).reduce((str,it)=>str+it.innerText+'\n','')
+      }
+    });
+    clip.on('success', function(e) {
+      e.trigger.setAttribute('aria-label', "Copied!");
+      e.clearSelection();
+    })
+  })
+  </script>
+
+
+<script src="/js/main.js"></script>
+
+<!-- search -->
+
+<!-- Baidu Analytics -->
+
+<!-- Cloudflare Analytics -->
+
+<!-- Disqus Comments -->
+
+<!-- utterances Comments -->
+
+</body>
+</html>

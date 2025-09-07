@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang=zh>
+<head>
+    <!-- so meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5" />
+    <meta name="description" content="How to Benchmark a Python Statement time.perf_counter() from time import perf_counter  # record start time time_start &#x3D; perf_counter()  # execute the statement data &#x3D; [i*i for i in range(100000000)]">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Weekly - issue 43">
+<meta property="og:url" content="https://lnxpgn.github.io/2023/10/29/issue-43-202310-4/index.html">
+<meta property="og:site_name" content="竹里馆">
+<meta property="og:description" content="How to Benchmark a Python Statement time.perf_counter() from time import perf_counter  # record start time time_start &#x3D; perf_counter()  # execute the statement data &#x3D; [i*i for i in range(100000000)]">
+<meta property="og:locale">
+<meta property="article:published_time" content="2023-10-28T16:00:00.000Z">
+<meta property="article:modified_time" content="2023-12-08T09:15:05.000Z">
+<meta property="article:author" content="lnxpgn">
+<meta property="article:tag" content="Python">
+<meta property="article:tag" content="Weekly">
+<meta name="twitter:card" content="summary">
+    
+    
+      
+        
+          <link rel="shortcut icon" href="/images/favicon.ico">
+        
+      
+      
+        
+          <link rel="icon" type="image/png" href="/images/favicon-192x192.png" sizes="192x192">
+        
+      
+      
+        
+          <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+        
+      
+    
+    <!-- title -->
+    <title>Weekly - issue 43</title>
+    <!-- async scripts -->
+    <!-- Google Analytics -->
+
+
+    <!-- Umami Analytics -->
+
+
+    <!-- styles -->
+    
+<link rel="stylesheet" href="/css/style.css">
+
+    <!-- persian styles -->
+    
+    <!-- rss -->
+    
+    
+	<!-- mathjax -->
+	
+<meta name="generator" content="Hexo 7.3.0"><link rel="alternate" href="/atom.xml" title="竹里馆" type="application/atom+xml">
+<link rel="alternate" href="/rss.xml" title="竹里馆" type="application/rss+xml">
+</head>
+
+<body class="max-width mx-auto px3 ltr">
+    
+      <div id="header-post">
+  <a id="menu-icon" href="#" aria-label="Menu"><i class="fa-solid fa-bars fa-lg"></i></a>
+  <a id="menu-icon-tablet" href="#" aria-label="Menu"><i class="fa-solid fa-bars fa-lg"></i></a>
+  <a id="top-icon-tablet" href="#" aria-label="Top" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');" style="display:none;"><i class="fa-solid fa-chevron-up fa-lg"></i></a>
+  <span id="menu">
+    <span id="nav">
+      <ul>
+        <!--
+       --><li><a href="/">Home</a></li><!--
+     --><!--
+       --><li><a href="/archives/">Writing</a></li><!--
+     --><!--
+       --><li><a href="/categories/">Categories</a></li><!--
+     --><!--
+       --><li><a href="/tags/">Tags</a></li><!--
+     --><!--
+       --><li><a href="/about/">About</a></li><!--
+     -->
+      </ul>
+    </span>
+    <br/>
+    <span id="actions">
+      <ul>
+        
+        <li><a class="icon" aria-label="Previous post" href="/2023/11/05/issue-44-202311-1/"><i class="fa-solid fa-chevron-left" aria-hidden="true" onmouseover="$('#i-prev').toggle();" onmouseout="$('#i-prev').toggle();"></i></a></li>
+        
+        
+        <li><a class="icon" aria-label="Next post" href="/2023/10/21/issue-42-202310-3/"><i class="fa-solid fa-chevron-right" aria-hidden="true" onmouseover="$('#i-next').toggle();" onmouseout="$('#i-next').toggle();"></i></a></li>
+        
+        <li><a class="icon" aria-label="Back to top" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fa-solid fa-chevron-up" aria-hidden="true" onmouseover="$('#i-top').toggle();" onmouseout="$('#i-top').toggle();"></i></a></li>
+        <li><a class="icon" aria-label="Share post" href="#"><i class="fa-solid fa-share-alt" aria-hidden="true" onmouseover="$('#i-share').toggle();" onmouseout="$('#i-share').toggle();" onclick="$('#share').toggle();return false;"></i></a></li>
+      </ul>
+      <span id="i-prev" class="info" style="display:none;">Previous post</span>
+      <span id="i-next" class="info" style="display:none;">Next post</span>
+      <span id="i-top" class="info" style="display:none;">Back to top</span>
+      <span id="i-share" class="info" style="display:none;">Share post</span>
+    </span>
+    <br/>
+    <div id="share" style="display: none">
+      <ul>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.facebook.com/sharer.php?u=https://lnxpgn.github.io/2023/10/29/issue-43-202310-4/"><i class="fab fa-facebook " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://twitter.com/share?url=https://lnxpgn.github.io/2023/10/29/issue-43-202310-4/&text=Weekly - issue 43"><i class="fab fa-twitter " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.linkedin.com/shareArticle?url=https://lnxpgn.github.io/2023/10/29/issue-43-202310-4/&title=Weekly - issue 43"><i class="fab fa-linkedin " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://pinterest.com/pin/create/bookmarklet/?url=https://lnxpgn.github.io/2023/10/29/issue-43-202310-4/&is_video=false&description=Weekly - issue 43"><i class="fab fa-pinterest " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=Weekly - issue 43&body=Check out this article: https://lnxpgn.github.io/2023/10/29/issue-43-202310-4/"><i class="fa-solid fa-envelope " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://getpocket.com/save?url=https://lnxpgn.github.io/2023/10/29/issue-43-202310-4/&title=Weekly - issue 43"><i class="fab fa-get-pocket " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://reddit.com/submit?url=https://lnxpgn.github.io/2023/10/29/issue-43-202310-4/&title=Weekly - issue 43"><i class="fab fa-reddit " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.stumbleupon.com/submit?url=https://lnxpgn.github.io/2023/10/29/issue-43-202310-4/&title=Weekly - issue 43"><i class="fab fa-stumbleupon " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://digg.com/submit?url=https://lnxpgn.github.io/2023/10/29/issue-43-202310-4/&title=Weekly - issue 43"><i class="fab fa-digg " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.tumblr.com/share/link?url=https://lnxpgn.github.io/2023/10/29/issue-43-202310-4/&name=Weekly - issue 43&description="><i class="fab fa-tumblr " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://news.ycombinator.com/submitlink?u=https://lnxpgn.github.io/2023/10/29/issue-43-202310-4/&t=Weekly - issue 43"><i class="fab fa-hacker-news " aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+    
+    
+      <div id="toc">
+        <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#How-to-Benchmark-a-Python-Statement"><span class="toc-number">1.</span> <span class="toc-text">How to Benchmark a Python Statement</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#How-to-Share-Large-Data-Between-Processes-in-Python"><span class="toc-number">2.</span> <span class="toc-text">How to Share Large Data Between Processes in Python</span></a></li></ol>
+      </div>
+    
+  </span>
+</div>
+
+    
+    <div class="content index py4 ">
+        
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+  <header>
+    
+    <h1 class="posttitle p-name" itemprop="name headline">
+        Weekly - issue 43
+    </h1>
+
+
+
+    <div class="meta">
+      <!-- <span class="author p-author h-card" itemprop="author" itemscope itemtype="http://schema.org/Person">
+        <span class="p-name" itemprop="name">lnxpgn</span>
+      </span> -->
+      
+    <div class="postdate">
+      
+        <time datetime="2023-10-28T16:00:00.000Z" class="dt-published" itemprop="datePublished">2023-10-29</time>
+        
+      
+    </div>
+
+
+      
+    <div class="article-category">
+        <i class="fa-solid fa-archive"></i>
+        <a class="category-link" href="/categories/Weekly/">Weekly</a>
+    </div>
+
+
+      
+    <div class="article-tag">
+        <i class="fa-solid fa-tag"></i>
+        <a class="p-category" href="/tags/Python/" rel="tag">Python</a>, <a class="p-category" href="/tags/Weekly/" rel="tag">Weekly</a>
+    </div>
+
+
+    </div>
+  </header>
+  
+
+  <div class="content e-content" itemprop="articleBody">
+    <h3 id="How-to-Benchmark-a-Python-Statement"><a href="#How-to-Benchmark-a-Python-Statement" class="headerlink" title="How to Benchmark a Python Statement"></a><a target="_blank" rel="noopener" href="https://superfastpython.com/benchmark-python-statement/">How to Benchmark a Python Statement</a></h3><ul>
+<li><p><code>time.perf_counter()</code></p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">from</span> time <span class="token keyword">import</span> perf_counter
+
+<span class="token comment"># record start time</span>
+time_start <span class="token operator">=</span> perf_counter<span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+<span class="token comment"># execute the statement</span>
+data <span class="token operator">=</span> <span class="token punctuation">[</span>i<span class="token operator">*</span>i <span class="token keyword">for</span> i <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span><span class="token number">100000000</span><span class="token punctuation">)</span><span class="token punctuation">]</span>
+
+<span class="token comment"># record end time</span>
+time_end <span class="token operator">=</span> perf_counter<span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+<span class="token comment"># calculate the duration</span>
+time_duration <span class="token operator">=</span> time_end <span class="token operator">-</span> time_start
+
+<span class="token comment"># report the duration</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string-interpolation"><span class="token string">f'Took </span><span class="token interpolation"><span class="token punctuation">&#123;</span>time_duration<span class="token punctuation">&#125;</span></span><span class="token string"> seconds'</span></span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+</li>
+<li><p><code>timeit</code></p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">from</span> timeit <span class="token keyword">import</span> timeit
+
+<span class="token comment"># benchmark the statement</span>
+time_duration <span class="token operator">=</span> timeit<span class="token punctuation">(</span><span class="token string">'[i*i for i in range(100000000)]'</span><span class="token punctuation">,</span> number<span class="token operator">=</span><span class="token number">1</span><span class="token punctuation">)</span>
+
+<span class="token comment"># report the duration</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string-interpolation"><span class="token string">f'Took </span><span class="token interpolation"><span class="token punctuation">&#123;</span>time_duration<span class="token punctuation">&#125;</span></span><span class="token string"> seconds'</span></span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>OR</p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token comment"># The command executes the statement one time and</span>
+<span class="token comment"># reports the best time (smallest time) over 3 repetitions of executing the statement</span>
+python <span class="token parameter variable">-m</span> timeit <span class="token parameter variable">-n</span> <span class="token number">1</span> <span class="token parameter variable">-r</span> <span class="token number">3</span> <span class="token string">"[i*i for i in range(100000000)]"</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre></li>
+</ul>
+<h3 id="How-to-Share-Large-Data-Between-Processes-in-Python"><a href="#How-to-Share-Large-Data-Between-Processes-in-Python" class="headerlink" title="How to Share Large Data Between Processes in Python"></a><a target="_blank" rel="noopener" href="https://superfastpython.com/multiprocessing-share-large-data-between-processes/">How to Share Large Data Between Processes in Python</a></h3><ul>
+<li><p>Inherit a copy of the structure in each process</p>
+<p>It is the fastest way.</p>
+</li>
+<li><p>Pass a copy of the structure to each task via an argument</p>
+<p>It is the slowest way.</p>
+</li>
+<li><p>Initialize process workers with a copy of the structure once</p>
+</li>
+</ul>
+
+  </div>
+</article>
+
+
+
+        
+          <div id="footer-post-container">
+  <div id="footer-post">
+
+    <div id="nav-footer" style="display: none">
+      <ul>
+        
+          <li><a href="/">Home</a></li>
+        
+          <li><a href="/archives/">Writing</a></li>
+        
+          <li><a href="/categories/">Categories</a></li>
+        
+          <li><a href="/tags/">Tags</a></li>
+        
+          <li><a href="/about/">About</a></li>
+        
+      </ul>
+    </div>
+
+    
+    
+      <div id="toc-footer" style="display: none">
+        <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#How-to-Benchmark-a-Python-Statement"><span class="toc-number">1.</span> <span class="toc-text">How to Benchmark a Python Statement</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#How-to-Share-Large-Data-Between-Processes-in-Python"><span class="toc-number">2.</span> <span class="toc-text">How to Share Large Data Between Processes in Python</span></a></li></ol>
+      </div>
+    
+
+    <div id="share-footer" style="display: none">
+      <ul>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.facebook.com/sharer.php?u=https://lnxpgn.github.io/2023/10/29/issue-43-202310-4/"><i class="fab fa-facebook fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://twitter.com/share?url=https://lnxpgn.github.io/2023/10/29/issue-43-202310-4/&text=Weekly - issue 43"><i class="fab fa-twitter fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.linkedin.com/shareArticle?url=https://lnxpgn.github.io/2023/10/29/issue-43-202310-4/&title=Weekly - issue 43"><i class="fab fa-linkedin fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://pinterest.com/pin/create/bookmarklet/?url=https://lnxpgn.github.io/2023/10/29/issue-43-202310-4/&is_video=false&description=Weekly - issue 43"><i class="fab fa-pinterest fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=Weekly - issue 43&body=Check out this article: https://lnxpgn.github.io/2023/10/29/issue-43-202310-4/"><i class="fa-solid fa-envelope fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://getpocket.com/save?url=https://lnxpgn.github.io/2023/10/29/issue-43-202310-4/&title=Weekly - issue 43"><i class="fab fa-get-pocket fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://reddit.com/submit?url=https://lnxpgn.github.io/2023/10/29/issue-43-202310-4/&title=Weekly - issue 43"><i class="fab fa-reddit fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.stumbleupon.com/submit?url=https://lnxpgn.github.io/2023/10/29/issue-43-202310-4/&title=Weekly - issue 43"><i class="fab fa-stumbleupon fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://digg.com/submit?url=https://lnxpgn.github.io/2023/10/29/issue-43-202310-4/&title=Weekly - issue 43"><i class="fab fa-digg fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.tumblr.com/share/link?url=https://lnxpgn.github.io/2023/10/29/issue-43-202310-4/&name=Weekly - issue 43&description="><i class="fab fa-tumblr fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://news.ycombinator.com/submitlink?u=https://lnxpgn.github.io/2023/10/29/issue-43-202310-4/&t=Weekly - issue 43"><i class="fab fa-hacker-news fa-lg" aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+
+    <div id="actions-footer">
+        <a id="menu" class="icon" href="#" onclick="$('#nav-footer').toggle();return false;"><i class="fa-solid fa-bars fa-lg" aria-hidden="true"></i> Menu</a>
+        
+          <a id="toc" class="icon" href="#" onclick="$('#toc-footer').toggle();return false;"><i class="fa-solid fa-list fa-lg" aria-hidden="true"></i> TOC</a>
+        
+        <a id="share" class="icon" href="#" onclick="$('#share-footer').toggle();return false;"><i class="fa-solid fa-share-alt fa-lg" aria-hidden="true"></i> Share</a>
+        <a id="top" style="display:none" class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fa-solid fa-chevron-up fa-lg" aria-hidden="true"></i> Top</a>
+    </div>
+
+  </div>
+</div>
+
+        
+        <footer id="footer">
+  <div class="footer-left">
+    Copyright &copy;
+    
+    
+    2015-2025
+    lnxpgn
+  </div>
+  <div class="footer-right">
+    <nav>
+      <ul>
+        <!--
+       --><li><a href="/">Home</a></li><!--
+     --><!--
+       --><li><a href="/archives/">Writing</a></li><!--
+     --><!--
+       --><li><a href="/categories/">Categories</a></li><!--
+     --><!--
+       --><li><a href="/tags/">Tags</a></li><!--
+     --><!--
+       --><li><a href="/about/">About</a></li><!--
+     -->
+      </ul>
+    </nav>
+  </div>
+</footer>
+
+    </div>
+    <!-- styles -->
+
+
+
+  <link rel="preload" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" crossorigin="anonymous" onload="this.onload=null;this.rel='stylesheet'"/>
+
+
+  <link
+    rel="stylesheet"
+    href="/css/prism-default-line-numbers.css"/>
+
+
+    <!-- jquery -->
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" crossorigin="anonymous"></script>
+
+
+
+
+<!-- clipboard -->
+
+  
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.7/clipboard.min.js" crossorigin="anonymous"></script>
+  
+  <script type="text/javascript">
+  $(function() {
+    // copy-btn HTML
+    var btn = "<span class=\"btn-copy tooltipped tooltipped-sw\" aria-label=\"Copy to clipboard!\">";
+    btn += '<i class="fa-regular fa-clone"></i>';
+    btn += '</span>';
+    // mount it!
+    $(".highlight table").before(btn);
+    var clip = new ClipboardJS('.btn-copy', {
+      text: function(trigger) {
+        return Array.from(trigger.nextElementSibling.querySelectorAll('.code')).reduce((str,it)=>str+it.innerText+'\n','')
+      }
+    });
+    clip.on('success', function(e) {
+      e.trigger.setAttribute('aria-label', "Copied!");
+      e.clearSelection();
+    })
+  })
+  </script>
+
+
+<script src="/js/main.js"></script>
+
+<!-- search -->
+
+<!-- Baidu Analytics -->
+
+<!-- Cloudflare Analytics -->
+
+<!-- Disqus Comments -->
+
+<!-- utterances Comments -->
+
+</body>
+</html>

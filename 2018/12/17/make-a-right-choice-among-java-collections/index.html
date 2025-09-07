@@ -1,0 +1,642 @@
+<!DOCTYPE html>
+<html lang=zh>
+<head>
+    <!-- so meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5" />
+    <meta property="og:type" content="article">
+<meta property="og:title" content="Make a Right Choice among Java Collections">
+<meta property="og:url" content="https://lnxpgn.github.io/2018/12/17/make-a-right-choice-among-java-collections/index.html">
+<meta property="og:site_name" content="竹里馆">
+<meta property="og:locale">
+<meta property="og:image" content="https://lnxpgn.github.io/images/java-collections.png">
+<meta property="article:published_time" content="2018-12-17T12:38:37.000Z">
+<meta property="article:modified_time" content="2023-12-10T10:57:02.000Z">
+<meta property="article:author" content="lnxpgn">
+<meta property="article:tag" content="Java">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://lnxpgn.github.io/images/java-collections.png">
+    
+    
+      
+        
+          <link rel="shortcut icon" href="/images/favicon.ico">
+        
+      
+      
+        
+          <link rel="icon" type="image/png" href="/images/favicon-192x192.png" sizes="192x192">
+        
+      
+      
+        
+          <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+        
+      
+    
+    <!-- title -->
+    <title>Make a Right Choice among Java Collections</title>
+    <!-- async scripts -->
+    <!-- Google Analytics -->
+
+
+    <!-- Umami Analytics -->
+
+
+    <!-- styles -->
+    
+<link rel="stylesheet" href="/css/style.css">
+
+    <!-- persian styles -->
+    
+    <!-- rss -->
+    
+    
+	<!-- mathjax -->
+	
+<meta name="generator" content="Hexo 7.3.0"><link rel="alternate" href="/atom.xml" title="竹里馆" type="application/atom+xml">
+<link rel="alternate" href="/rss.xml" title="竹里馆" type="application/rss+xml">
+</head>
+
+<body class="max-width mx-auto px3 ltr">
+    
+      <div id="header-post">
+  <a id="menu-icon" href="#" aria-label="Menu"><i class="fa-solid fa-bars fa-lg"></i></a>
+  <a id="menu-icon-tablet" href="#" aria-label="Menu"><i class="fa-solid fa-bars fa-lg"></i></a>
+  <a id="top-icon-tablet" href="#" aria-label="Top" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');" style="display:none;"><i class="fa-solid fa-chevron-up fa-lg"></i></a>
+  <span id="menu">
+    <span id="nav">
+      <ul>
+        <!--
+       --><li><a href="/">Home</a></li><!--
+     --><!--
+       --><li><a href="/archives/">Writing</a></li><!--
+     --><!--
+       --><li><a href="/categories/">Categories</a></li><!--
+     --><!--
+       --><li><a href="/tags/">Tags</a></li><!--
+     --><!--
+       --><li><a href="/about/">About</a></li><!--
+     -->
+      </ul>
+    </span>
+    <br/>
+    <span id="actions">
+      <ul>
+        
+        <li><a class="icon" aria-label="Previous post" href="/2020/01/20/know-javascript/"><i class="fa-solid fa-chevron-left" aria-hidden="true" onmouseover="$('#i-prev').toggle();" onmouseout="$('#i-prev').toggle();"></i></a></li>
+        
+        
+        <li><a class="icon" aria-label="Next post" href="/2018/05/18/http-optimization/"><i class="fa-solid fa-chevron-right" aria-hidden="true" onmouseover="$('#i-next').toggle();" onmouseout="$('#i-next').toggle();"></i></a></li>
+        
+        <li><a class="icon" aria-label="Back to top" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fa-solid fa-chevron-up" aria-hidden="true" onmouseover="$('#i-top').toggle();" onmouseout="$('#i-top').toggle();"></i></a></li>
+        <li><a class="icon" aria-label="Share post" href="#"><i class="fa-solid fa-share-alt" aria-hidden="true" onmouseover="$('#i-share').toggle();" onmouseout="$('#i-share').toggle();" onclick="$('#share').toggle();return false;"></i></a></li>
+      </ul>
+      <span id="i-prev" class="info" style="display:none;">Previous post</span>
+      <span id="i-next" class="info" style="display:none;">Next post</span>
+      <span id="i-top" class="info" style="display:none;">Back to top</span>
+      <span id="i-share" class="info" style="display:none;">Share post</span>
+    </span>
+    <br/>
+    <div id="share" style="display: none">
+      <ul>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.facebook.com/sharer.php?u=https://lnxpgn.github.io/2018/12/17/make-a-right-choice-among-java-collections/"><i class="fab fa-facebook " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://twitter.com/share?url=https://lnxpgn.github.io/2018/12/17/make-a-right-choice-among-java-collections/&text=Make a Right Choice among Java Collections"><i class="fab fa-twitter " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.linkedin.com/shareArticle?url=https://lnxpgn.github.io/2018/12/17/make-a-right-choice-among-java-collections/&title=Make a Right Choice among Java Collections"><i class="fab fa-linkedin " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://pinterest.com/pin/create/bookmarklet/?url=https://lnxpgn.github.io/2018/12/17/make-a-right-choice-among-java-collections/&is_video=false&description=Make a Right Choice among Java Collections"><i class="fab fa-pinterest " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=Make a Right Choice among Java Collections&body=Check out this article: https://lnxpgn.github.io/2018/12/17/make-a-right-choice-among-java-collections/"><i class="fa-solid fa-envelope " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://getpocket.com/save?url=https://lnxpgn.github.io/2018/12/17/make-a-right-choice-among-java-collections/&title=Make a Right Choice among Java Collections"><i class="fab fa-get-pocket " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://reddit.com/submit?url=https://lnxpgn.github.io/2018/12/17/make-a-right-choice-among-java-collections/&title=Make a Right Choice among Java Collections"><i class="fab fa-reddit " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.stumbleupon.com/submit?url=https://lnxpgn.github.io/2018/12/17/make-a-right-choice-among-java-collections/&title=Make a Right Choice among Java Collections"><i class="fab fa-stumbleupon " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://digg.com/submit?url=https://lnxpgn.github.io/2018/12/17/make-a-right-choice-among-java-collections/&title=Make a Right Choice among Java Collections"><i class="fab fa-digg " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.tumblr.com/share/link?url=https://lnxpgn.github.io/2018/12/17/make-a-right-choice-among-java-collections/&name=Make a Right Choice among Java Collections&description=&lt;p&gt;&lt;img src=&#34;/images/java-collections.png&#34; alt=&#34;Java Collections&#34;&gt;&lt;/p&gt;"><i class="fab fa-tumblr " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://news.ycombinator.com/submitlink?u=https://lnxpgn.github.io/2018/12/17/make-a-right-choice-among-java-collections/&t=Make a Right Choice among Java Collections"><i class="fab fa-hacker-news " aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+    
+    
+      <div id="toc">
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#ENV"><span class="toc-number">1.</span> <span class="toc-text">ENV</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#HashMap"><span class="toc-number">2.</span> <span class="toc-text">HashMap</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#LinkedHashMap"><span class="toc-number">3.</span> <span class="toc-text">LinkedHashMap</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#ConcurrentHashMap"><span class="toc-number">4.</span> <span class="toc-text">ConcurrentHashMap</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#ConcurrentSkipListMap"><span class="toc-number">5.</span> <span class="toc-text">ConcurrentSkipListMap</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#TreeMap"><span class="toc-number">6.</span> <span class="toc-text">TreeMap</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#WeakHashMap"><span class="toc-number">7.</span> <span class="toc-text">WeakHashMap</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#EnumMap"><span class="toc-number">8.</span> <span class="toc-text">EnumMap</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#LinkedList"><span class="toc-number">9.</span> <span class="toc-text">LinkedList</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#ArrayList"><span class="toc-number">10.</span> <span class="toc-text">ArrayList</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#CopyOnWriteArrayList"><span class="toc-number">11.</span> <span class="toc-text">CopyOnWriteArrayList</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Stack"><span class="toc-number">12.</span> <span class="toc-text">Stack</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Vector"><span class="toc-number">13.</span> <span class="toc-text">Vector</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#TreeSet"><span class="toc-number">14.</span> <span class="toc-text">TreeSet</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#HashSet"><span class="toc-number">15.</span> <span class="toc-text">HashSet</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#LinkedHashSet"><span class="toc-number">16.</span> <span class="toc-text">LinkedHashSet</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#CopyOnWriteArraySet"><span class="toc-number">17.</span> <span class="toc-text">CopyOnWriteArraySet</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#ConcurrentSkipListSet"><span class="toc-number">18.</span> <span class="toc-text">ConcurrentSkipListSet</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#EnumSet"><span class="toc-number">19.</span> <span class="toc-text">EnumSet</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#BlockingQueue"><span class="toc-number">20.</span> <span class="toc-text">BlockingQueue</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#ArrayBlockingQueue"><span class="toc-number">21.</span> <span class="toc-text">ArrayBlockingQueue</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#PriorityBlockingQueue"><span class="toc-number">22.</span> <span class="toc-text">PriorityBlockingQueue</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#LinkedBlockingQueue"><span class="toc-number">23.</span> <span class="toc-text">LinkedBlockingQueue</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#DelayQueue"><span class="toc-number">24.</span> <span class="toc-text">DelayQueue</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#SynchronousQueue"><span class="toc-number">25.</span> <span class="toc-text">SynchronousQueue</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#LinkedTransferQueue"><span class="toc-number">26.</span> <span class="toc-text">LinkedTransferQueue</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#PriorityQueue"><span class="toc-number">27.</span> <span class="toc-text">PriorityQueue</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#ConcurrentLinkedQueue"><span class="toc-number">28.</span> <span class="toc-text">ConcurrentLinkedQueue</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#LinkedBlockingDeque"><span class="toc-number">29.</span> <span class="toc-text">LinkedBlockingDeque</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#ArrayDeque"><span class="toc-number">30.</span> <span class="toc-text">ArrayDeque</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#ConcurrentLinkedDeque"><span class="toc-number">31.</span> <span class="toc-text">ConcurrentLinkedDeque</span></a></li></ol>
+      </div>
+    
+  </span>
+</div>
+
+    
+    <div class="content index py4 ">
+        
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+  <header>
+    
+    <h1 class="posttitle p-name" itemprop="name headline">
+        Make a Right Choice among Java Collections
+    </h1>
+
+
+
+    <div class="meta">
+      <!-- <span class="author p-author h-card" itemprop="author" itemscope itemtype="http://schema.org/Person">
+        <span class="p-name" itemprop="name">lnxpgn</span>
+      </span> -->
+      
+    <div class="postdate">
+      
+        <time datetime="2018-12-17T12:38:37.000Z" class="dt-published" itemprop="datePublished">2018-12-17</time>
+        
+      
+    </div>
+
+
+      
+    <div class="article-category">
+        <i class="fa-solid fa-archive"></i>
+        <a class="category-link" href="/categories/Tech/">Tech</a>
+    </div>
+
+
+      
+    <div class="article-tag">
+        <i class="fa-solid fa-tag"></i>
+        <a class="p-category" href="/tags/Java/" rel="tag">Java</a>
+    </div>
+
+
+    </div>
+  </header>
+  
+
+  <div class="content e-content" itemprop="articleBody">
+    <p><img src="/images/java-collections.png" alt="Java Collections"></p>
+<span id="more"></span>
+<p>This figure doesn’t show all inheritance information, such as, LinkedList also extends Deque interface;</p>
+<p>The primary purpose is to choose a right data structure when do Java programming.</p>
+<h2 id="ENV"><a href="#ENV" class="headerlink" title="ENV"></a>ENV</h2><p>Java 8</p>
+<h2 id="HashMap"><a href="#HashMap" class="headerlink" title="HashMap"></a>HashMap</h2><blockquote>
+<p>Base on bucket + list&#x2F;red-black tree, if the list size of a bucket is greater than 8, the list will be converted to a red-black tree;</p>
+</blockquote>
+<blockquote>
+<p>Don’t set a too high capacity if iteration performance is important, figure out a sufficiently large capacity will allow key-value pairs to be stored more efficiently than resizing the hash table;</p>
+</blockquote>
+<blockquote>
+<p>Unordered, not thread-safe, fail-fast iterator(no guarantees);</p>
+</blockquote>
+<blockquote>
+<p>Permits null keys and values;</p>
+</blockquote>
+<h2 id="LinkedHashMap"><a href="#LinkedHashMap" class="headerlink" title="LinkedHashMap"></a>LinkedHashMap</h2><blockquote>
+<p>Like HashMap, but maintains a doubly-linked list to make the map entries are in insertion order;</p>
+</blockquote>
+<blockquote>
+<p>A special constructor is provided to support LRU(Least recently used), calling the get and put methods will make the key appear in the tail of the doubly-linked list;</p>
+</blockquote>
+<h2 id="ConcurrentHashMap"><a href="#ConcurrentHashMap" class="headerlink" title="ConcurrentHashMap"></a>ConcurrentHashMap</h2><blockquote>
+<p>Same functional specification as Hashtable;</p>
+</blockquote>
+<blockquote>
+<p>Base on bucket + list&#x2F;red-black tree, like HashMap, <a target="_blank" rel="noopener" href="http://en.wikipedia.org/wiki/Compare-and-swap">CAS algo</a>, no read lock, don’t lock the entire table;</p>
+</blockquote>
+<blockquote>
+<p>Iterators are designed to be used by only one thread at a time, the results of aggregate status methods including size, isEmpty, and containsValue are typically useful only when a map is not undergoing concurrent updates in other threads;</p>
+</blockquote>
+<blockquote>
+<p>Resizing may be a relatively slow operation, estimate a appropriate hash table size;</p>
+</blockquote>
+<blockquote>
+<p>Unordered, no null keys or values, thread-safe, fail-safe iterator;</p>
+</blockquote>
+<h2 id="ConcurrentSkipListMap"><a href="#ConcurrentSkipListMap" class="headerlink" title="ConcurrentSkipListMap"></a>ConcurrentSkipListMap</h2><blockquote>
+<p>Base on <a target="_blank" rel="noopener" href="http://en.wikipedia.org/wiki/Skip_list">SkipLists</a>, space-time tradeoff, appropriate for massive data access;</p>
+</blockquote>
+<blockquote>
+<p><strong>It is sorted</strong>, natural order or defined by a Comparator, ascending key ordered views and their iterators are faster than descending ones;</p>
+</blockquote>
+<blockquote>
+<p>The size method is  inaccurate, the bulk operations putAll, equals, toArray, containsValue, and clear are not guaranteed to be performed atomically;</p>
+</blockquote>
+<blockquote>
+<p>O(log(n)), thread-safe, no null keys or values;</p>
+</blockquote>
+<h2 id="TreeMap"><a href="#TreeMap" class="headerlink" title="TreeMap"></a>TreeMap</h2><blockquote>
+<p>Base on red-black tree, O(log(n)), ordered, not thread-safe, fail-fast iterator;</p>
+</blockquote>
+<blockquote>
+<p>Natural order or defined by a Comparator;</p>
+</blockquote>
+<h2 id="WeakHashMap"><a href="#WeakHashMap" class="headerlink" title="WeakHashMap"></a>WeakHashMap</h2><blockquote>
+<p>Hash table based implementation of the Map interface;</p>
+</blockquote>
+<blockquote>
+<p>An entry in a WeakHashMap will automatically be removed when its key is no longer in ordinary use. The value objects in a WeakHashMap are held by ordinary strong references;</p>
+</blockquote>
+<blockquote>
+<p>Permits null keys and values;</p>
+</blockquote>
+<blockquote>
+<p>Not thread-safe, fail-fast iterator;</p>
+</blockquote>
+<h2 id="EnumMap"><a href="#EnumMap" class="headerlink" title="EnumMap"></a>EnumMap</h2><blockquote>
+<p>An array accessed with enum’s ordinal value as an index. There is no need to calculate hash codes or resolve collisions;</p>
+</blockquote>
+<blockquote>
+<p>Enum maps are maintained in the natural order of their keys (the order in which the enum constants are declared);</p>
+</blockquote>
+<blockquote>
+<p>Iterators returned by the collection views are weakly consistent: they will never throw ConcurrentModificationException and they may or may not show the effects of any modifications to the map that occur while the iteration is in progress;</p>
+</blockquote>
+<blockquote>
+<p>No null keys, permits null values;</p>
+</blockquote>
+<blockquote>
+<p>Not thread-safe, O(1);</p>
+</blockquote>
+<h2 id="LinkedList"><a href="#LinkedList" class="headerlink" title="LinkedList"></a>LinkedList</h2><blockquote>
+<p>A doubly-linked list, insertion and deletion are fast;</p>
+</blockquote>
+<blockquote>
+<p>Not thread-safe, fail-fast iterator, permits null elements;</p>
+</blockquote>
+<blockquote>
+<p>Also implements Deque interface, slower than ArrayDeque and need more memory for small objects. It can use an index to get an element, remove the current element during iteration and supports null elements, but ArrayDeque can’t;</p>
+</blockquote>
+<h2 id="ArrayList"><a href="#ArrayList" class="headerlink" title="ArrayList"></a>ArrayList</h2><blockquote>
+<p>Base on an array, has List interface</p>
+</blockquote>
+<blockquote>
+<p>Access its elements in constant time by their index, inserting or removing an element may be slow if the array is huge and the inserted or removed element is close to the beginning of the list;</p>
+</blockquote>
+<blockquote>
+<p>In most cases, however, ArrayList outperforms LinkedList. Even elements shifting in ArrayList, while being an O(n) operation, is implemented as a very fast System.arraycopy() call. It can even appear faster than the LinkedList‘s O(1) insertion which requires instantiating a Node object and updating multiple references under the hood. LinkedList also can have a large memory overhead due to a creation of multiple small Node objects;</p>
+</blockquote>
+<blockquote>
+<p>Not thread-safe, fail-fast iterator;</p>
+</blockquote>
+<h2 id="CopyOnWriteArrayList"><a href="#CopyOnWriteArrayList" class="headerlink" title="CopyOnWriteArrayList"></a>CopyOnWriteArrayList</h2><blockquote>
+<p>A variant of ArrayList, thread-safe;</p>
+</blockquote>
+<blockquote>
+<p>Iterator provides a snapshot of the state of the list when the iterator was constructed. No synchronization is needed while traversing the iterator, this array never changes during the lifetime of the iterator. Element-changing operations on iterators themselves (remove, set, and add) are not supported;</p>
+</blockquote>
+<blockquote>
+<p>Perfer reading. Element-changing operations are costly. Don’t block read, but read old value when writing. Be best suited for small size, read-only operations;</p>
+</blockquote>
+<blockquote>
+<p>Permits null keys and values;</p>
+</blockquote>
+<h2 id="Stack"><a href="#Stack" class="headerlink" title="Stack"></a>Stack</h2><blockquote>
+<p>Use Deque’s implementations instead of it, such as ArrayDeque, ConcurrentLinkedDeque;</p>
+</blockquote>
+<h2 id="Vector"><a href="#Vector" class="headerlink" title="Vector"></a>Vector</h2><blockquote>
+<p>Use ArrayList or CopyOnWriteArrayList instead of it;</p>
+</blockquote>
+<h2 id="TreeSet"><a href="#TreeSet" class="headerlink" title="TreeSet"></a>TreeSet</h2><blockquote>
+<p>Based on TreeMap;</p>
+</blockquote>
+<blockquote>
+<p>O(log(n)) time for the basic operations (add, remove and contains);</p>
+</blockquote>
+<blockquote>
+<p>Natural order or defined by a Comparator, not thread-safe, fail-fast iterator;</p>
+</blockquote>
+<h2 id="HashSet"><a href="#HashSet" class="headerlink" title="HashSet"></a>HashSet</h2><blockquote>
+<p>Based on HashMap;</p>
+</blockquote>
+<blockquote>
+<p>Iterating over this set requires time proportional to the sum of the HashSet instance’s size (the number of elements) plus the “capacity” of the backing HashMap instance (the number of buckets). Thus, it’s very important not to set the initial capacity too high (or the load factor too low) if iteration performance is important;</p>
+</blockquote>
+<blockquote>
+<p>Permits null elements, unordered, not thread-safe, fail-fast iterator;</p>
+</blockquote>
+<h2 id="LinkedHashSet"><a href="#LinkedHashSet" class="headerlink" title="LinkedHashSet"></a>LinkedHashSet</h2><blockquote>
+<p> HashSet + doubly-linked list;</p>
+</blockquote>
+<blockquote>
+<p>It provides constant-time performance for the basic operations (add, contains and remove), assuming the hash function disperses elements properly among the buckets. Performance is likely to be just slightly below that of HashSet, due to the added expense of maintaining the linked list, with one exception: Iteration over a LinkedHashSet requires time proportional to the size of the set, regardless of its capacity. Iteration over a HashSet is likely to be more expensive, requiring time proportional to its capacity;</p>
+</blockquote>
+<blockquote>
+<p>Has two parameters that affect its performance: initial capacity and load factor. They are defined precisely as for HashSet. Note, however, that the penalty for choosing an excessively high value for initial capacity is less severe for this class than for HashSet, as iteration times for this class are unaffected by capacity;</p>
+</blockquote>
+<blockquote>
+<p> Permits null elements, insertion-order, not thread-safe, fail-fast iterator;</p>
+</blockquote>
+<h2 id="CopyOnWriteArraySet"><a href="#CopyOnWriteArraySet" class="headerlink" title="CopyOnWriteArraySet"></a>CopyOnWriteArraySet</h2><blockquote>
+<p>Set + CopyOnWriteArrayList;</p>
+</blockquote>
+<h2 id="ConcurrentSkipListSet"><a href="#ConcurrentSkipListSet" class="headerlink" title="ConcurrentSkipListSet"></a>ConcurrentSkipListSet</h2><blockquote>
+<p>Based on ConcurrentSkipListMap, O(log(n));</p>
+</blockquote>
+<h2 id="EnumSet"><a href="#EnumSet" class="headerlink" title="EnumSet"></a>EnumSet</h2><blockquote>
+<p> Are represented internally as bit vectors;</p>
+</blockquote>
+<blockquote>
+<p>The iterator returned by the iterator method traverses the elements in their natural order (the order in which the enum constants are declared);</p>
+</blockquote>
+<blockquote>
+<p>The returned iterator is weakly consistent: it will never throw ConcurrentModificationException and it may or may not show the effects of any modifications to the set that occur while the iteration is in progress;</p>
+</blockquote>
+<blockquote>
+<p>No null elements, not thread-safe, O(1);</p>
+</blockquote>
+<h2 id="BlockingQueue"><a href="#BlockingQueue" class="headerlink" title="BlockingQueue"></a>BlockingQueue</h2><blockquote>
+<p>Insert&#x2F;Remove&#x2F;Examine operations come in four forms: wait, throw an exception, return a special value(null or false), timeout;</p>
+</blockquote>
+<blockquote>
+<p>Support the Collection interface;</p>
+</blockquote>
+<blockquote>
+<p>Primarily for producer-consumer queues;</p>
+</blockquote>
+<blockquote>
+<p>No null elements;</p>
+</blockquote>
+<blockquote>
+<p>Thread-safe;</p>
+</blockquote>
+<blockquote>
+<p>The bulk Collection operations addAll, containsAll, retainAll and removeAll are not necessarily performed atomically unless specified otherwise in an implementation. May fail after adding only some of the elements;</p>
+</blockquote>
+<blockquote>
+<p>remove()&#x2F;clear()&#x2F;contains() functions are O(n);</p>
+</blockquote>
+<h2 id="ArrayBlockingQueue"><a href="#ArrayBlockingQueue" class="headerlink" title="ArrayBlockingQueue"></a>ArrayBlockingQueue</h2><blockquote>
+<p>A bounded BlockingQueue backed by an array, FIFO, thread-safe(ReentrantLock), producer-consumer model, optional fairness policy;</p>
+</blockquote>
+<blockquote>
+<p>Enqueue and dequeue operations are O(1); </p>
+</blockquote>
+<h2 id="PriorityBlockingQueue"><a href="#PriorityBlockingQueue" class="headerlink" title="PriorityBlockingQueue"></a>PriorityBlockingQueue</h2><blockquote>
+<p>A unbounded BlockingQueue, array + priority heap, natural order or defined by a Comparator, thread-safe(ReentrantLock);</p>
+</blockquote>
+<blockquote>
+<p>It is unbounded, doesn’t block put()&#x2F;offer(e, time, unit), might cause OutOfMemoryError;</p>
+</blockquote>
+<blockquote>
+<p>A priority queue relying on natural ordering also does not permit insertion of non-comparable objects (doing so results in ClassCastException);</p>
+</blockquote>
+<blockquote>
+<p>iterator() is not guaranteed to traverse the elements in any particular order;</p>
+</blockquote>
+<blockquote>
+<p>Enqueue and dequeue operations are O(log(n)); </p>
+</blockquote>
+<h2 id="LinkedBlockingQueue"><a href="#LinkedBlockingQueue" class="headerlink" title="LinkedBlockingQueue"></a>LinkedBlockingQueue</h2><blockquote>
+<p>An optionally-bounded blocking queue based on linked nodes, FIFO, thread-safe(ReentrantLock);</p>
+</blockquote>
+<blockquote>
+<p>Linked queues typically have higher throughput than array-based queues but less predictable performance in most concurrent applications;</p>
+</blockquote>
+<blockquote>
+<p>Enqueue and dequeue operations are O(1); </p>
+</blockquote>
+<h2 id="DelayQueue"><a href="#DelayQueue" class="headerlink" title="DelayQueue"></a>DelayQueue</h2><blockquote>
+<p>An unbounded blocking queue;</p>
+</blockquote>
+<blockquote>
+<p>An element can only be taken when its delay has expired;</p>
+</blockquote>
+<h2 id="SynchronousQueue"><a href="#SynchronousQueue" class="headerlink" title="SynchronousQueue"></a>SynchronousQueue</h2><blockquote>
+<p>A blocking queue in which each insert operation must wait for a corresponding remove operation by another thread, and vice versa;</p>
+</blockquote>
+<blockquote>
+<p>Not have any internal capacity, acts as an empty collection, nothing to iterate;</p>
+</blockquote>
+<blockquote>
+<p>Optional fairness policy to guarantee FIFO order;</p>
+</blockquote>
+<h2 id="LinkedTransferQueue"><a href="#LinkedTransferQueue" class="headerlink" title="LinkedTransferQueue"></a>LinkedTransferQueue</h2><blockquote>
+<p>An unbounded TransferQueue(a BlockingQueue) based on linked nodes, producers may wait for consumers to receive elements;</p>
+</blockquote>
+<blockquote>
+<p>FIFO, thread-safe, <a target="_blank" rel="noopener" href="http://en.wikipedia.org/wiki/Compare-and-swap">CAS algo</a>;</p>
+</blockquote>
+<blockquote>
+<p>size() is inaccurate;</p>
+</blockquote>
+<blockquote>
+<p>Has a special function, transfer(), which transfers the specified element immediately if there exists a consumer already waiting to receive it (in take() or timed poll), else inserts the specified element at the tail of this queue and waits until the element is received by a consumer. In other worlds, if already have elements in the queue, transfer() will wait all of them to be received first;</p>
+</blockquote>
+<blockquote>
+<p>LinkedBlockingQueue(unbounded) + SynchronousQueue(fairness) + ConcurrentLinkedQueue;</p>
+</blockquote>
+<h2 id="PriorityQueue"><a href="#PriorityQueue" class="headerlink" title="PriorityQueue"></a>PriorityQueue</h2><blockquote>
+<p>An unbounded priority queue based on a priority heap, but has an internal capacity governing the size of an array used to store the elements on the queue;</p>
+</blockquote>
+<blockquote>
+<p>No null elements, not thread-safe;</p>
+</blockquote>
+<blockquote>
+<p>Natural order or defined by a Comparator. The head of this queue is the least element with respect to the specified ordering. Natural ordering also does not permit insertion of non-comparable objects (doing so results in ClassCastException). if use a Comparator, the least element is depend on this Comparator, it may be the minimum or maximum if these elements are numbers;</p>
+</blockquote>
+<blockquote>
+<p>iterator() is not guaranteed to traverse the elements in any particular order;</p>
+</blockquote>
+<blockquote>
+<p>Enqueuing and dequeuing methods are O(log(n)), remove() and contains() are O(n), peek(), element() and size() are O(1);</p>
+</blockquote>
+<h2 id="ConcurrentLinkedQueue"><a href="#ConcurrentLinkedQueue" class="headerlink" title="ConcurrentLinkedQueue"></a>ConcurrentLinkedQueue</h2><blockquote>
+<p>An unbounded thread-safe queue based on linked nodes;</p>
+</blockquote>
+<blockquote>
+<p>FIFO, no null elements, thread-safe, lock-free, <a target="_blank" rel="noopener" href="http://en.wikipedia.org/wiki/Compare-and-swap">CAS algo</a>. The thread-safe is relative:</p>
+</blockquote>
+<pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token keyword">if</span><span class="token punctuation">(</span> <span class="token operator">!</span>queue<span class="token punctuation">.</span><span class="token function">isEmpty</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>  
+    queue<span class="token punctuation">.</span><span class="token function">poll</span><span class="token punctuation">(</span>obj<span class="token punctuation">)</span><span class="token punctuation">;</span>  
+<span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+<p>No! need a lock</p>
+<pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token keyword">synchronized</span><span class="token punctuation">(</span> queue <span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+    <span class="token keyword">if</span><span class="token punctuation">(</span> <span class="token operator">!</span>queue<span class="token punctuation">.</span><span class="token function">isEmpty</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+        queue<span class="token punctuation">.</span><span class="token function">poll</span><span class="token punctuation">(</span>obj<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">&#125;</span>
+<span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<blockquote>
+<p>Iterators are weakly consistent;</p>
+</blockquote>
+<blockquote>
+<p>The size method is  inaccurate, the bulk operations addAll, removeAll, retainAll, containsAll, equals, and toArray are not guaranteed to be performed atomically;</p>
+</blockquote>
+<h2 id="LinkedBlockingDeque"><a href="#LinkedBlockingDeque" class="headerlink" title="LinkedBlockingDeque"></a>LinkedBlockingDeque</h2><blockquote>
+<p>An optionally-bounded blocking deque based on linked nodes, BlockingDeque extends BlockingQueue interface;</p>
+</blockquote>
+<blockquote>
+<p>FIFO, LIFO, thread-safe(ReentrantLock), no null elements;</p>
+</blockquote>
+<blockquote>
+<p>remove(), removeFirstOccurrence(), removeLastOccurrence(), contains(), iterator.remove(), and the bulk operations: O(n), others: O(1);</p>
+</blockquote>
+<h2 id="ArrayDeque"><a href="#ArrayDeque" class="headerlink" title="ArrayDeque"></a>ArrayDeque</h2><blockquote>
+<p>Resizable-array implementation of the Deque interface, has a circular array, the array length is powers of two;</p>
+</blockquote>
+<blockquote>
+<p>FIFO, LIFO, no capacity restrictions, not thread-safe, fail-fast iterator, no null elements;</p>
+</blockquote>
+<blockquote>
+<p>Faster than LinkedList when used as a queue. But allocate enough capacity before use it, otherwise need to enlarge the array and copy data;</p>
+</blockquote>
+<blockquote>
+<p>As a stack instead of Stack;</p>
+</blockquote>
+<h2 id="ConcurrentLinkedDeque"><a href="#ConcurrentLinkedDeque" class="headerlink" title="ConcurrentLinkedDeque"></a>ConcurrentLinkedDeque</h2><blockquote>
+<p>An unbounded concurrent deque based on linked nodes;</p>
+</blockquote>
+<blockquote>
+<p>FIFO, LIFO, no null elements, thread-safe, lock-free;</p>
+</blockquote>
+<blockquote>
+<p>The size method is  inaccurate, the bulk operations addAll, removeAll, retainAll, containsAll, equals, and toArray are not guaranteed to be performed atomically;</p>
+</blockquote>
+<blockquote>
+<p>As a stack instead of Stack;</p>
+</blockquote>
+
+  </div>
+</article>
+
+
+
+        
+          <div id="footer-post-container">
+  <div id="footer-post">
+
+    <div id="nav-footer" style="display: none">
+      <ul>
+        
+          <li><a href="/">Home</a></li>
+        
+          <li><a href="/archives/">Writing</a></li>
+        
+          <li><a href="/categories/">Categories</a></li>
+        
+          <li><a href="/tags/">Tags</a></li>
+        
+          <li><a href="/about/">About</a></li>
+        
+      </ul>
+    </div>
+
+    
+    
+      <div id="toc-footer" style="display: none">
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#ENV"><span class="toc-number">1.</span> <span class="toc-text">ENV</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#HashMap"><span class="toc-number">2.</span> <span class="toc-text">HashMap</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#LinkedHashMap"><span class="toc-number">3.</span> <span class="toc-text">LinkedHashMap</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#ConcurrentHashMap"><span class="toc-number">4.</span> <span class="toc-text">ConcurrentHashMap</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#ConcurrentSkipListMap"><span class="toc-number">5.</span> <span class="toc-text">ConcurrentSkipListMap</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#TreeMap"><span class="toc-number">6.</span> <span class="toc-text">TreeMap</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#WeakHashMap"><span class="toc-number">7.</span> <span class="toc-text">WeakHashMap</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#EnumMap"><span class="toc-number">8.</span> <span class="toc-text">EnumMap</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#LinkedList"><span class="toc-number">9.</span> <span class="toc-text">LinkedList</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#ArrayList"><span class="toc-number">10.</span> <span class="toc-text">ArrayList</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#CopyOnWriteArrayList"><span class="toc-number">11.</span> <span class="toc-text">CopyOnWriteArrayList</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Stack"><span class="toc-number">12.</span> <span class="toc-text">Stack</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Vector"><span class="toc-number">13.</span> <span class="toc-text">Vector</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#TreeSet"><span class="toc-number">14.</span> <span class="toc-text">TreeSet</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#HashSet"><span class="toc-number">15.</span> <span class="toc-text">HashSet</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#LinkedHashSet"><span class="toc-number">16.</span> <span class="toc-text">LinkedHashSet</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#CopyOnWriteArraySet"><span class="toc-number">17.</span> <span class="toc-text">CopyOnWriteArraySet</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#ConcurrentSkipListSet"><span class="toc-number">18.</span> <span class="toc-text">ConcurrentSkipListSet</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#EnumSet"><span class="toc-number">19.</span> <span class="toc-text">EnumSet</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#BlockingQueue"><span class="toc-number">20.</span> <span class="toc-text">BlockingQueue</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#ArrayBlockingQueue"><span class="toc-number">21.</span> <span class="toc-text">ArrayBlockingQueue</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#PriorityBlockingQueue"><span class="toc-number">22.</span> <span class="toc-text">PriorityBlockingQueue</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#LinkedBlockingQueue"><span class="toc-number">23.</span> <span class="toc-text">LinkedBlockingQueue</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#DelayQueue"><span class="toc-number">24.</span> <span class="toc-text">DelayQueue</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#SynchronousQueue"><span class="toc-number">25.</span> <span class="toc-text">SynchronousQueue</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#LinkedTransferQueue"><span class="toc-number">26.</span> <span class="toc-text">LinkedTransferQueue</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#PriorityQueue"><span class="toc-number">27.</span> <span class="toc-text">PriorityQueue</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#ConcurrentLinkedQueue"><span class="toc-number">28.</span> <span class="toc-text">ConcurrentLinkedQueue</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#LinkedBlockingDeque"><span class="toc-number">29.</span> <span class="toc-text">LinkedBlockingDeque</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#ArrayDeque"><span class="toc-number">30.</span> <span class="toc-text">ArrayDeque</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#ConcurrentLinkedDeque"><span class="toc-number">31.</span> <span class="toc-text">ConcurrentLinkedDeque</span></a></li></ol>
+      </div>
+    
+
+    <div id="share-footer" style="display: none">
+      <ul>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.facebook.com/sharer.php?u=https://lnxpgn.github.io/2018/12/17/make-a-right-choice-among-java-collections/"><i class="fab fa-facebook fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://twitter.com/share?url=https://lnxpgn.github.io/2018/12/17/make-a-right-choice-among-java-collections/&text=Make a Right Choice among Java Collections"><i class="fab fa-twitter fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.linkedin.com/shareArticle?url=https://lnxpgn.github.io/2018/12/17/make-a-right-choice-among-java-collections/&title=Make a Right Choice among Java Collections"><i class="fab fa-linkedin fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://pinterest.com/pin/create/bookmarklet/?url=https://lnxpgn.github.io/2018/12/17/make-a-right-choice-among-java-collections/&is_video=false&description=Make a Right Choice among Java Collections"><i class="fab fa-pinterest fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=Make a Right Choice among Java Collections&body=Check out this article: https://lnxpgn.github.io/2018/12/17/make-a-right-choice-among-java-collections/"><i class="fa-solid fa-envelope fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://getpocket.com/save?url=https://lnxpgn.github.io/2018/12/17/make-a-right-choice-among-java-collections/&title=Make a Right Choice among Java Collections"><i class="fab fa-get-pocket fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://reddit.com/submit?url=https://lnxpgn.github.io/2018/12/17/make-a-right-choice-among-java-collections/&title=Make a Right Choice among Java Collections"><i class="fab fa-reddit fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.stumbleupon.com/submit?url=https://lnxpgn.github.io/2018/12/17/make-a-right-choice-among-java-collections/&title=Make a Right Choice among Java Collections"><i class="fab fa-stumbleupon fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://digg.com/submit?url=https://lnxpgn.github.io/2018/12/17/make-a-right-choice-among-java-collections/&title=Make a Right Choice among Java Collections"><i class="fab fa-digg fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.tumblr.com/share/link?url=https://lnxpgn.github.io/2018/12/17/make-a-right-choice-among-java-collections/&name=Make a Right Choice among Java Collections&description=&lt;p&gt;&lt;img src=&#34;/images/java-collections.png&#34; alt=&#34;Java Collections&#34;&gt;&lt;/p&gt;"><i class="fab fa-tumblr fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://news.ycombinator.com/submitlink?u=https://lnxpgn.github.io/2018/12/17/make-a-right-choice-among-java-collections/&t=Make a Right Choice among Java Collections"><i class="fab fa-hacker-news fa-lg" aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+
+    <div id="actions-footer">
+        <a id="menu" class="icon" href="#" onclick="$('#nav-footer').toggle();return false;"><i class="fa-solid fa-bars fa-lg" aria-hidden="true"></i> Menu</a>
+        
+          <a id="toc" class="icon" href="#" onclick="$('#toc-footer').toggle();return false;"><i class="fa-solid fa-list fa-lg" aria-hidden="true"></i> TOC</a>
+        
+        <a id="share" class="icon" href="#" onclick="$('#share-footer').toggle();return false;"><i class="fa-solid fa-share-alt fa-lg" aria-hidden="true"></i> Share</a>
+        <a id="top" style="display:none" class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fa-solid fa-chevron-up fa-lg" aria-hidden="true"></i> Top</a>
+    </div>
+
+  </div>
+</div>
+
+        
+        <footer id="footer">
+  <div class="footer-left">
+    Copyright &copy;
+    
+    
+    2015-2025
+    lnxpgn
+  </div>
+  <div class="footer-right">
+    <nav>
+      <ul>
+        <!--
+       --><li><a href="/">Home</a></li><!--
+     --><!--
+       --><li><a href="/archives/">Writing</a></li><!--
+     --><!--
+       --><li><a href="/categories/">Categories</a></li><!--
+     --><!--
+       --><li><a href="/tags/">Tags</a></li><!--
+     --><!--
+       --><li><a href="/about/">About</a></li><!--
+     -->
+      </ul>
+    </nav>
+  </div>
+</footer>
+
+    </div>
+    <!-- styles -->
+
+
+
+  <link rel="preload" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" crossorigin="anonymous" onload="this.onload=null;this.rel='stylesheet'"/>
+
+
+  <link
+    rel="stylesheet"
+    href="/css/prism-default-line-numbers.css"/>
+
+
+    <!-- jquery -->
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" crossorigin="anonymous"></script>
+
+
+
+
+<!-- clipboard -->
+
+  
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.7/clipboard.min.js" crossorigin="anonymous"></script>
+  
+  <script type="text/javascript">
+  $(function() {
+    // copy-btn HTML
+    var btn = "<span class=\"btn-copy tooltipped tooltipped-sw\" aria-label=\"Copy to clipboard!\">";
+    btn += '<i class="fa-regular fa-clone"></i>';
+    btn += '</span>';
+    // mount it!
+    $(".highlight table").before(btn);
+    var clip = new ClipboardJS('.btn-copy', {
+      text: function(trigger) {
+        return Array.from(trigger.nextElementSibling.querySelectorAll('.code')).reduce((str,it)=>str+it.innerText+'\n','')
+      }
+    });
+    clip.on('success', function(e) {
+      e.trigger.setAttribute('aria-label', "Copied!");
+      e.clearSelection();
+    })
+  })
+  </script>
+
+
+<script src="/js/main.js"></script>
+
+<!-- search -->
+
+<!-- Baidu Analytics -->
+
+<!-- Cloudflare Analytics -->
+
+<!-- Disqus Comments -->
+
+<!-- utterances Comments -->
+
+</body>
+</html>

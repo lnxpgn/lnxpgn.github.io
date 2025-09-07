@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html lang=zh>
+<head>
+    <!-- so meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5" />
+    <meta name="description" content="ModulesAs your program gets longer, you can split it into several files for easier maintenance, you may also want to share a handy function across several programs. To support this, Python has a way t">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Python Modules and Packages">
+<meta property="og:url" content="https://lnxpgn.github.io/2023/12/09/python-modules-and-packages/index.html">
+<meta property="og:site_name" content="竹里馆">
+<meta property="og:description" content="ModulesAs your program gets longer, you can split it into several files for easier maintenance, you may also want to share a handy function across several programs. To support this, Python has a way t">
+<meta property="og:locale">
+<meta property="article:published_time" content="2023-12-08T16:00:00.000Z">
+<meta property="article:modified_time" content="2023-12-09T10:30:22.000Z">
+<meta property="article:author" content="lnxpgn">
+<meta property="article:tag" content="Python">
+<meta name="twitter:card" content="summary">
+    
+    
+      
+        
+          <link rel="shortcut icon" href="/images/favicon.ico">
+        
+      
+      
+        
+          <link rel="icon" type="image/png" href="/images/favicon-192x192.png" sizes="192x192">
+        
+      
+      
+        
+          <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+        
+      
+    
+    <!-- title -->
+    <title>Python Modules and Packages</title>
+    <!-- async scripts -->
+    <!-- Google Analytics -->
+
+
+    <!-- Umami Analytics -->
+
+
+    <!-- styles -->
+    
+<link rel="stylesheet" href="/css/style.css">
+
+    <!-- persian styles -->
+    
+    <!-- rss -->
+    
+    
+	<!-- mathjax -->
+	
+<meta name="generator" content="Hexo 7.3.0"><link rel="alternate" href="/atom.xml" title="竹里馆" type="application/atom+xml">
+<link rel="alternate" href="/rss.xml" title="竹里馆" type="application/rss+xml">
+</head>
+
+<body class="max-width mx-auto px3 ltr">
+    
+      <div id="header-post">
+  <a id="menu-icon" href="#" aria-label="Menu"><i class="fa-solid fa-bars fa-lg"></i></a>
+  <a id="menu-icon-tablet" href="#" aria-label="Menu"><i class="fa-solid fa-bars fa-lg"></i></a>
+  <a id="top-icon-tablet" href="#" aria-label="Top" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');" style="display:none;"><i class="fa-solid fa-chevron-up fa-lg"></i></a>
+  <span id="menu">
+    <span id="nav">
+      <ul>
+        <!--
+       --><li><a href="/">Home</a></li><!--
+     --><!--
+       --><li><a href="/archives/">Writing</a></li><!--
+     --><!--
+       --><li><a href="/categories/">Categories</a></li><!--
+     --><!--
+       --><li><a href="/tags/">Tags</a></li><!--
+     --><!--
+       --><li><a href="/about/">About</a></li><!--
+     -->
+      </ul>
+    </span>
+    <br/>
+    <span id="actions">
+      <ul>
+        
+        <li><a class="icon" aria-label="Previous post" href="/2023/12/17/issue-46-202312-1/"><i class="fa-solid fa-chevron-left" aria-hidden="true" onmouseover="$('#i-prev').toggle();" onmouseout="$('#i-prev').toggle();"></i></a></li>
+        
+        
+        <li><a class="icon" aria-label="Next post" href="/2023/12/03/zig/"><i class="fa-solid fa-chevron-right" aria-hidden="true" onmouseover="$('#i-next').toggle();" onmouseout="$('#i-next').toggle();"></i></a></li>
+        
+        <li><a class="icon" aria-label="Back to top" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fa-solid fa-chevron-up" aria-hidden="true" onmouseover="$('#i-top').toggle();" onmouseout="$('#i-top').toggle();"></i></a></li>
+        <li><a class="icon" aria-label="Share post" href="#"><i class="fa-solid fa-share-alt" aria-hidden="true" onmouseover="$('#i-share').toggle();" onmouseout="$('#i-share').toggle();" onclick="$('#share').toggle();return false;"></i></a></li>
+      </ul>
+      <span id="i-prev" class="info" style="display:none;">Previous post</span>
+      <span id="i-next" class="info" style="display:none;">Next post</span>
+      <span id="i-top" class="info" style="display:none;">Back to top</span>
+      <span id="i-share" class="info" style="display:none;">Share post</span>
+    </span>
+    <br/>
+    <div id="share" style="display: none">
+      <ul>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.facebook.com/sharer.php?u=https://lnxpgn.github.io/2023/12/09/python-modules-and-packages/"><i class="fab fa-facebook " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://twitter.com/share?url=https://lnxpgn.github.io/2023/12/09/python-modules-and-packages/&text=Python Modules and Packages"><i class="fab fa-twitter " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.linkedin.com/shareArticle?url=https://lnxpgn.github.io/2023/12/09/python-modules-and-packages/&title=Python Modules and Packages"><i class="fab fa-linkedin " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://pinterest.com/pin/create/bookmarklet/?url=https://lnxpgn.github.io/2023/12/09/python-modules-and-packages/&is_video=false&description=Python Modules and Packages"><i class="fab fa-pinterest " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=Python Modules and Packages&body=Check out this article: https://lnxpgn.github.io/2023/12/09/python-modules-and-packages/"><i class="fa-solid fa-envelope " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://getpocket.com/save?url=https://lnxpgn.github.io/2023/12/09/python-modules-and-packages/&title=Python Modules and Packages"><i class="fab fa-get-pocket " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://reddit.com/submit?url=https://lnxpgn.github.io/2023/12/09/python-modules-and-packages/&title=Python Modules and Packages"><i class="fab fa-reddit " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.stumbleupon.com/submit?url=https://lnxpgn.github.io/2023/12/09/python-modules-and-packages/&title=Python Modules and Packages"><i class="fab fa-stumbleupon " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://digg.com/submit?url=https://lnxpgn.github.io/2023/12/09/python-modules-and-packages/&title=Python Modules and Packages"><i class="fab fa-digg " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.tumblr.com/share/link?url=https://lnxpgn.github.io/2023/12/09/python-modules-and-packages/&name=Python Modules and Packages&description=&lt;h3 id=&#34;Modules&#34;&gt;&lt;a href=&#34;#Modules&#34; class=&#34;headerlink&#34; title=&#34;Modules&#34;&gt;&lt;/a&gt;Modules&lt;/h3&gt;&lt;p&gt;As your program gets longer, you can split it into several files for easier maintenance, you may also want to share a handy function across several programs.&lt;/p&gt;
+&lt;p&gt;To support this, Python has a way to put definitions in a file, such a file is called a module, the file name is the module name with the suffix &lt;code&gt;.py&lt;/code&gt; appended.&lt;/p&gt;"><i class="fab fa-tumblr " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://news.ycombinator.com/submitlink?u=https://lnxpgn.github.io/2023/12/09/python-modules-and-packages/&t=Python Modules and Packages"><i class="fab fa-hacker-news " aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+    
+    
+      <div id="toc">
+        <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#Modules"><span class="toc-number">1.</span> <span class="toc-text">Modules</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Packages"><span class="toc-number">2.</span> <span class="toc-text">Packages</span></a></li></ol>
+      </div>
+    
+  </span>
+</div>
+
+    
+    <div class="content index py4 ">
+        
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+  <header>
+    
+    <h1 class="posttitle p-name" itemprop="name headline">
+        Python Modules and Packages
+    </h1>
+
+
+
+    <div class="meta">
+      <!-- <span class="author p-author h-card" itemprop="author" itemscope itemtype="http://schema.org/Person">
+        <span class="p-name" itemprop="name">lnxpgn</span>
+      </span> -->
+      
+    <div class="postdate">
+      
+        <time datetime="2023-12-08T16:00:00.000Z" class="dt-published" itemprop="datePublished">2023-12-09</time>
+        
+      
+    </div>
+
+
+      
+    <div class="article-category">
+        <i class="fa-solid fa-archive"></i>
+        <a class="category-link" href="/categories/Tech/">Tech</a>
+    </div>
+
+
+      
+    <div class="article-tag">
+        <i class="fa-solid fa-tag"></i>
+        <a class="p-category" href="/tags/Python/" rel="tag">Python</a>
+    </div>
+
+
+    </div>
+  </header>
+  
+
+  <div class="content e-content" itemprop="articleBody">
+    <h3 id="Modules"><a href="#Modules" class="headerlink" title="Modules"></a>Modules</h3><p>As your program gets longer, you can split it into several files for easier maintenance, you may also want to share a handy function across several programs.</p>
+<p>To support this, Python has a way to put definitions in a file, such a file is called a module, the file name is the module name with the suffix <code>.py</code> appended.</p>
+<span id="more"></span>
+<p><code>fibo.py</code>:</p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"In fibo module."</span><span class="token punctuation">)</span>
+
+<span class="token keyword">def</span> <span class="token function">fib</span><span class="token punctuation">(</span>n<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token triple-quoted-string string">"""write Fibonacci series up to n."""</span>
+    a<span class="token punctuation">,</span> b <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">1</span>
+    <span class="token keyword">while</span> a <span class="token operator">&lt;</span> n<span class="token punctuation">:</span>
+        <span class="token keyword">print</span><span class="token punctuation">(</span>a<span class="token punctuation">,</span> end<span class="token operator">=</span><span class="token string">' '</span><span class="token punctuation">)</span>
+        a<span class="token punctuation">,</span> b <span class="token operator">=</span> b<span class="token punctuation">,</span> a<span class="token operator">+</span>b
+    <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string-interpolation"><span class="token string">f"module name: </span><span class="token interpolation"><span class="token punctuation">&#123;</span>__name__<span class="token punctuation">&#125;</span></span><span class="token string">"</span></span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>A module can contain executable statements as well as function definitions. They are executed only the first time the module name is encountered in an import statement.</p>
+<p>For efficiency reasons, each module is only imported once per interpreter session.</p>
+<p>Within a module, the module’s name (as a string) is available as the value of the global variable <code>__name__</code>.</p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token comment"># In a Python interpreter</span>
+
+<span class="token operator">>></span><span class="token operator">></span> <span class="token keyword">import</span> fibo
+In fibo module<span class="token punctuation">.</span>
+module name<span class="token punctuation">:</span> fibo<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token comment"># In Shell</span>
+
+<span class="token operator">></span> python fibo.py
+In fibo module.
+module name: __main__<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p><code>python -c &#39;import fibo&#39;</code> outputs the module name <code>fibo</code>.</p>
+<p><code>python -m fibo</code> outputs the module name <code>__main__</code>.</p>
+<p>You may see some Python files that have the following code:</p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">if</span> __name__ <span class="token operator">==</span> <span class="token string">"__main__"</span><span class="token punctuation">:</span>
+    <span class="token comment"># some code</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+
+<p><code>__name__</code>  is used to distinguish whether the file is running directly or imported as a module.</p>
+<p>Each module has its own private namespace.</p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token comment"># fibo is a namespace</span>
+
+<span class="token operator">>></span><span class="token operator">></span> fibo<span class="token punctuation">.</span>fib
+<span class="token operator">&lt;</span>function fib at <span class="token number">0x7f89fc505400</span><span class="token operator">></span>
+<span class="token operator">>></span><span class="token operator">></span> fib<span class="token operator">=</span>fibo<span class="token punctuation">.</span>fib
+<span class="token operator">>></span><span class="token operator">></span> fib<span class="token punctuation">(</span><span class="token number">100</span><span class="token punctuation">)</span>
+<span class="token number">0</span> <span class="token number">1</span> <span class="token number">1</span> <span class="token number">2</span> <span class="token number">3</span> <span class="token number">5</span> <span class="token number">8</span> <span class="token number">13</span> <span class="token number">21</span> <span class="token number">34</span> <span class="token number">55</span> <span class="token number">89</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>Different ways to use <code>import</code>:</p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token comment"># Import the module, fibo is just a namespace</span>
+<span class="token comment"># To call the fib function within the fibo module: fibo.fib(100)</span>
+<span class="token keyword">import</span> fibo
+<span class="token comment"># fib is an alias of fibo</span>
+<span class="token keyword">import</span> fibo <span class="token keyword">as</span> fib
+
+<span class="token comment"># Only import the fib function</span>
+<span class="token keyword">from</span> fibo <span class="token keyword">import</span> fib
+<span class="token comment"># fibonacci is an alias of fib</span>
+<span class="token keyword">from</span> fibo <span class="token keyword">import</span> fib <span class="token keyword">as</span> fibonacci
+
+<span class="token comment"># Import all names except those beginning with an underscore (_)</span>
+<span class="token keyword">from</span> fibo <span class="token keyword">import</span> <span class="token operator">*</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>The module search path:</p>
+<ol>
+<li><p>built-in modules</p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token comment"># check them</span>
+
+<span class="token keyword">import</span> sys
+<span class="token keyword">print</span><span class="token punctuation">(</span>sys<span class="token punctuation">.</span>builtin_module_names<span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+</li>
+<li><p>A list of directories given by the variable <code>sys.path</code></p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token comment"># check it</span>
+
+<span class="token keyword">import</span> sys
+<span class="token keyword">print</span><span class="token punctuation">(</span>sys<span class="token punctuation">.</span>path<span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre></li>
+</ol>
+<p><code>sys.path</code> is initialized from these locations:</p>
+<ol>
+<li><p>The directory containing the <code>.py</code> file or current working directory</p>
+<p><code>fibo.py</code> is in <code>/opt/py-modules</code>.</p>
+<p>When running the module directly:</p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">python fibo.py<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p>The directory is <code>/opt/py-modules</code>.</p>
+<blockquote>
+<p>If <code>/opt/py-modules</code> is a symlink to <code>/opt/third-party/py-modules</code>, the directory is <code>/opt/third-party/py-modules</code>, not <code>/opt/py-modules</code>, Python follows the symlink.</p>
+</blockquote>
+<p>When using a Python interpreter:</p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token operator">>></span><span class="token operator">></span> <span class="token keyword">import</span> sys
+<span class="token operator">>></span><span class="token operator">></span> <span class="token keyword">print</span><span class="token punctuation">(</span>sys<span class="token punctuation">.</span>path<span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+
+<p>You will see the directory (the first one) is current working directory.</p>
+<blockquote>
+<p>The directory is placed at the beginning of the search path, ahead of the standard library path. This means that modules in the directory will be loaded instead of modules of the same name in the library directory.</p>
+</blockquote>
+</li>
+<li><p>Directories listed in the shell environment variable <code>PYTHONPATH</code></p>
+<p>The default value of  <code>PYTHONPATH</code> is an empty string, but Python always append the directories containing standard Python modules (e.g, <code>/usr/local/lib/python311.zip</code>, <code>/usr/local/lib/python3.11</code>) as well as any extension modules that these modules depend on (e.g, <code>/usr/local/lib/python3.11/lib-dynload</code>).</p>
+</li>
+<li><p>The installation-dependent default directories</p>
+<p>It includes the user-specific site-packages directory and all global site-packages directories.</p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token operator">>></span><span class="token operator">></span> <span class="token keyword">import</span> site
+<span class="token operator">>></span><span class="token operator">></span> <span class="token keyword">print</span><span class="token punctuation">(</span>site<span class="token punctuation">.</span>getusersitepackages<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+<span class="token operator">>></span><span class="token operator">></span> <span class="token keyword">print</span><span class="token punctuation">(</span>site<span class="token punctuation">.</span>getsitepackages<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre></li>
+</ol>
+<p>In a directory, you may see a <code>__pycache__</code> directory, Python caches the compiled version of each module in it.</p>
+<p>The only advantage of <code>.pyc</code> files is that they can be loaded faster, not run faster.</p>
+<p>Python does not check the cache in two circumstances:</p>
+<ol>
+<li><p>Load a module from the command line</p>
+</li>
+<li><p>No corresponding <code>.py</code> source modules</p>
+</li>
+</ol>
+<h3 id="Packages"><a href="#Packages" class="headerlink" title="Packages"></a>Packages</h3><pre class="line-numbers language-none"><code class="language-none">run.py
+sound&#x2F;                          Top-level package
+      __init__.py               Initialize the sound package
+      formats&#x2F;                  Subpackage for file format conversions
+              __init__.py
+              wavread.py
+              wavwrite.py
+              ...
+      effects&#x2F;                  Subpackage for sound effects
+              __init__.py
+              echo.py
+              surround.py
+              ...
+      filters&#x2F;                  Subpackage for filters
+              __init__.py
+              equalizer.py
+              vocoder.py
+              ...<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token comment"># Load the submodule sound.effects.echo</span>
+
+<span class="token keyword">import</span> sound<span class="token punctuation">.</span>effects<span class="token punctuation">.</span>echo
+
+<span class="token comment"># OR</span>
+
+<span class="token keyword">from</span> sound<span class="token punctuation">.</span>effects <span class="token keyword">import</span> echo
+
+<span class="token comment"># Import the desired function or variable directly</span>
+<span class="token keyword">from</span> sound<span class="token punctuation">.</span>effects<span class="token punctuation">.</span>echo <span class="token keyword">import</span> echofilter<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>Packages are a way of structuring Python’s module namespace by using “dotted module names”.</p>
+<p>The <code>__init__.py</code> files are required to make Python treat directories containing the file as packages.</p>
+<p>In the simplest case, <code>__init__.py</code> can just be an empty file, but it can also execute initialization code for the package or set the <code>__all__</code> variable.</p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token comment"># sound/effects/__init__.py</span>
+
+__all__ <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token string">"echo"</span><span class="token punctuation">]</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+
+<p>When using <code>from sound.effects import *</code>, only import <code>echo</code> submodule from the <code>sound.effects</code> package. <code>__all__</code> likes a filter.</p>
+<p>If you define a function or variable named <code>echo</code> in <code>sound/effects/__init__.py</code>, it will shadow the <code>echo.py</code> module.</p>
+<p>If no <code>__all__</code>, Python only ensures that the package <code>sound.effects</code> has been imported, not submodules.</p>
+<p>Using <code>import *</code> is a bad practice in production code.</p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token comment"># absolute imports</span>
+<span class="token keyword">from</span> sound<span class="token punctuation">.</span>effects <span class="token keyword">import</span> echo
+
+<span class="token comment"># relative imports</span>
+<span class="token comment"># leading dots indicate the current and parent packages</span>
+<span class="token keyword">from</span> <span class="token punctuation">.</span> <span class="token keyword">import</span> echo
+<span class="token keyword">from</span> <span class="token punctuation">.</span><span class="token punctuation">.</span> <span class="token keyword">import</span> formats
+<span class="token keyword">from</span> <span class="token punctuation">.</span><span class="token punctuation">.</span>filters <span class="token keyword">import</span> equalizer<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>Relative imports are based on the name of the <strong>current module</strong>.</p>
+<p><code>python run.py</code> runs the program, <code>run.py</code> is the main module, its <code>__name__</code> is <code>__main__</code>.</p>
+<p>The directory containing the main module <code>run.py</code> is not a package, <code>sound</code> is the top-level package, we can’t use relative imports in <code>run.py</code> and other modules at the same directory.</p>
+<p>When using <code>from .sound.effects import echo</code> in <code>run.py</code>, the error message:</p>
+<pre class="line-numbers language-none"><code class="language-none">ImportError: attempted relative import with no known parent package<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+  </div>
+</article>
+
+
+
+        
+          <div id="footer-post-container">
+  <div id="footer-post">
+
+    <div id="nav-footer" style="display: none">
+      <ul>
+        
+          <li><a href="/">Home</a></li>
+        
+          <li><a href="/archives/">Writing</a></li>
+        
+          <li><a href="/categories/">Categories</a></li>
+        
+          <li><a href="/tags/">Tags</a></li>
+        
+          <li><a href="/about/">About</a></li>
+        
+      </ul>
+    </div>
+
+    
+    
+      <div id="toc-footer" style="display: none">
+        <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#Modules"><span class="toc-number">1.</span> <span class="toc-text">Modules</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Packages"><span class="toc-number">2.</span> <span class="toc-text">Packages</span></a></li></ol>
+      </div>
+    
+
+    <div id="share-footer" style="display: none">
+      <ul>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.facebook.com/sharer.php?u=https://lnxpgn.github.io/2023/12/09/python-modules-and-packages/"><i class="fab fa-facebook fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://twitter.com/share?url=https://lnxpgn.github.io/2023/12/09/python-modules-and-packages/&text=Python Modules and Packages"><i class="fab fa-twitter fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.linkedin.com/shareArticle?url=https://lnxpgn.github.io/2023/12/09/python-modules-and-packages/&title=Python Modules and Packages"><i class="fab fa-linkedin fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://pinterest.com/pin/create/bookmarklet/?url=https://lnxpgn.github.io/2023/12/09/python-modules-and-packages/&is_video=false&description=Python Modules and Packages"><i class="fab fa-pinterest fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=Python Modules and Packages&body=Check out this article: https://lnxpgn.github.io/2023/12/09/python-modules-and-packages/"><i class="fa-solid fa-envelope fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://getpocket.com/save?url=https://lnxpgn.github.io/2023/12/09/python-modules-and-packages/&title=Python Modules and Packages"><i class="fab fa-get-pocket fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://reddit.com/submit?url=https://lnxpgn.github.io/2023/12/09/python-modules-and-packages/&title=Python Modules and Packages"><i class="fab fa-reddit fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.stumbleupon.com/submit?url=https://lnxpgn.github.io/2023/12/09/python-modules-and-packages/&title=Python Modules and Packages"><i class="fab fa-stumbleupon fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://digg.com/submit?url=https://lnxpgn.github.io/2023/12/09/python-modules-and-packages/&title=Python Modules and Packages"><i class="fab fa-digg fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.tumblr.com/share/link?url=https://lnxpgn.github.io/2023/12/09/python-modules-and-packages/&name=Python Modules and Packages&description=&lt;h3 id=&#34;Modules&#34;&gt;&lt;a href=&#34;#Modules&#34; class=&#34;headerlink&#34; title=&#34;Modules&#34;&gt;&lt;/a&gt;Modules&lt;/h3&gt;&lt;p&gt;As your program gets longer, you can split it into several files for easier maintenance, you may also want to share a handy function across several programs.&lt;/p&gt;
+&lt;p&gt;To support this, Python has a way to put definitions in a file, such a file is called a module, the file name is the module name with the suffix &lt;code&gt;.py&lt;/code&gt; appended.&lt;/p&gt;"><i class="fab fa-tumblr fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://news.ycombinator.com/submitlink?u=https://lnxpgn.github.io/2023/12/09/python-modules-and-packages/&t=Python Modules and Packages"><i class="fab fa-hacker-news fa-lg" aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+
+    <div id="actions-footer">
+        <a id="menu" class="icon" href="#" onclick="$('#nav-footer').toggle();return false;"><i class="fa-solid fa-bars fa-lg" aria-hidden="true"></i> Menu</a>
+        
+          <a id="toc" class="icon" href="#" onclick="$('#toc-footer').toggle();return false;"><i class="fa-solid fa-list fa-lg" aria-hidden="true"></i> TOC</a>
+        
+        <a id="share" class="icon" href="#" onclick="$('#share-footer').toggle();return false;"><i class="fa-solid fa-share-alt fa-lg" aria-hidden="true"></i> Share</a>
+        <a id="top" style="display:none" class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fa-solid fa-chevron-up fa-lg" aria-hidden="true"></i> Top</a>
+    </div>
+
+  </div>
+</div>
+
+        
+        <footer id="footer">
+  <div class="footer-left">
+    Copyright &copy;
+    
+    
+    2015-2025
+    lnxpgn
+  </div>
+  <div class="footer-right">
+    <nav>
+      <ul>
+        <!--
+       --><li><a href="/">Home</a></li><!--
+     --><!--
+       --><li><a href="/archives/">Writing</a></li><!--
+     --><!--
+       --><li><a href="/categories/">Categories</a></li><!--
+     --><!--
+       --><li><a href="/tags/">Tags</a></li><!--
+     --><!--
+       --><li><a href="/about/">About</a></li><!--
+     -->
+      </ul>
+    </nav>
+  </div>
+</footer>
+
+    </div>
+    <!-- styles -->
+
+
+
+  <link rel="preload" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" crossorigin="anonymous" onload="this.onload=null;this.rel='stylesheet'"/>
+
+
+  <link
+    rel="stylesheet"
+    href="/css/prism-default-line-numbers.css"/>
+
+
+    <!-- jquery -->
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" crossorigin="anonymous"></script>
+
+
+
+
+<!-- clipboard -->
+
+  
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.7/clipboard.min.js" crossorigin="anonymous"></script>
+  
+  <script type="text/javascript">
+  $(function() {
+    // copy-btn HTML
+    var btn = "<span class=\"btn-copy tooltipped tooltipped-sw\" aria-label=\"Copy to clipboard!\">";
+    btn += '<i class="fa-regular fa-clone"></i>';
+    btn += '</span>';
+    // mount it!
+    $(".highlight table").before(btn);
+    var clip = new ClipboardJS('.btn-copy', {
+      text: function(trigger) {
+        return Array.from(trigger.nextElementSibling.querySelectorAll('.code')).reduce((str,it)=>str+it.innerText+'\n','')
+      }
+    });
+    clip.on('success', function(e) {
+      e.trigger.setAttribute('aria-label', "Copied!");
+      e.clearSelection();
+    })
+  })
+  </script>
+
+
+<script src="/js/main.js"></script>
+
+<!-- search -->
+
+<!-- Baidu Analytics -->
+
+<!-- Cloudflare Analytics -->
+
+<!-- Disqus Comments -->
+
+<!-- utterances Comments -->
+
+</body>
+</html>

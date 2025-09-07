@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang=zh>
+<head>
+    <!-- so meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5" />
+    <meta name="description" content="双面镜的原理常见的镜子，反射层都镀在后表面，有灰扑扑的“背面”，光线照到玻璃的后表面会反射回来。 如果把指尖按在镜子上（玻璃的前表面），眼睛看到“镜子后面”先有一个同样厚度的玻璃，然后才是手指的图像，手指和镜像手指之间会有一段距离，不会贴在一起。 反射层镀在后表面有一个缺陷 —— 光线照到玻璃的前表面的时候也会多少反射一些，同时还会有折射，这会稍微影响镜像的质量。对于一些精度要求高的地方，使用前表">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Weekly - issue 41">
+<meta property="og:url" content="https://lnxpgn.github.io/2023/10/15/issue-41-202310-2/index.html">
+<meta property="og:site_name" content="竹里馆">
+<meta property="og:description" content="双面镜的原理常见的镜子，反射层都镀在后表面，有灰扑扑的“背面”，光线照到玻璃的后表面会反射回来。 如果把指尖按在镜子上（玻璃的前表面），眼睛看到“镜子后面”先有一个同样厚度的玻璃，然后才是手指的图像，手指和镜像手指之间会有一段距离，不会贴在一起。 反射层镀在后表面有一个缺陷 —— 光线照到玻璃的前表面的时候也会多少反射一些，同时还会有折射，这会稍微影响镜像的质量。对于一些精度要求高的地方，使用前表">
+<meta property="og:locale">
+<meta property="article:published_time" content="2023-10-14T16:00:00.000Z">
+<meta property="article:modified_time" content="2023-12-08T09:15:05.000Z">
+<meta property="article:author" content="lnxpgn">
+<meta property="article:tag" content="Weekly">
+<meta property="article:tag" content="curl">
+<meta property="article:tag" content="科学">
+<meta name="twitter:card" content="summary">
+    
+    
+      
+        
+          <link rel="shortcut icon" href="/images/favicon.ico">
+        
+      
+      
+        
+          <link rel="icon" type="image/png" href="/images/favicon-192x192.png" sizes="192x192">
+        
+      
+      
+        
+          <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+        
+      
+    
+    <!-- title -->
+    <title>Weekly - issue 41</title>
+    <!-- async scripts -->
+    <!-- Google Analytics -->
+
+
+    <!-- Umami Analytics -->
+
+
+    <!-- styles -->
+    
+<link rel="stylesheet" href="/css/style.css">
+
+    <!-- persian styles -->
+    
+    <!-- rss -->
+    
+    
+	<!-- mathjax -->
+	
+<meta name="generator" content="Hexo 7.3.0"><link rel="alternate" href="/atom.xml" title="竹里馆" type="application/atom+xml">
+<link rel="alternate" href="/rss.xml" title="竹里馆" type="application/rss+xml">
+</head>
+
+<body class="max-width mx-auto px3 ltr">
+    
+      <div id="header-post">
+  <a id="menu-icon" href="#" aria-label="Menu"><i class="fa-solid fa-bars fa-lg"></i></a>
+  <a id="menu-icon-tablet" href="#" aria-label="Menu"><i class="fa-solid fa-bars fa-lg"></i></a>
+  <a id="top-icon-tablet" href="#" aria-label="Top" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');" style="display:none;"><i class="fa-solid fa-chevron-up fa-lg"></i></a>
+  <span id="menu">
+    <span id="nav">
+      <ul>
+        <!--
+       --><li><a href="/">Home</a></li><!--
+     --><!--
+       --><li><a href="/archives/">Writing</a></li><!--
+     --><!--
+       --><li><a href="/categories/">Categories</a></li><!--
+     --><!--
+       --><li><a href="/tags/">Tags</a></li><!--
+     --><!--
+       --><li><a href="/about/">About</a></li><!--
+     -->
+      </ul>
+    </span>
+    <br/>
+    <span id="actions">
+      <ul>
+        
+        <li><a class="icon" aria-label="Previous post" href="/2023/10/21/issue-42-202310-3/"><i class="fa-solid fa-chevron-left" aria-hidden="true" onmouseover="$('#i-prev').toggle();" onmouseout="$('#i-prev').toggle();"></i></a></li>
+        
+        
+        <li><a class="icon" aria-label="Next post" href="/2023/10/08/issue-40-202310-1/"><i class="fa-solid fa-chevron-right" aria-hidden="true" onmouseover="$('#i-next').toggle();" onmouseout="$('#i-next').toggle();"></i></a></li>
+        
+        <li><a class="icon" aria-label="Back to top" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fa-solid fa-chevron-up" aria-hidden="true" onmouseover="$('#i-top').toggle();" onmouseout="$('#i-top').toggle();"></i></a></li>
+        <li><a class="icon" aria-label="Share post" href="#"><i class="fa-solid fa-share-alt" aria-hidden="true" onmouseover="$('#i-share').toggle();" onmouseout="$('#i-share').toggle();" onclick="$('#share').toggle();return false;"></i></a></li>
+      </ul>
+      <span id="i-prev" class="info" style="display:none;">Previous post</span>
+      <span id="i-next" class="info" style="display:none;">Next post</span>
+      <span id="i-top" class="info" style="display:none;">Back to top</span>
+      <span id="i-share" class="info" style="display:none;">Share post</span>
+    </span>
+    <br/>
+    <div id="share" style="display: none">
+      <ul>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.facebook.com/sharer.php?u=https://lnxpgn.github.io/2023/10/15/issue-41-202310-2/"><i class="fab fa-facebook " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://twitter.com/share?url=https://lnxpgn.github.io/2023/10/15/issue-41-202310-2/&text=Weekly - issue 41"><i class="fab fa-twitter " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.linkedin.com/shareArticle?url=https://lnxpgn.github.io/2023/10/15/issue-41-202310-2/&title=Weekly - issue 41"><i class="fab fa-linkedin " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://pinterest.com/pin/create/bookmarklet/?url=https://lnxpgn.github.io/2023/10/15/issue-41-202310-2/&is_video=false&description=Weekly - issue 41"><i class="fab fa-pinterest " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=Weekly - issue 41&body=Check out this article: https://lnxpgn.github.io/2023/10/15/issue-41-202310-2/"><i class="fa-solid fa-envelope " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://getpocket.com/save?url=https://lnxpgn.github.io/2023/10/15/issue-41-202310-2/&title=Weekly - issue 41"><i class="fab fa-get-pocket " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://reddit.com/submit?url=https://lnxpgn.github.io/2023/10/15/issue-41-202310-2/&title=Weekly - issue 41"><i class="fab fa-reddit " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.stumbleupon.com/submit?url=https://lnxpgn.github.io/2023/10/15/issue-41-202310-2/&title=Weekly - issue 41"><i class="fab fa-stumbleupon " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://digg.com/submit?url=https://lnxpgn.github.io/2023/10/15/issue-41-202310-2/&title=Weekly - issue 41"><i class="fab fa-digg " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.tumblr.com/share/link?url=https://lnxpgn.github.io/2023/10/15/issue-41-202310-2/&name=Weekly - issue 41&description="><i class="fab fa-tumblr " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://news.ycombinator.com/submitlink?u=https://lnxpgn.github.io/2023/10/15/issue-41-202310-2/&t=Weekly - issue 41"><i class="fab fa-hacker-news " aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+    
+    
+      <div id="toc">
+        <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8F%8C%E9%9D%A2%E9%95%9C%E7%9A%84%E5%8E%9F%E7%90%86"><span class="toc-number">1.</span> <span class="toc-text">双面镜的原理</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Mastering-curl-interactive-text-guide"><span class="toc-number">2.</span> <span class="toc-text">Mastering curl: interactive text guide</span></a></li></ol>
+      </div>
+    
+  </span>
+</div>
+
+    
+    <div class="content index py4 ">
+        
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+  <header>
+    
+    <h1 class="posttitle p-name" itemprop="name headline">
+        Weekly - issue 41
+    </h1>
+
+
+
+    <div class="meta">
+      <!-- <span class="author p-author h-card" itemprop="author" itemscope itemtype="http://schema.org/Person">
+        <span class="p-name" itemprop="name">lnxpgn</span>
+      </span> -->
+      
+    <div class="postdate">
+      
+        <time datetime="2023-10-14T16:00:00.000Z" class="dt-published" itemprop="datePublished">2023-10-15</time>
+        
+      
+    </div>
+
+
+      
+    <div class="article-category">
+        <i class="fa-solid fa-archive"></i>
+        <a class="category-link" href="/categories/Weekly/">Weekly</a>
+    </div>
+
+
+      
+    <div class="article-tag">
+        <i class="fa-solid fa-tag"></i>
+        <a class="p-category" href="/tags/Weekly/" rel="tag">Weekly</a>, <a class="p-category" href="/tags/curl/" rel="tag">curl</a>, <a class="p-category" href="/tags/%E7%A7%91%E5%AD%A6/" rel="tag">科学</a>
+    </div>
+
+
+    </div>
+  </header>
+  
+
+  <div class="content e-content" itemprop="articleBody">
+    <h3 id="双面镜的原理"><a href="#双面镜的原理" class="headerlink" title="双面镜的原理"></a><a target="_blank" rel="noopener" href="http://www.guokr.com/article/464477/">双面镜的原理</a></h3><p>常见的镜子，反射层都镀在后表面，有灰扑扑的“背面”，光线照到玻璃的后表面会反射回来。</p>
+<p>如果把指尖按在镜子上（玻璃的前表面），眼睛看到“镜子后面”先有一个同样厚度的玻璃，然后才是手指的图像，手指和镜像手指之间会有一段距离，不会贴在一起。</p>
+<p>反射层镀在后表面有一个缺陷 —— 光线照到玻璃的前表面的时候也会多少反射一些，同时还会有折射，这会稍微影响镜像的质量。对于一些精度要求高的地方，使用前表面反光镜。把手指贴到前表面反光镜上，手指和镜像手指则会贴到一起。</p>
+<p>普通的镜子，其反射层会把光线几乎全部反射。但如果把全反射层换成只可以反射 50%－70% 光的半反射层，就是双面镜。让镜子起到“双面不同”作用的，是两侧的光强差距：对光亮的房间来说，反射回来的光线更抢眼，镜子就只是镜子；但对昏暗的房间里，对面过来的光线更抢眼，所以镜子就成了玻璃。</p>
+<p>一句话总结双面镜：亮处看不到暗处，暗处可以看到亮处。</p>
+<h3 id="Mastering-curl-interactive-text-guide"><a href="#Mastering-curl-interactive-text-guide" class="headerlink" title="Mastering curl: interactive text guide"></a><a target="_blank" rel="noopener" href="https://antonz.org/mastering-curl/">Mastering curl: interactive text guide</a></h3><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token comment"># To specify query parts separately</span>
+<span class="token function">curl</span> http://httpbin/get --url-query <span class="token string">"name=Alice"</span> --url-query <span class="token string">"age=25"</span>
+
+<span class="token comment"># URL globbing</span>
+<span class="token comment"># This command requests three different paths (al, bt, gm),</span>
+<span class="token comment"># each with two different parameters (num=1 and num=2),</span>
+<span class="token comment"># for a total of six URLs</span>
+<span class="token function">curl</span> --output-dir /tmp <span class="token parameter variable">-o</span> <span class="token string">"out_#1_#2.txt"</span> <span class="token punctuation">\</span>
+  http://httpbin/anything/<span class="token punctuation">&#123;</span>al,bt,gm<span class="token punctuation">&#125;</span>?num<span class="token operator">=</span><span class="token punctuation">[</span><span class="token number">1</span>-2<span class="token punctuation">]</span>
+
+<span class="token comment"># To extract specific information about the response</span>
+<span class="token function">curl</span> <span class="token parameter variable">-w</span> <span class="token string">"<span class="token entity" title="\n">\n</span>status: %&#123;response_code&#125;<span class="token entity" title="\n">\n</span>type: %&#123;content_type&#125;"</span> <span class="token punctuation">\</span>
+  http://httpbin/status/429
+
+<span class="token comment"># Upload file</span>
+<span class="token function">curl</span> <span class="token parameter variable">-T</span> /tmp/hello.txt http://httpbin/put
+
+<span class="token comment"># To limit bandwidth usage.</span>
+<span class="token comment"># It accepts anything from bytes to petabytes</span>
+<span class="token function">curl</span> --limit-rate 3k http://httpbin/get
+
+<span class="token comment"># Limit the number of concurrent requests.</span>
+<span class="token comment"># It accepts seconds, minutes, hours or days</span>
+<span class="token function">curl</span> <span class="token parameter variable">--rate</span> <span class="token number">3</span>/s http://httpbin/anything/<span class="token punctuation">[</span><span class="token number">1</span>-9<span class="token punctuation">]</span>.txt
+
+<span class="token comment"># Curl supports two different conditions: file timestamp and etag.</span>
+<span class="token comment"># Download the data only if the remote resource is newer</span>
+<span class="token comment"># -i, include the HTTP response headers in the output</span>
+<span class="token function">curl</span> <span class="token parameter variable">-i</span> --time-cond <span class="token string">"Aug 30, 2023"</span> http://httpbin/etag/etag
+<span class="token comment"># Or older</span>
+<span class="token function">curl</span> <span class="token parameter variable">-i</span> --time-cond <span class="token string">"-Aug 30, 2023"</span> http://httpbin/etag/etag
+<span class="token comment"># To checks an etag, curl must first to save it</span>
+<span class="token function">curl</span> --etag-save /tmp/etags http://httpbin/etag/etag
+<span class="token function">curl</span> <span class="token parameter variable">-i</span> --etag-compare /tmp/etags http://httpbin/etag/etag
+
+<span class="token comment"># HTTP POST</span>
+<span class="token function">curl</span> <span class="token parameter variable">-d</span> <span class="token assign-left variable">name</span><span class="token operator">=</span>alice <span class="token parameter variable">-d</span> <span class="token assign-left variable">age</span><span class="token operator">=</span><span class="token number">25</span> http://httpbin/post
+<span class="token function">curl</span> <span class="token parameter variable">-d</span> @/tmp/data.txt <span class="token parameter variable">-H</span> <span class="token string">"content-type: text/plain"</span> <span class="token punctuation">\</span>
+  http://httpbin/post
+<span class="token function">curl</span> <span class="token parameter variable">--json</span> <span class="token string">'&#123;"name": "alice"&#125;'</span> http://httpbin/post
+<span class="token function">curl</span> <span class="token parameter variable">--json</span> @xx.json http://httpbin/post
+<span class="token function">cat</span> xx.json <span class="token operator">|</span> <span class="token function">curl</span> <span class="token parameter variable">--json</span> @- http://httpbin/post
+<span class="token comment"># To URL-encode data</span>
+<span class="token function">curl</span> --data-urlencode <span class="token string">"Name: Alice Barton"</span> http://httpbin/post
+<span class="token comment"># multipart/form-data</span>
+<span class="token function">curl</span> <span class="token parameter variable">-F</span> <span class="token assign-left variable">name</span><span class="token operator">=</span>Alice <span class="token parameter variable">-F</span> <span class="token assign-left variable">age</span><span class="token operator">=</span><span class="token number">25</span> <span class="token parameter variable">-F</span> <span class="token assign-left variable">photo</span><span class="token operator">=</span>@/tmp/alice.png <span class="token punctuation">\</span>
+  http://httpbin/post
+
+<span class="token comment"># Curl does not follow redirects by default.</span>
+<span class="token comment"># To make curl follow redirects, use --follow (-L)</span>
+<span class="token comment"># To protect against endless loop redirects, use --max-redirs</span>
+<span class="token function">curl</span> <span class="token parameter variable">-L</span> --max-redirs <span class="token number">3</span> http://httpbin/redirect/10
+
+<span class="token comment"># Curl ignores cookies by default.</span>
+<span class="token comment"># To enable them, use the --cookie (-b) option.</span>
+<span class="token comment"># Specify a file to read from or use a blank string</span>
+<span class="token function">curl</span> <span class="token parameter variable">-b</span> <span class="token string">""</span> <span class="token parameter variable">-c</span> /tmp/cookies http://httpbin/cookies
+<span class="token comment"># Tell curl a new cookie session starts by using -j,</span>
+<span class="token comment"># --junk-session-cookies</span>
+<span class="token comment"># A new session begins.</span>
+<span class="token comment"># It is the equivalent of closing a browser and starting it up again.</span>
+<span class="token function">curl</span> <span class="token parameter variable">-j</span> <span class="token parameter variable">-b</span> /tmp/cookies http://httpbin/get
+
+<span class="token comment"># This tells curl to store HSTS-enabled servers in the specified file</span>
+<span class="token comment"># and automatically convert http → https when accessing them.</span>
+<span class="token function">curl</span> <span class="token parameter variable">--hsts</span> /tmp/hsts http://httpbin/get<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+  </div>
+</article>
+
+
+
+        
+          <div id="footer-post-container">
+  <div id="footer-post">
+
+    <div id="nav-footer" style="display: none">
+      <ul>
+        
+          <li><a href="/">Home</a></li>
+        
+          <li><a href="/archives/">Writing</a></li>
+        
+          <li><a href="/categories/">Categories</a></li>
+        
+          <li><a href="/tags/">Tags</a></li>
+        
+          <li><a href="/about/">About</a></li>
+        
+      </ul>
+    </div>
+
+    
+    
+      <div id="toc-footer" style="display: none">
+        <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8F%8C%E9%9D%A2%E9%95%9C%E7%9A%84%E5%8E%9F%E7%90%86"><span class="toc-number">1.</span> <span class="toc-text">双面镜的原理</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Mastering-curl-interactive-text-guide"><span class="toc-number">2.</span> <span class="toc-text">Mastering curl: interactive text guide</span></a></li></ol>
+      </div>
+    
+
+    <div id="share-footer" style="display: none">
+      <ul>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.facebook.com/sharer.php?u=https://lnxpgn.github.io/2023/10/15/issue-41-202310-2/"><i class="fab fa-facebook fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://twitter.com/share?url=https://lnxpgn.github.io/2023/10/15/issue-41-202310-2/&text=Weekly - issue 41"><i class="fab fa-twitter fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.linkedin.com/shareArticle?url=https://lnxpgn.github.io/2023/10/15/issue-41-202310-2/&title=Weekly - issue 41"><i class="fab fa-linkedin fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://pinterest.com/pin/create/bookmarklet/?url=https://lnxpgn.github.io/2023/10/15/issue-41-202310-2/&is_video=false&description=Weekly - issue 41"><i class="fab fa-pinterest fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=Weekly - issue 41&body=Check out this article: https://lnxpgn.github.io/2023/10/15/issue-41-202310-2/"><i class="fa-solid fa-envelope fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://getpocket.com/save?url=https://lnxpgn.github.io/2023/10/15/issue-41-202310-2/&title=Weekly - issue 41"><i class="fab fa-get-pocket fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://reddit.com/submit?url=https://lnxpgn.github.io/2023/10/15/issue-41-202310-2/&title=Weekly - issue 41"><i class="fab fa-reddit fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.stumbleupon.com/submit?url=https://lnxpgn.github.io/2023/10/15/issue-41-202310-2/&title=Weekly - issue 41"><i class="fab fa-stumbleupon fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://digg.com/submit?url=https://lnxpgn.github.io/2023/10/15/issue-41-202310-2/&title=Weekly - issue 41"><i class="fab fa-digg fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.tumblr.com/share/link?url=https://lnxpgn.github.io/2023/10/15/issue-41-202310-2/&name=Weekly - issue 41&description="><i class="fab fa-tumblr fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://news.ycombinator.com/submitlink?u=https://lnxpgn.github.io/2023/10/15/issue-41-202310-2/&t=Weekly - issue 41"><i class="fab fa-hacker-news fa-lg" aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+
+    <div id="actions-footer">
+        <a id="menu" class="icon" href="#" onclick="$('#nav-footer').toggle();return false;"><i class="fa-solid fa-bars fa-lg" aria-hidden="true"></i> Menu</a>
+        
+          <a id="toc" class="icon" href="#" onclick="$('#toc-footer').toggle();return false;"><i class="fa-solid fa-list fa-lg" aria-hidden="true"></i> TOC</a>
+        
+        <a id="share" class="icon" href="#" onclick="$('#share-footer').toggle();return false;"><i class="fa-solid fa-share-alt fa-lg" aria-hidden="true"></i> Share</a>
+        <a id="top" style="display:none" class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fa-solid fa-chevron-up fa-lg" aria-hidden="true"></i> Top</a>
+    </div>
+
+  </div>
+</div>
+
+        
+        <footer id="footer">
+  <div class="footer-left">
+    Copyright &copy;
+    
+    
+    2015-2025
+    lnxpgn
+  </div>
+  <div class="footer-right">
+    <nav>
+      <ul>
+        <!--
+       --><li><a href="/">Home</a></li><!--
+     --><!--
+       --><li><a href="/archives/">Writing</a></li><!--
+     --><!--
+       --><li><a href="/categories/">Categories</a></li><!--
+     --><!--
+       --><li><a href="/tags/">Tags</a></li><!--
+     --><!--
+       --><li><a href="/about/">About</a></li><!--
+     -->
+      </ul>
+    </nav>
+  </div>
+</footer>
+
+    </div>
+    <!-- styles -->
+
+
+
+  <link rel="preload" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" crossorigin="anonymous" onload="this.onload=null;this.rel='stylesheet'"/>
+
+
+  <link
+    rel="stylesheet"
+    href="/css/prism-default-line-numbers.css"/>
+
+
+    <!-- jquery -->
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" crossorigin="anonymous"></script>
+
+
+
+
+<!-- clipboard -->
+
+  
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.7/clipboard.min.js" crossorigin="anonymous"></script>
+  
+  <script type="text/javascript">
+  $(function() {
+    // copy-btn HTML
+    var btn = "<span class=\"btn-copy tooltipped tooltipped-sw\" aria-label=\"Copy to clipboard!\">";
+    btn += '<i class="fa-regular fa-clone"></i>';
+    btn += '</span>';
+    // mount it!
+    $(".highlight table").before(btn);
+    var clip = new ClipboardJS('.btn-copy', {
+      text: function(trigger) {
+        return Array.from(trigger.nextElementSibling.querySelectorAll('.code')).reduce((str,it)=>str+it.innerText+'\n','')
+      }
+    });
+    clip.on('success', function(e) {
+      e.trigger.setAttribute('aria-label', "Copied!");
+      e.clearSelection();
+    })
+  })
+  </script>
+
+
+<script src="/js/main.js"></script>
+
+<!-- search -->
+
+<!-- Baidu Analytics -->
+
+<!-- Cloudflare Analytics -->
+
+<!-- Disqus Comments -->
+
+<!-- utterances Comments -->
+
+</body>
+</html>

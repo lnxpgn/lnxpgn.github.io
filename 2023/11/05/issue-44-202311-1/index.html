@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang=zh>
+<head>
+    <!-- so meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5" />
+    <meta name="description" content="How to know which program sent a network requestsudo tcpdump -i any -n -k INPD port 53  We can also write captured network packets to a file, then read it later. sudo tcpdump -i any -n -k INPD port 53">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Weekly - issue 44">
+<meta property="og:url" content="https://lnxpgn.github.io/2023/11/05/issue-44-202311-1/index.html">
+<meta property="og:site_name" content="竹里馆">
+<meta property="og:description" content="How to know which program sent a network requestsudo tcpdump -i any -n -k INPD port 53  We can also write captured network packets to a file, then read it later. sudo tcpdump -i any -n -k INPD port 53">
+<meta property="og:locale">
+<meta property="article:published_time" content="2023-11-04T16:00:00.000Z">
+<meta property="article:modified_time" content="2023-12-08T09:15:04.000Z">
+<meta property="article:author" content="lnxpgn">
+<meta property="article:tag" content="Python">
+<meta property="article:tag" content="Weekly">
+<meta property="article:tag" content="Network">
+<meta name="twitter:card" content="summary">
+    
+    
+      
+        
+          <link rel="shortcut icon" href="/images/favicon.ico">
+        
+      
+      
+        
+          <link rel="icon" type="image/png" href="/images/favicon-192x192.png" sizes="192x192">
+        
+      
+      
+        
+          <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+        
+      
+    
+    <!-- title -->
+    <title>Weekly - issue 44</title>
+    <!-- async scripts -->
+    <!-- Google Analytics -->
+
+
+    <!-- Umami Analytics -->
+
+
+    <!-- styles -->
+    
+<link rel="stylesheet" href="/css/style.css">
+
+    <!-- persian styles -->
+    
+    <!-- rss -->
+    
+    
+	<!-- mathjax -->
+	
+<meta name="generator" content="Hexo 7.3.0"><link rel="alternate" href="/atom.xml" title="竹里馆" type="application/atom+xml">
+<link rel="alternate" href="/rss.xml" title="竹里馆" type="application/rss+xml">
+</head>
+
+<body class="max-width mx-auto px3 ltr">
+    
+      <div id="header-post">
+  <a id="menu-icon" href="#" aria-label="Menu"><i class="fa-solid fa-bars fa-lg"></i></a>
+  <a id="menu-icon-tablet" href="#" aria-label="Menu"><i class="fa-solid fa-bars fa-lg"></i></a>
+  <a id="top-icon-tablet" href="#" aria-label="Top" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');" style="display:none;"><i class="fa-solid fa-chevron-up fa-lg"></i></a>
+  <span id="menu">
+    <span id="nav">
+      <ul>
+        <!--
+       --><li><a href="/">Home</a></li><!--
+     --><!--
+       --><li><a href="/archives/">Writing</a></li><!--
+     --><!--
+       --><li><a href="/categories/">Categories</a></li><!--
+     --><!--
+       --><li><a href="/tags/">Tags</a></li><!--
+     --><!--
+       --><li><a href="/about/">About</a></li><!--
+     -->
+      </ul>
+    </span>
+    <br/>
+    <span id="actions">
+      <ul>
+        
+        <li><a class="icon" aria-label="Previous post" href="/2023/11/19/issue-45-202311-2/"><i class="fa-solid fa-chevron-left" aria-hidden="true" onmouseover="$('#i-prev').toggle();" onmouseout="$('#i-prev').toggle();"></i></a></li>
+        
+        
+        <li><a class="icon" aria-label="Next post" href="/2023/10/29/issue-43-202310-4/"><i class="fa-solid fa-chevron-right" aria-hidden="true" onmouseover="$('#i-next').toggle();" onmouseout="$('#i-next').toggle();"></i></a></li>
+        
+        <li><a class="icon" aria-label="Back to top" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fa-solid fa-chevron-up" aria-hidden="true" onmouseover="$('#i-top').toggle();" onmouseout="$('#i-top').toggle();"></i></a></li>
+        <li><a class="icon" aria-label="Share post" href="#"><i class="fa-solid fa-share-alt" aria-hidden="true" onmouseover="$('#i-share').toggle();" onmouseout="$('#i-share').toggle();" onclick="$('#share').toggle();return false;"></i></a></li>
+      </ul>
+      <span id="i-prev" class="info" style="display:none;">Previous post</span>
+      <span id="i-next" class="info" style="display:none;">Next post</span>
+      <span id="i-top" class="info" style="display:none;">Back to top</span>
+      <span id="i-share" class="info" style="display:none;">Share post</span>
+    </span>
+    <br/>
+    <div id="share" style="display: none">
+      <ul>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.facebook.com/sharer.php?u=https://lnxpgn.github.io/2023/11/05/issue-44-202311-1/"><i class="fab fa-facebook " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://twitter.com/share?url=https://lnxpgn.github.io/2023/11/05/issue-44-202311-1/&text=Weekly - issue 44"><i class="fab fa-twitter " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.linkedin.com/shareArticle?url=https://lnxpgn.github.io/2023/11/05/issue-44-202311-1/&title=Weekly - issue 44"><i class="fab fa-linkedin " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://pinterest.com/pin/create/bookmarklet/?url=https://lnxpgn.github.io/2023/11/05/issue-44-202311-1/&is_video=false&description=Weekly - issue 44"><i class="fab fa-pinterest " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=Weekly - issue 44&body=Check out this article: https://lnxpgn.github.io/2023/11/05/issue-44-202311-1/"><i class="fa-solid fa-envelope " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://getpocket.com/save?url=https://lnxpgn.github.io/2023/11/05/issue-44-202311-1/&title=Weekly - issue 44"><i class="fab fa-get-pocket " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://reddit.com/submit?url=https://lnxpgn.github.io/2023/11/05/issue-44-202311-1/&title=Weekly - issue 44"><i class="fab fa-reddit " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.stumbleupon.com/submit?url=https://lnxpgn.github.io/2023/11/05/issue-44-202311-1/&title=Weekly - issue 44"><i class="fab fa-stumbleupon " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://digg.com/submit?url=https://lnxpgn.github.io/2023/11/05/issue-44-202311-1/&title=Weekly - issue 44"><i class="fab fa-digg " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.tumblr.com/share/link?url=https://lnxpgn.github.io/2023/11/05/issue-44-202311-1/&name=Weekly - issue 44&description="><i class="fab fa-tumblr " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://news.ycombinator.com/submitlink?u=https://lnxpgn.github.io/2023/11/05/issue-44-202311-1/&t=Weekly - issue 44"><i class="fab fa-hacker-news " aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+    
+    
+      <div id="toc">
+        <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#How-to-know-which-program-sent-a-network-request"><span class="toc-number">1.</span> <span class="toc-text">How to know which program sent a network request</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Python-subprocess-and-stderr"><span class="toc-number">2.</span> <span class="toc-text">Python subprocess and stderr</span></a></li></ol>
+      </div>
+    
+  </span>
+</div>
+
+    
+    <div class="content index py4 ">
+        
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+  <header>
+    
+    <h1 class="posttitle p-name" itemprop="name headline">
+        Weekly - issue 44
+    </h1>
+
+
+
+    <div class="meta">
+      <!-- <span class="author p-author h-card" itemprop="author" itemscope itemtype="http://schema.org/Person">
+        <span class="p-name" itemprop="name">lnxpgn</span>
+      </span> -->
+      
+    <div class="postdate">
+      
+        <time datetime="2023-11-04T16:00:00.000Z" class="dt-published" itemprop="datePublished">2023-11-05</time>
+        
+      
+    </div>
+
+
+      
+    <div class="article-category">
+        <i class="fa-solid fa-archive"></i>
+        <a class="category-link" href="/categories/Weekly/">Weekly</a>
+    </div>
+
+
+      
+    <div class="article-tag">
+        <i class="fa-solid fa-tag"></i>
+        <a class="p-category" href="/tags/Network/" rel="tag">Network</a>, <a class="p-category" href="/tags/Python/" rel="tag">Python</a>, <a class="p-category" href="/tags/Weekly/" rel="tag">Weekly</a>
+    </div>
+
+
+    </div>
+  </header>
+  
+
+  <div class="content e-content" itemprop="articleBody">
+    <h3 id="How-to-know-which-program-sent-a-network-request"><a href="#How-to-know-which-program-sent-a-network-request" class="headerlink" title="How to know which program sent a network request"></a>How to know which program sent a network request</h3><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">sudo</span> tcpdump <span class="token parameter variable">-i</span> any <span class="token parameter variable">-n</span> <span class="token parameter variable">-k</span> INPD port <span class="token number">53</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p>We can also write captured network packets to a file, then read it later.</p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">sudo</span> tcpdump <span class="token parameter variable">-i</span> any <span class="token parameter variable">-n</span> <span class="token parameter variable">-k</span> INPD port <span class="token number">53</span> <span class="token parameter variable">-w</span> /<span class="token operator">&lt;</span>file path<span class="token operator">></span>/tcpdump-output.pcap
+
+tcpdump <span class="token parameter variable">-n</span> <span class="token parameter variable">-k</span> INPD <span class="token parameter variable">-r</span> /<span class="token operator">&lt;</span>file path<span class="token operator">></span>/tcpdump-output.pcap<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+
+<p><code>-i any</code>, <em>tcpdump</em> listens on all interfaces.</p>
+<p><code>-n</code>, <em>tcpdump</em> doesn’t convert addresses (e.g., host addresses, port numbers) to names.</p>
+<p><code>-k</code>, control the display of packet metadata via an optional argument (e.g., <code>INPD</code>).</p>
+<p><code>port 53</code>, a packet filter expression. Here we only capture DNS packets.</p>
+<p>The metadata arguments:</p>
+<ul>
+<li><p><code>I</code>: interface name.</p>
+</li>
+<li><p><code>N</code>: process name.</p>
+</li>
+<li><p><code>P</code>: process ID.</p>
+</li>
+<li><p><code>D</code>: direction.</p>
+</li>
+</ul>
+<p>The sample output of <em>tcpdump</em>:</p>
+<pre class="line-numbers language-none"><code class="language-none">10:57:45.835947 (eth0, proc dig:3437, out) IP 192.168.1.20.57959 &gt; 192.168.1.1.53: 33994+ [1au] A? gitlab.com. (39)
+10:57:45.842205 (eth0, proc dig:3437, in) IP 192.168.1.1.53 &gt; 192.168.1.20.57959: 33994 1&#x2F;0&#x2F;0 A 172.65.251.78 (44)<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+
+<p>The sample packets generated by a shell command <code>dig gitlab.com</code>.</p>
+<p><code>eth0, proc dig:3437, out</code>, <code>eth0, proc dig:3437, in</code> are what we want.</p>
+<ul>
+<li><p><code>eth0</code> is the interface name</p>
+</li>
+<li><p><code>dig</code> is the process name</p>
+</li>
+<li><p><code>3437</code> is the process ID</p>
+</li>
+<li><p><code>out</code> indicates the network request is send by the device</p>
+</li>
+<li><p><code>in</code> indicates the network request is received by the device</p>
+</li>
+</ul>
+<h3 id="Python-subprocess-and-stderr"><a href="#Python-subprocess-and-stderr" class="headerlink" title="Python subprocess and stderr"></a><a target="_blank" rel="noopener" href="https://zaitcev.livejournal.com/264423.html">Python subprocess and stderr</a></h3><p>Pipe output of <code>cmd1</code> into <code>cmd2</code> and capture the <em>stderr</em>.</p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">p1 <span class="token operator">=</span> subprocess<span class="token punctuation">.</span>Popen<span class="token punctuation">(</span>cmd1<span class="token punctuation">,</span>
+  stdout<span class="token operator">=</span>subprocess<span class="token punctuation">.</span>PIPE<span class="token punctuation">,</span> stderr<span class="token operator">=</span>subprocess<span class="token punctuation">.</span>PIPE<span class="token punctuation">,</span> close_fds<span class="token operator">=</span><span class="token boolean">True</span><span class="token punctuation">)</span>
+p2 <span class="token operator">=</span> subprocess<span class="token punctuation">.</span>Popen<span class="token punctuation">(</span>cmd2<span class="token punctuation">,</span> stdin<span class="token operator">=</span>p1<span class="token punctuation">.</span>stdout<span class="token punctuation">,</span>
+  stdout<span class="token operator">=</span>subprocess<span class="token punctuation">.</span>PIPE<span class="token punctuation">,</span> stderr<span class="token operator">=</span>subprocess<span class="token punctuation">.</span>PIPE<span class="token punctuation">,</span> close_fds<span class="token operator">=</span><span class="token boolean">True</span><span class="token punctuation">)</span>
+p1<span class="token punctuation">.</span>stdout<span class="token punctuation">.</span>close<span class="token punctuation">(</span><span class="token punctuation">)</span>
+p1_stderr <span class="token operator">=</span> p1<span class="token punctuation">.</span>communicate<span class="token punctuation">(</span><span class="token punctuation">)</span>
+p2_stderr <span class="token operator">=</span> p2<span class="token punctuation">.</span>communicate<span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token keyword">return</span> p1<span class="token punctuation">.</span>returncode <span class="token keyword">or</span> p2<span class="token punctuation">.</span>returncode<span class="token punctuation">,</span> p1_stderr<span class="token punctuation">,</span> p2_stderr<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>The above saves the <code>p1.stdout</code> in memory, if the amount piped becomes large enough, we should use the following code:</p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">with</span> tempfile<span class="token punctuation">.</span>TemporaryFile<span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token keyword">as</span> errfile<span class="token punctuation">:</span>
+    p1 <span class="token operator">=</span> subprocess<span class="token punctuation">.</span>Popen<span class="token punctuation">(</span>cmd1<span class="token punctuation">,</span>
+      stdout<span class="token operator">=</span>subprocess<span class="token punctuation">.</span>PIPE<span class="token punctuation">,</span> stderr<span class="token operator">=</span>errfile<span class="token punctuation">,</span> close_fds<span class="token operator">=</span><span class="token boolean">True</span><span class="token punctuation">)</span>
+    p2 <span class="token operator">=</span> subprocess<span class="token punctuation">.</span>Popen<span class="token punctuation">(</span>cmd2<span class="token punctuation">,</span> stdin<span class="token operator">=</span>p1<span class="token punctuation">.</span>stdout<span class="token punctuation">,</span>
+      stdout<span class="token operator">=</span>subprocess<span class="token punctuation">.</span>PIPE<span class="token punctuation">,</span> stderr<span class="token operator">=</span>errfile<span class="token punctuation">,</span> close_fds<span class="token operator">=</span><span class="token boolean">True</span><span class="token punctuation">)</span>
+    p1<span class="token punctuation">.</span>stdout<span class="token punctuation">.</span>close<span class="token punctuation">(</span><span class="token punctuation">)</span>
+    p2<span class="token punctuation">.</span>communicate<span class="token punctuation">(</span><span class="token punctuation">)</span>
+    p1<span class="token punctuation">.</span>wait<span class="token punctuation">(</span><span class="token punctuation">)</span>
+    errfile<span class="token punctuation">.</span>seek<span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">)</span>
+    px_stderr <span class="token operator">=</span> errfile<span class="token punctuation">.</span>read<span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token keyword">return</span> p1<span class="token punctuation">.</span>returncode <span class="token keyword">or</span> p2<span class="token punctuation">.</span>returncode<span class="token punctuation">,</span> px_stderr<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+  </div>
+</article>
+
+
+
+        
+          <div id="footer-post-container">
+  <div id="footer-post">
+
+    <div id="nav-footer" style="display: none">
+      <ul>
+        
+          <li><a href="/">Home</a></li>
+        
+          <li><a href="/archives/">Writing</a></li>
+        
+          <li><a href="/categories/">Categories</a></li>
+        
+          <li><a href="/tags/">Tags</a></li>
+        
+          <li><a href="/about/">About</a></li>
+        
+      </ul>
+    </div>
+
+    
+    
+      <div id="toc-footer" style="display: none">
+        <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#How-to-know-which-program-sent-a-network-request"><span class="toc-number">1.</span> <span class="toc-text">How to know which program sent a network request</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Python-subprocess-and-stderr"><span class="toc-number">2.</span> <span class="toc-text">Python subprocess and stderr</span></a></li></ol>
+      </div>
+    
+
+    <div id="share-footer" style="display: none">
+      <ul>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.facebook.com/sharer.php?u=https://lnxpgn.github.io/2023/11/05/issue-44-202311-1/"><i class="fab fa-facebook fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://twitter.com/share?url=https://lnxpgn.github.io/2023/11/05/issue-44-202311-1/&text=Weekly - issue 44"><i class="fab fa-twitter fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.linkedin.com/shareArticle?url=https://lnxpgn.github.io/2023/11/05/issue-44-202311-1/&title=Weekly - issue 44"><i class="fab fa-linkedin fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://pinterest.com/pin/create/bookmarklet/?url=https://lnxpgn.github.io/2023/11/05/issue-44-202311-1/&is_video=false&description=Weekly - issue 44"><i class="fab fa-pinterest fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=Weekly - issue 44&body=Check out this article: https://lnxpgn.github.io/2023/11/05/issue-44-202311-1/"><i class="fa-solid fa-envelope fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://getpocket.com/save?url=https://lnxpgn.github.io/2023/11/05/issue-44-202311-1/&title=Weekly - issue 44"><i class="fab fa-get-pocket fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://reddit.com/submit?url=https://lnxpgn.github.io/2023/11/05/issue-44-202311-1/&title=Weekly - issue 44"><i class="fab fa-reddit fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.stumbleupon.com/submit?url=https://lnxpgn.github.io/2023/11/05/issue-44-202311-1/&title=Weekly - issue 44"><i class="fab fa-stumbleupon fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://digg.com/submit?url=https://lnxpgn.github.io/2023/11/05/issue-44-202311-1/&title=Weekly - issue 44"><i class="fab fa-digg fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.tumblr.com/share/link?url=https://lnxpgn.github.io/2023/11/05/issue-44-202311-1/&name=Weekly - issue 44&description="><i class="fab fa-tumblr fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://news.ycombinator.com/submitlink?u=https://lnxpgn.github.io/2023/11/05/issue-44-202311-1/&t=Weekly - issue 44"><i class="fab fa-hacker-news fa-lg" aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+
+    <div id="actions-footer">
+        <a id="menu" class="icon" href="#" onclick="$('#nav-footer').toggle();return false;"><i class="fa-solid fa-bars fa-lg" aria-hidden="true"></i> Menu</a>
+        
+          <a id="toc" class="icon" href="#" onclick="$('#toc-footer').toggle();return false;"><i class="fa-solid fa-list fa-lg" aria-hidden="true"></i> TOC</a>
+        
+        <a id="share" class="icon" href="#" onclick="$('#share-footer').toggle();return false;"><i class="fa-solid fa-share-alt fa-lg" aria-hidden="true"></i> Share</a>
+        <a id="top" style="display:none" class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fa-solid fa-chevron-up fa-lg" aria-hidden="true"></i> Top</a>
+    </div>
+
+  </div>
+</div>
+
+        
+        <footer id="footer">
+  <div class="footer-left">
+    Copyright &copy;
+    
+    
+    2015-2025
+    lnxpgn
+  </div>
+  <div class="footer-right">
+    <nav>
+      <ul>
+        <!--
+       --><li><a href="/">Home</a></li><!--
+     --><!--
+       --><li><a href="/archives/">Writing</a></li><!--
+     --><!--
+       --><li><a href="/categories/">Categories</a></li><!--
+     --><!--
+       --><li><a href="/tags/">Tags</a></li><!--
+     --><!--
+       --><li><a href="/about/">About</a></li><!--
+     -->
+      </ul>
+    </nav>
+  </div>
+</footer>
+
+    </div>
+    <!-- styles -->
+
+
+
+  <link rel="preload" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" crossorigin="anonymous" onload="this.onload=null;this.rel='stylesheet'"/>
+
+
+  <link
+    rel="stylesheet"
+    href="/css/prism-default-line-numbers.css"/>
+
+
+    <!-- jquery -->
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" crossorigin="anonymous"></script>
+
+
+
+
+<!-- clipboard -->
+
+  
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.7/clipboard.min.js" crossorigin="anonymous"></script>
+  
+  <script type="text/javascript">
+  $(function() {
+    // copy-btn HTML
+    var btn = "<span class=\"btn-copy tooltipped tooltipped-sw\" aria-label=\"Copy to clipboard!\">";
+    btn += '<i class="fa-regular fa-clone"></i>';
+    btn += '</span>';
+    // mount it!
+    $(".highlight table").before(btn);
+    var clip = new ClipboardJS('.btn-copy', {
+      text: function(trigger) {
+        return Array.from(trigger.nextElementSibling.querySelectorAll('.code')).reduce((str,it)=>str+it.innerText+'\n','')
+      }
+    });
+    clip.on('success', function(e) {
+      e.trigger.setAttribute('aria-label', "Copied!");
+      e.clearSelection();
+    })
+  })
+  </script>
+
+
+<script src="/js/main.js"></script>
+
+<!-- search -->
+
+<!-- Baidu Analytics -->
+
+<!-- Cloudflare Analytics -->
+
+<!-- Disqus Comments -->
+
+<!-- utterances Comments -->
+
+</body>
+</html>

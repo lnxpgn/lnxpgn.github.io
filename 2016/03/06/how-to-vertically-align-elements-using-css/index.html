@@ -1,0 +1,604 @@
+<!DOCTYPE html>
+<html lang=zh>
+<head>
+    <!-- so meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5" />
+    <meta name="description" content="任何一个Web开发人员都会遇到垂直对齐这个老问题。我在Web领域工作了将近一年，已经被客户问了多次“把这个对齐到窗口中央”或“把那个放到那个的中部”。使用CSS容易实现水平对齐： 对于块级元素（block-level element） display: block; margin: 0 auto;  对于内联元素（inline element，也叫行内元素） display: inline-blo">
+<meta property="og:type" content="article">
+<meta property="og:title" content="如何使用CSS垂直对齐元素">
+<meta property="og:url" content="https://lnxpgn.github.io/2016/03/06/how-to-vertically-align-elements-using-css/index.html">
+<meta property="og:site_name" content="竹里馆">
+<meta property="og:description" content="任何一个Web开发人员都会遇到垂直对齐这个老问题。我在Web领域工作了将近一年，已经被客户问了多次“把这个对齐到窗口中央”或“把那个放到那个的中部”。使用CSS容易实现水平对齐： 对于块级元素（block-level element） display: block; margin: 0 auto;  对于内联元素（inline element，也叫行内元素） display: inline-blo">
+<meta property="og:locale">
+<meta property="og:image" content="https://lnxpgn.github.io/images/va-vertical-align.png">
+<meta property="og:image" content="https://lnxpgn.github.io/images/vertical-align-values-1.png">
+<meta property="og:image" content="https://lnxpgn.github.io/images/vertical-align-values-2.png">
+<meta property="og:image" content="https://lnxpgn.github.io/images/va-line-height.png">
+<meta property="og:image" content="https://lnxpgn.github.io/images/va-display-table.png">
+<meta property="og:image" content="https://lnxpgn.github.io/images/va-position-absolute.png">
+<meta property="og:image" content="https://lnxpgn.github.io/images/va-display-table.png">
+<meta property="og:image" content="https://lnxpgn.github.io/images/va-display-table.png">
+<meta property="article:published_time" content="2016-03-06T15:18:36.000Z">
+<meta property="article:modified_time" content="2020-05-07T16:00:00.000Z">
+<meta property="article:author" content="lnxpgn">
+<meta property="article:tag" content="Translation">
+<meta property="article:tag" content="翻译">
+<meta property="article:tag" content="CSS">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://lnxpgn.github.io/images/va-vertical-align.png">
+    
+    
+      
+        
+          <link rel="shortcut icon" href="/images/favicon.ico">
+        
+      
+      
+        
+          <link rel="icon" type="image/png" href="/images/favicon-192x192.png" sizes="192x192">
+        
+      
+      
+        
+          <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+        
+      
+    
+    <!-- title -->
+    <title>如何使用CSS垂直对齐元素</title>
+    <!-- async scripts -->
+    <!-- Google Analytics -->
+
+
+    <!-- Umami Analytics -->
+
+
+    <!-- styles -->
+    
+<link rel="stylesheet" href="/css/style.css">
+
+    <!-- persian styles -->
+    
+    <!-- rss -->
+    
+    
+	<!-- mathjax -->
+	
+<meta name="generator" content="Hexo 7.3.0"><link rel="alternate" href="/atom.xml" title="竹里馆" type="application/atom+xml">
+<link rel="alternate" href="/rss.xml" title="竹里馆" type="application/rss+xml">
+</head>
+
+<body class="max-width mx-auto px3 ltr">
+    
+      <div id="header-post">
+  <a id="menu-icon" href="#" aria-label="Menu"><i class="fa-solid fa-bars fa-lg"></i></a>
+  <a id="menu-icon-tablet" href="#" aria-label="Menu"><i class="fa-solid fa-bars fa-lg"></i></a>
+  <a id="top-icon-tablet" href="#" aria-label="Top" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');" style="display:none;"><i class="fa-solid fa-chevron-up fa-lg"></i></a>
+  <span id="menu">
+    <span id="nav">
+      <ul>
+        <!--
+       --><li><a href="/">Home</a></li><!--
+     --><!--
+       --><li><a href="/archives/">Writing</a></li><!--
+     --><!--
+       --><li><a href="/categories/">Categories</a></li><!--
+     --><!--
+       --><li><a href="/tags/">Tags</a></li><!--
+     --><!--
+       --><li><a href="/about/">About</a></li><!--
+     -->
+      </ul>
+    </span>
+    <br/>
+    <span id="actions">
+      <ul>
+        
+        <li><a class="icon" aria-label="Previous post" href="/2016/04/18/a-simple-web-developer-guide-to-color/"><i class="fa-solid fa-chevron-left" aria-hidden="true" onmouseover="$('#i-prev').toggle();" onmouseout="$('#i-prev').toggle();"></i></a></li>
+        
+        
+        <li><a class="icon" aria-label="Next post" href="/2015/08/01/hexo-markdown-issues/"><i class="fa-solid fa-chevron-right" aria-hidden="true" onmouseover="$('#i-next').toggle();" onmouseout="$('#i-next').toggle();"></i></a></li>
+        
+        <li><a class="icon" aria-label="Back to top" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fa-solid fa-chevron-up" aria-hidden="true" onmouseover="$('#i-top').toggle();" onmouseout="$('#i-top').toggle();"></i></a></li>
+        <li><a class="icon" aria-label="Share post" href="#"><i class="fa-solid fa-share-alt" aria-hidden="true" onmouseover="$('#i-share').toggle();" onmouseout="$('#i-share').toggle();" onclick="$('#share').toggle();return false;"></i></a></li>
+      </ul>
+      <span id="i-prev" class="info" style="display:none;">Previous post</span>
+      <span id="i-next" class="info" style="display:none;">Next post</span>
+      <span id="i-top" class="info" style="display:none;">Back to top</span>
+      <span id="i-share" class="info" style="display:none;">Share post</span>
+    </span>
+    <br/>
+    <div id="share" style="display: none">
+      <ul>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.facebook.com/sharer.php?u=https://lnxpgn.github.io/2016/03/06/how-to-vertically-align-elements-using-css/"><i class="fab fa-facebook " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://twitter.com/share?url=https://lnxpgn.github.io/2016/03/06/how-to-vertically-align-elements-using-css/&text=如何使用CSS垂直对齐元素"><i class="fab fa-twitter " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.linkedin.com/shareArticle?url=https://lnxpgn.github.io/2016/03/06/how-to-vertically-align-elements-using-css/&title=如何使用CSS垂直对齐元素"><i class="fab fa-linkedin " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://pinterest.com/pin/create/bookmarklet/?url=https://lnxpgn.github.io/2016/03/06/how-to-vertically-align-elements-using-css/&is_video=false&description=如何使用CSS垂直对齐元素"><i class="fab fa-pinterest " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=如何使用CSS垂直对齐元素&body=Check out this article: https://lnxpgn.github.io/2016/03/06/how-to-vertically-align-elements-using-css/"><i class="fa-solid fa-envelope " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://getpocket.com/save?url=https://lnxpgn.github.io/2016/03/06/how-to-vertically-align-elements-using-css/&title=如何使用CSS垂直对齐元素"><i class="fab fa-get-pocket " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://reddit.com/submit?url=https://lnxpgn.github.io/2016/03/06/how-to-vertically-align-elements-using-css/&title=如何使用CSS垂直对齐元素"><i class="fab fa-reddit " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.stumbleupon.com/submit?url=https://lnxpgn.github.io/2016/03/06/how-to-vertically-align-elements-using-css/&title=如何使用CSS垂直对齐元素"><i class="fab fa-stumbleupon " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://digg.com/submit?url=https://lnxpgn.github.io/2016/03/06/how-to-vertically-align-elements-using-css/&title=如何使用CSS垂直对齐元素"><i class="fab fa-digg " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.tumblr.com/share/link?url=https://lnxpgn.github.io/2016/03/06/how-to-vertically-align-elements-using-css/&name=如何使用CSS垂直对齐元素&description=&lt;p&gt;任何一个Web开发人员都会遇到垂直对齐这个老问题。我在Web领域工作了将近一年，已经被客户问了多次“把这个对齐到窗口中央”或“把那个放到那个的中部”。使用CSS容易实现水平对齐：&lt;/p&gt;
+&lt;p&gt;对于块级元素（block-level element）&lt;/p&gt;
+&lt;pre class=&#34;line-numbers language-css&#34; data-language=&#34;css&#34;&gt;&lt;code class=&#34;language-css&#34;&gt;&lt;span class=&#34;token property&#34;&gt;display&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;:&lt;/span&gt; block&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt; &lt;span class=&#34;token property&#34;&gt;margin&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;:&lt;/span&gt; 0 auto&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;span aria-hidden=&#34;true&#34; class=&#34;line-numbers-rows&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;对于内联元素（inline element，也叫行内元素）&lt;/p&gt;
+&lt;pre class=&#34;line-numbers language-css&#34; data-language=&#34;css&#34;&gt;&lt;code class=&#34;language-css&#34;&gt;&lt;span class=&#34;token property&#34;&gt;display&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;:&lt;/span&gt; inline-block&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt; &lt;span class=&#34;token property&#34;&gt;text-align&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;:&lt;/span&gt; center&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;span aria-hidden=&#34;true&#34; class=&#34;line-numbers-rows&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;为什么垂直对齐不能这么简单？问题在于网站传统上并不是为了垂直对齐，网页是横向缩放的，高度改变以适应内容。我们幸运的是CSS有多种方法可以绕过这个问题，有些方法好于其他，有些则是十分糟糕，不应该使用。记住这些都是相对的（有时是绝对的），一个可以在某种情况下解决问题的方法可能不能解决另外一种情况的问题。&lt;/p&gt;"><i class="fab fa-tumblr " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://news.ycombinator.com/submitlink?u=https://lnxpgn.github.io/2016/03/06/how-to-vertically-align-elements-using-css/&t=如何使用CSS垂直对齐元素"><i class="fab fa-hacker-news " aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+    
+    
+      <div id="toc">
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%A6%96%E5%85%88%EF%BC%8Cvertical-align%E5%B1%9E%E6%80%A7"><span class="toc-number">1.</span> <span class="toc-text">首先，vertical-align属性</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Line-height"><span class="toc-number">2.</span> <span class="toc-text">Line height</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#CSS%E8%A1%A8%E6%A0%BC"><span class="toc-number">3.</span> <span class="toc-text">CSS表格</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%BB%9D%E5%AF%B9%E5%AE%9A%E4%BD%8D"><span class="toc-number">4.</span> <span class="toc-text">绝对定位</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%B9%BD%E7%81%B5%E5%85%83%E7%B4%A0"><span class="toc-number">5.</span> <span class="toc-text">幽灵元素</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Flexbox"><span class="toc-number">6.</span> <span class="toc-text">Flexbox</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%80%BB%E7%BB%93-%E3%80%82%E3%80%82%E3%80%82"><span class="toc-number">7.</span> <span class="toc-text">总结 。。。</span></a></li></ol>
+      </div>
+    
+  </span>
+</div>
+
+    
+    <div class="content index py4 ">
+        
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+  <header>
+    
+    <h1 class="posttitle p-name" itemprop="name headline">
+        如何使用CSS垂直对齐元素
+    </h1>
+
+
+
+    <div class="meta">
+      <!-- <span class="author p-author h-card" itemprop="author" itemscope itemtype="http://schema.org/Person">
+        <span class="p-name" itemprop="name">lnxpgn</span>
+      </span> -->
+      
+    <div class="postdate">
+      
+        <time datetime="2016-03-06T15:18:36.000Z" class="dt-published" itemprop="datePublished">2016-03-06</time>
+        
+      
+    </div>
+
+
+      
+    <div class="article-category">
+        <i class="fa-solid fa-archive"></i>
+        <a class="category-link" href="/categories/Tech/">Tech</a>
+    </div>
+
+
+      
+    <div class="article-tag">
+        <i class="fa-solid fa-tag"></i>
+        <a class="p-category" href="/tags/CSS/" rel="tag">CSS</a>, <a class="p-category" href="/tags/Translation/" rel="tag">Translation</a>, <a class="p-category" href="/tags/%E7%BF%BB%E8%AF%91/" rel="tag">翻译</a>
+    </div>
+
+
+    </div>
+  </header>
+  
+
+  <div class="content e-content" itemprop="articleBody">
+    <p>任何一个Web开发人员都会遇到垂直对齐这个老问题。我在Web领域工作了将近一年，已经被客户问了多次“把这个对齐到窗口中央”或“把那个放到那个的中部”。使用CSS容易实现水平对齐：</p>
+<p>对于块级元素（block-level element）</p>
+<pre class="line-numbers language-css" data-language="css"><code class="language-css"><span class="token property">display</span><span class="token punctuation">:</span> block<span class="token punctuation">;</span> <span class="token property">margin</span><span class="token punctuation">:</span> 0 auto<span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p>对于内联元素（inline element，也叫行内元素）</p>
+<pre class="line-numbers language-css" data-language="css"><code class="language-css"><span class="token property">display</span><span class="token punctuation">:</span> inline-block<span class="token punctuation">;</span> <span class="token property">text-align</span><span class="token punctuation">:</span> center<span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p>为什么垂直对齐不能这么简单？问题在于网站传统上并不是为了垂直对齐，网页是横向缩放的，高度改变以适应内容。我们幸运的是CSS有多种方法可以绕过这个问题，有些方法好于其他，有些则是十分糟糕，不应该使用。记住这些都是相对的（有时是绝对的），一个可以在某种情况下解决问题的方法可能不能解决另外一种情况的问题。</p>
+<span id="more"></span>
+<h2 id="首先，vertical-align属性"><a href="#首先，vertical-align属性" class="headerlink" title="首先，vertical-align属性"></a>首先，vertical-align属性</h2><p>开发人员都有这个时候：首先发现了<code>vertical-align</code>属性，几分钟后则疑惑它到底有什么含义，特别是在使用这个属性后该死的垂直对齐仍不奏效！！！的确，我们都曾经错误地使用它！</p>
+<p><code>vertical-align</code>属性规定了排成一行的兄弟元素间彼此是如何对齐的。它适用于内联元素（inline element）和table cell元素。</p>
+<p><img src="/images/va-vertical-align.png" alt="The vertical-align property"><br><em><a target="_blank" rel="noopener" href="https://codepen.io/edenagency/pen/neDlk/">codepen.io&#x2F;edenagency&#x2F;pen&#x2F;neDlk</a>（译者加）</em></p>
+<pre class="line-numbers language-css" data-language="css"><code class="language-css"><span class="token selector">#parent-container</span> <span class="token punctuation">&#123;</span>
+    <span class="token property">background-color</span><span class="token punctuation">:</span> #bc5858<span class="token punctuation">;</span>
+    <span class="token property">width</span><span class="token punctuation">:</span> 100%<span class="token punctuation">;</span>
+    <span class="token property">text-align</span><span class="token punctuation">:</span> center<span class="token punctuation">;</span>
+    <span class="token property">padding</span><span class="token punctuation">:</span> 20px<span class="token punctuation">;</span>
+<span class="token punctuation">&#125;</span>
+
+<span class="token selector">.child-container</span> <span class="token punctuation">&#123;</span>
+    <span class="token property">background-color</span><span class="token punctuation">:</span> #ff933d<span class="token punctuation">;</span>
+    <span class="token property">display</span><span class="token punctuation">:</span> inline-block<span class="token punctuation">;</span>
+    <span class="token property">padding</span><span class="token punctuation">:</span> 20px<span class="token punctuation">;</span>
+    <span class="token property">margin</span><span class="token punctuation">:</span> 0 10px<span class="token punctuation">;</span>
+    <span class="token property">font-family</span><span class="token punctuation">:</span> helvetica<span class="token punctuation">,</span> arial<span class="token punctuation">,</span> sans-serif<span class="token punctuation">;</span>
+    <span class="token property">font-weight</span><span class="token punctuation">:</span> 100<span class="token punctuation">;</span>
+    <span class="token property">color</span><span class="token punctuation">:</span> #fff<span class="token punctuation">;</span>
+    <span class="token property">vertical-align</span><span class="token punctuation">:</span> middle<span class="token punctuation">;</span>
+<span class="token punctuation">&#125;</span>
+
+<span class="token selector">#john</span> <span class="token punctuation">&#123;</span>
+    <span class="token property">height</span><span class="token punctuation">:</span> 100px<span class="token punctuation">;</span>
+<span class="token punctuation">&#125;</span>
+
+<span class="token selector">#dave</span> <span class="token punctuation">&#123;</span>
+    <span class="token property">height</span><span class="token punctuation">:</span> 50px<span class="token punctuation">;</span>
+<span class="token punctuation">&#125;</span>
+
+<span class="token selector">#colin</span> <span class="token punctuation">&#123;</span>
+    <span class="token property">height</span><span class="token punctuation">:</span> 20px<span class="token punctuation">;</span>
+<span class="token punctuation">&#125;</span>
+
+<span class="token selector">#beryl</span> <span class="token punctuation">&#123;</span>
+    <span class="token property">height</span><span class="token punctuation">:</span> 120px<span class="token punctuation">;</span>
+<span class="token punctuation">&#125;</span>
+
+<span class="token selector">#gertie</span> <span class="token punctuation">&#123;</span>
+    <span class="token property">height</span><span class="token punctuation">:</span> 35px<span class="token punctuation">;</span>
+<span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p><em>（译者加）</em></p>
+<p>适用于内联元素时的值：</p>
+<ul>
+<li><p>baseline</p>
+<blockquote>
+<p>将子元素文本的基线（base line）与父元素的基线对齐。想象基线就是带有横线的写作纸上的横线。这是默认值；</p>
+</blockquote>
+</li>
+<li><p>bottom</p>
+<blockquote>
+<p>将子元素的底部与<em><strong>行</strong></em> 的底部对齐；</p>
+</blockquote>
+</li>
+<li><p>middle</p>
+<blockquote>
+<p>将子元素的中心线与父元素的中心线对齐（译者注：元素的中心线比基线高一点）；</p>
+</blockquote>
+</li>
+<li><p>sub</p>
+<blockquote>
+<p>将子元素的基线与父元素的下标基线对齐；</p>
+</blockquote>
+</li>
+<li><p>super</p>
+<blockquote>
+<p>将子元素的基线与父元素的上标基线对齐；</p>
+</blockquote>
+</li>
+<li><p>text-bottom</p>
+<blockquote>
+<p>将子元素的底部与父元素字体的最底部对齐（译者注：即与父元素的文本内容区的最底部对齐）；</p>
+</blockquote>
+</li>
+<li><p>text-top</p>
+<blockquote>
+<p>将子元素的顶部与父元素字体的最顶部对齐（译者注：即与父元素的文本内容区的最顶部对齐）；</p>
+</blockquote>
+</li>
+<li><p>top</p>
+<blockquote>
+<p>将子元素的顶部与<em><strong>行</strong></em> 的顶部对齐；</p>
+</blockquote>
+</li>
+<li><p>length</p>
+<blockquote>
+<p>将子元素文本的基线值设为父元素的基线值加上<em><strong>length</strong></em> 所给定的值；</p>
+</blockquote>
+</li>
+</ul>
+<p>当<code>vertical-align</code>被误用时，<code>vertical-align: middle</code>通常是罪魁祸首，最常见的原因是用在了块级元素上。记住，它仅在<code>inline</code>和<code>inline-block</code>元素上有效。如果用在了块级元素上，所有子元素都会继承它的值。</p>
+<p><code>vertical-align</code>也可用于HTML表格的单元格。适用于单元格时的值：</p>
+<ul>
+<li><p>top</p>
+<blockquote>
+<p>将单元格的内容与单元格的顶部对齐；</p>
+</blockquote>
+</li>
+<li><p>middle</p>
+<blockquote>
+<p>将单元格的内容与单元格的中心对齐；</p>
+</blockquote>
+</li>
+<li><p>bottom</p>
+<blockquote>
+<p>将单元格的内容与单元格的底部对齐；</p>
+</blockquote>
+</li>
+</ul>
+<p>现在清晰了，让我们来看看怎么解决在块级元素上的问题。</p>
+<p>译者注：<code>vertical-align</code>属性的含义和图解也可参考<a target="_blank" rel="noopener" href="http://bitsofco.de/the-vertical-align-property/">这里</a></p>
+<p><img src="/images/vertical-align-values-1.png" alt="vertical-align-values-1"><img src="/images/vertical-align-values-2.png" alt="vertical-align-values-2"><em>（译者加）</em></p>
+<h2 id="Line-height"><a href="#Line-height" class="headerlink" title="Line height"></a>Line height</h2><p>这是项简单的技术，你只想中心对齐一行文本时效果很好。也可用于图片，不过这是一种hack，尽量避免使用。</p>
+<p><img src="/images/va-line-height.png" alt="Vertical alignment using line height"><br><em><a target="_blank" rel="noopener" href="https://codepen.io/edenagency/pen/GiLdm/">codepen.io&#x2F;edenagency&#x2F;pen&#x2F;GiLdm</a>（译者加）</em></p>
+<p>这个例子包含了两个元素，一个是父元素，一个是子元素。<code>line-height</code>设置在子元素上，反过来强制父元素调整到与之相同的高度。注意：为让这项技术凑效，<code>line-height</code>的值必须大于字体大小或图片的高度。为了用在图片上，必须把<code>vertical-align: middle</code>添加到图片元素。</p>
+<pre class="line-numbers language-css" data-language="css"><code class="language-css"><span class="token selector">#parent-container</span> <span class="token punctuation">&#123;</span>
+    <span class="token property">background-color</span><span class="token punctuation">:</span> #bc5858<span class="token punctuation">;</span>
+<span class="token punctuation">&#125;</span>
+
+<span class="token selector">#child-container</span> <span class="token punctuation">&#123;</span>
+    <span class="token property">line-height</span><span class="token punctuation">:</span> 300px<span class="token punctuation">;</span>
+    <span class="token property">text-align</span><span class="token punctuation">:</span> center<span class="token punctuation">;</span>
+    <span class="token property">font-family</span><span class="token punctuation">:</span> helvetica<span class="token punctuation">,</span> arial<span class="token punctuation">,</span> sans-serif<span class="token punctuation">;</span>
+    <span class="token property">font-weight</span><span class="token punctuation">:</span> 100<span class="token punctuation">;</span>
+    <span class="token property">color</span><span class="token punctuation">:</span> #fff<span class="token punctuation">;</span>
+<span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p><em>（译者加）</em></p>
+<p>如我之前所说，这是一种hack，稍后提及能产生同样效果的方法。</p>
+<p><strong>优点：</strong></p>
+<p>容易实现</p>
+<p><strong>缺点：</strong></p>
+<p>只能用于一行文本，当用于文本之外时，它不够正规、不够优雅。</p>
+<h2 id="CSS表格"><a href="#CSS表格" class="headerlink" title="CSS表格"></a>CSS表格</h2><p>是CSS的表格不是HTML的表格。我们可以使用<code>display: table</code>让一个元素表现得像个表格。这些表格属性基于原来的HTML表格元素，且行为一致。</p>
+<p><img src="/images/va-display-table.png" alt="Vertical alignment using css table properties"><br><em><a target="_blank" rel="noopener" href="https://codepen.io/edenagency/pen/iwBua/">codepen.io&#x2F;edenagency&#x2F;pen&#x2F;iwBua</a>（译者加）</em></p>
+<p>在这个示例中，父元素当作表格（display: table，译者注），子元素作为表格的单元格（display: table-cell，译者注）。<code>vertical-align: middle</code>使单元格完美居中，所有的单元格继承了其父元素的高度。</p>
+<pre class="line-numbers language-css" data-language="css"><code class="language-css"><span class="token selector">#parent-container</span> <span class="token punctuation">&#123;</span>
+    <span class="token property">background-color</span><span class="token punctuation">:</span>#bc5858<span class="token punctuation">;</span>
+    <span class="token property">display</span><span class="token punctuation">:</span> table<span class="token punctuation">;</span>
+    <span class="token property">width</span><span class="token punctuation">:</span> 90%<span class="token punctuation">;</span>
+    <span class="token property">height</span><span class="token punctuation">:</span> 300px<span class="token punctuation">;</span>
+    <span class="token property">margin</span><span class="token punctuation">:</span> 0 auto<span class="token punctuation">;</span>
+    <span class="token property">padding</span><span class="token punctuation">:</span> 20px<span class="token punctuation">;</span>
+<span class="token punctuation">&#125;</span>
+
+<span class="token selector">#child-container</span> <span class="token punctuation">&#123;</span>
+    <span class="token property">display</span><span class="token punctuation">:</span> table-cell<span class="token punctuation">;</span>
+    <span class="token property">vertical-align</span><span class="token punctuation">:</span> middle<span class="token punctuation">;</span>
+    <span class="token property">text-align</span><span class="token punctuation">:</span> center<span class="token punctuation">;</span>
+    <span class="token property">font-family</span><span class="token punctuation">:</span> helvetica<span class="token punctuation">,</span> arial<span class="token punctuation">,</span> sans-serif<span class="token punctuation">;</span>
+    <span class="token property">font-weight</span><span class="token punctuation">:</span> 100<span class="token punctuation">;</span>
+    <span class="token property">color</span><span class="token punctuation">:</span> #fff<span class="token punctuation">;</span>
+<span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p><em>（译者加）</em></p>
+<p><strong>优点：</strong></p>
+<p>完全像HTML表格一样运作，并且语义上正确；<br>不需要定义高度和宽度。</p>
+<p><strong>缺点：</strong></p>
+<p>除非定义了宽度，表格会展开到其内容的宽度；</p>
+<p>如果你在父元素中需要另一个块级元素并且不想把它当成table cell，事情就变得混乱；</p>
+<p>也可以使用HTML表格来实现，然而应该避免使用HTML元素去设计页面的样式，那是CSS的事情，语义上也是错误的，除非你的内容适用于表格，比如列车时刻表。</p>
+<h2 id="绝对定位"><a href="#绝对定位" class="headerlink" title="绝对定位"></a>绝对定位</h2><p>为了使用<code>position: absolute</code>来垂直对齐你选择的元素，需要使用像素或百分比定义一个高度。</p>
+<p><img src="/images/va-position-absolute.png" alt="Vertical alignment using absolute positioning"><br><em><a target="_blank" rel="noopener" href="https://codepen.io/edenagency/pen/GuqjD/">codepen.io&#x2F;edenagency&#x2F;pen&#x2F;GuqjD</a>（译者加）</em></p>
+<p>有两种方法可居中子元素。第一种选择，如上图所示，用<code>top: 50%</code>下移子元素，用<code>transform: translateY(-50%)</code>上移子元素高度的一半，以致子元素的中心与父元素的位于同一行。也可以使用负值的外边距（margin）实现；第二种选择是把子元素的<code>top</code>, <code>bottom</code>, <code>left</code>, <code>right</code>属性的值均设为<code>0</code>，外边距均设成<code>auto</code>，然而用这种方法我得到过不同的结果，最好还是选择第一种。</p>
+<pre class="line-numbers language-css" data-language="css"><code class="language-css"><span class="token selector">#parent-container</span> <span class="token punctuation">&#123;</span>
+    <span class="token property">background-color</span><span class="token punctuation">:</span> #bc5858<span class="token punctuation">;</span>
+    <span class="token property">height</span><span class="token punctuation">:</span> 300px<span class="token punctuation">;</span>
+    <span class="token property">width</span><span class="token punctuation">:</span> 500px<span class="token punctuation">;</span>
+    <span class="token property">position</span><span class="token punctuation">:</span> relative<span class="token punctuation">;</span>
+    <span class="token property">margin</span><span class="token punctuation">:</span> 0 auto<span class="token punctuation">;</span>
+<span class="token punctuation">&#125;</span>
+
+<span class="token selector">#child-container</span> <span class="token punctuation">&#123;</span>
+    <span class="token property">position</span><span class="token punctuation">:</span> absolute<span class="token punctuation">;</span>
+    <span class="token property">margin</span><span class="token punctuation">:</span> 0 auto<span class="token punctuation">;</span>
+    <span class="token property">top</span><span class="token punctuation">:</span> 50%<span class="token punctuation">;</span>
+    <span class="token property">transform</span><span class="token punctuation">:</span> <span class="token function">translateY</span><span class="token punctuation">(</span>-50%<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token property">left</span><span class="token punctuation">:</span> 0<span class="token punctuation">;</span>
+    <span class="token property">right</span><span class="token punctuation">:</span> 0<span class="token punctuation">;</span>
+    <span class="token property">height</span><span class="token punctuation">:</span> auto<span class="token punctuation">;</span>
+    <span class="token property">width</span><span class="token punctuation">:</span> 300px<span class="token punctuation">;</span>
+    <span class="token property">text-align</span><span class="token punctuation">:</span> center<span class="token punctuation">;</span>
+    <span class="token property">font-family</span><span class="token punctuation">:</span> helvetica<span class="token punctuation">,</span> arial<span class="token punctuation">,</span> sans-serif<span class="token punctuation">;</span>
+    <span class="token property">font-weight</span><span class="token punctuation">:</span> 100<span class="token punctuation">;</span>
+    <span class="token property">color</span><span class="token punctuation">:</span> #fff<span class="token punctuation">;</span>
+<span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p><em>（译者加）</em></p>
+<p><strong>优点：</strong></p>
+<p>尺寸使用百分比能使元素自适应。</p>
+<p><strong>缺点：</strong></p>
+<p>需要定义一个高度，有时这是不可能的；</p>
+<p>如果不止一个子元素，可能有重叠问题，除非它们也是绝对定位。</p>
+<p>你必须记得相对地或绝对地定位你的父元素，否则子元素不会居中。</p>
+<h2 id="幽灵元素"><a href="#幽灵元素" class="headerlink" title="幽灵元素"></a>幽灵元素</h2><p>这项技术最初在CSS Tricks的博客文章<a target="_blank" rel="noopener" href="http://css-tricks.com/centering-in-the-unknown/">“Centering in the Unknown”</a>中提及。一个幽灵元素（Ghost Element）用于在父元素中居中子元素。因为幽灵元素被赋于了一个<code>100%</code>的高度，没有必要为父元素或子元素定义高度。当无法知道尺寸时，这是一个理想的方法。</p>
+<p><img src="/images/va-display-table.png" alt="Vertical alignment using the &#39;Ghost Element&#39;"><br><em><a target="_blank" rel="noopener" href="https://codepen.io/edenagency/pen/trKAu/">codepen.io&#x2F;edenagency&#x2F;pen&#x2F;trKAu</a>（译者加）</em></p>
+<p>如同Chris Coyier在他的博客中提及的，Michal Czernow建议使用一个伪元素作为幽灵元素，不用另加一个<code>div</code>且语义上是正确的。</p>
+<pre class="line-numbers language-css" data-language="css"><code class="language-css"><span class="token selector">#parent-container</span> <span class="token punctuation">&#123;</span>
+    <span class="token property">text-align</span><span class="token punctuation">:</span> center<span class="token punctuation">;</span>
+    <span class="token property">background-color</span><span class="token punctuation">:</span>#bc5858<span class="token punctuation">;</span>
+    <span class="token property">width</span><span class="token punctuation">:</span> 90%<span class="token punctuation">;</span>
+    <span class="token property">height</span><span class="token punctuation">:</span> 500px<span class="token punctuation">;</span>
+    <span class="token property">margin</span><span class="token punctuation">:</span> 0 auto<span class="token punctuation">;</span>
+    <span class="token property">padding</span><span class="token punctuation">:</span> 20px<span class="token punctuation">;</span>
+<span class="token punctuation">&#125;</span>
+
+<span class="token selector">#parent-container:before</span> <span class="token punctuation">&#123;</span>
+    <span class="token property">content</span><span class="token punctuation">:</span> <span class="token string">''</span><span class="token punctuation">;</span>
+    <span class="token property">display</span><span class="token punctuation">:</span> inline-block<span class="token punctuation">;</span>
+    <span class="token property">height</span><span class="token punctuation">:</span> 100%<span class="token punctuation">;</span>
+    <span class="token property">vertical-align</span><span class="token punctuation">:</span> middle<span class="token punctuation">;</span>
+<span class="token punctuation">&#125;</span>
+
+<span class="token selector">#child-container</span> <span class="token punctuation">&#123;</span>
+    <span class="token property">display</span><span class="token punctuation">:</span> inline-block<span class="token punctuation">;</span>
+    <span class="token property">vertical-align</span><span class="token punctuation">:</span> middle<span class="token punctuation">;</span>
+    <span class="token property">width</span><span class="token punctuation">:</span> 75%<span class="token punctuation">;</span>
+    <span class="token property">text-align</span><span class="token punctuation">:</span> center<span class="token punctuation">;</span>
+    <span class="token property">font-family</span><span class="token punctuation">:</span> helvetica<span class="token punctuation">,</span> arial<span class="token punctuation">,</span> sans-serif<span class="token punctuation">;</span>
+    <span class="token property">font-weight</span><span class="token punctuation">:</span> 100<span class="token punctuation">;</span>
+    <span class="token property">color</span><span class="token punctuation">:</span> #fff<span class="token punctuation">;</span>
+<span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p><em>（译者加）</em></p>
+<p><strong>优点：</strong></p>
+<p>语义正确。</p>
+<p><strong>缺点：</strong></p>
+<p>完全像CSS表格一样运作，两项技术都不比另一个更好。</p>
+<h2 id="Flexbox"><a href="#Flexbox" class="headerlink" title="Flexbox"></a>Flexbox</h2><p>在CSS家族中Flexbox（CSS3 弹性盒模型）是项相对较新的技术。我不想深入太多细节，有很多细节，所以这里是一个对它是做什么的快速描述。</p>
+<p>根据<a target="_blank" rel="noopener" href="http://www.w3.org/TR/2014/WD-css-flexbox-1-20140325/">www.w3.org</a>:</p>
+<p>“在flex布局模型中，flex容器的子元素可以在任一方向展开，并且它们的大小具有相当的弹性，即能增长以填充未使用的空间，也可以缩小以防止溢出父元素。子元素在水平和垂直两个方向的对齐均容易操控。盒子的嵌套（水平的在垂直的中，或者垂直的在水平的中）可以在两个维度上构建布局。”</p>
+<p>总的来说，Flexbox仅适用于小型的可伸缩布局。它很容易均等地（或不均匀地）把子元素分成多行或多列，改变元素流动的方向等等。在一个容器中垂直对齐一个单一元素十分地简单。</p>
+<p><img src="/images/va-display-table.png" alt="Vertical alignment using flexbox"><br><em><a target="_blank" rel="noopener" href="https://codepen.io/edenagency/pen/DKCwz/">codepen.io&#x2F;edenagency&#x2F;pen&#x2F;DKCwz</a>（译者加）</em></p>
+<p>当一个父元素从块级元素转变成一个flex元素，它的子元素也自动转变成flex子元素。设置子元素的<code>margin</code>属性为<code>auto</code>将把子元素推向其父元素的中心，添加更多的子元素不会影响它的垂直居中，虽然它会相对于它的兄弟元素重新排列。例如，如果有太多的子元素需要固定在同一行上，并且父元素有<code>flex-wrap: wrap</code>属性，多余的子元素会掉到下一行，所有的子元素均在它们的父元素中居中就像它们是一个整体。</p>
+<pre class="line-numbers language-css" data-language="css"><code class="language-css"><span class="token selector">#parent-container</span> <span class="token punctuation">&#123;</span>
+    <span class="token property">display</span><span class="token punctuation">:</span> flex<span class="token punctuation">;</span>
+    <span class="token property">height</span><span class="token punctuation">:</span> 400px<span class="token punctuation">;</span>
+    <span class="token property">width</span><span class="token punctuation">:</span> 100%<span class="token punctuation">;</span>
+    <span class="token property">background-color</span><span class="token punctuation">:</span>#bc5858<span class="token punctuation">;</span>
+    <span class="token property">margin</span><span class="token punctuation">:</span> 0 auto<span class="token punctuation">;</span>
+<span class="token punctuation">&#125;</span>
+
+<span class="token selector">#child-container</span> <span class="token punctuation">&#123;</span>
+    <span class="token property">width</span><span class="token punctuation">:</span> 90%<span class="token punctuation">;</span>
+    <span class="token property">margin</span><span class="token punctuation">:</span> auto<span class="token punctuation">;</span>
+    <span class="token property">text-align</span><span class="token punctuation">:</span> center<span class="token punctuation">;</span>
+    <span class="token property">font-family</span><span class="token punctuation">:</span> helvetica<span class="token punctuation">,</span> arial<span class="token punctuation">,</span> sans-serif<span class="token punctuation">;</span>
+    <span class="token property">font-weight</span><span class="token punctuation">:</span> 100<span class="token punctuation">;</span>
+    <span class="token property">color</span><span class="token punctuation">:</span> #fff<span class="token punctuation">;</span>
+<span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p><em>（译者加）</em></p>
+<p><strong>优点：</strong></p>
+<p>Flexbox就是用来解决布局问题，因而对于垂直对齐它是理想的。</p>
+<p><strong>缺点：</strong></p>
+<p>通过使用前缀，它虽然和所有最新的浏览器兼容，但不支持旧版本的浏览器，如：IE9。<br>如果你想了解关于Flexbox的更多信息，看下CSS Tricks的<a target="_blank" rel="noopener" href="http://css-tricks.com/snippets/css/a-guide-to-flexbox/">“A Complete Guide to Flexbox”</a>。</p>
+<h2 id="总结-。。。"><a href="#总结-。。。" class="headerlink" title="总结 。。。"></a>总结 。。。</h2><p>有这么多的选择，真是奇怪为什么我们发现垂直对齐还是这么难！不幸的是没有一个最佳解决方案。Flexbox看上去更有前景，唯一的缺点是它与旧版浏览器的兼容性，然而我想一旦规范敲定它会是我们要转向的技术。</p>
+<p>原文：<a target="_blank" rel="noopener" href="http://createdineden.com/blog/2014/september/24/a-professional-guide-how-to-vertically-align-elements-using-css/">A Professional Guide: How to Vertically Align Elements Using CSS</a></p>
+
+  </div>
+</article>
+
+
+
+        
+          <div id="footer-post-container">
+  <div id="footer-post">
+
+    <div id="nav-footer" style="display: none">
+      <ul>
+        
+          <li><a href="/">Home</a></li>
+        
+          <li><a href="/archives/">Writing</a></li>
+        
+          <li><a href="/categories/">Categories</a></li>
+        
+          <li><a href="/tags/">Tags</a></li>
+        
+          <li><a href="/about/">About</a></li>
+        
+      </ul>
+    </div>
+
+    
+    
+      <div id="toc-footer" style="display: none">
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%A6%96%E5%85%88%EF%BC%8Cvertical-align%E5%B1%9E%E6%80%A7"><span class="toc-number">1.</span> <span class="toc-text">首先，vertical-align属性</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Line-height"><span class="toc-number">2.</span> <span class="toc-text">Line height</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#CSS%E8%A1%A8%E6%A0%BC"><span class="toc-number">3.</span> <span class="toc-text">CSS表格</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%BB%9D%E5%AF%B9%E5%AE%9A%E4%BD%8D"><span class="toc-number">4.</span> <span class="toc-text">绝对定位</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%B9%BD%E7%81%B5%E5%85%83%E7%B4%A0"><span class="toc-number">5.</span> <span class="toc-text">幽灵元素</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Flexbox"><span class="toc-number">6.</span> <span class="toc-text">Flexbox</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%80%BB%E7%BB%93-%E3%80%82%E3%80%82%E3%80%82"><span class="toc-number">7.</span> <span class="toc-text">总结 。。。</span></a></li></ol>
+      </div>
+    
+
+    <div id="share-footer" style="display: none">
+      <ul>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.facebook.com/sharer.php?u=https://lnxpgn.github.io/2016/03/06/how-to-vertically-align-elements-using-css/"><i class="fab fa-facebook fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://twitter.com/share?url=https://lnxpgn.github.io/2016/03/06/how-to-vertically-align-elements-using-css/&text=如何使用CSS垂直对齐元素"><i class="fab fa-twitter fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.linkedin.com/shareArticle?url=https://lnxpgn.github.io/2016/03/06/how-to-vertically-align-elements-using-css/&title=如何使用CSS垂直对齐元素"><i class="fab fa-linkedin fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://pinterest.com/pin/create/bookmarklet/?url=https://lnxpgn.github.io/2016/03/06/how-to-vertically-align-elements-using-css/&is_video=false&description=如何使用CSS垂直对齐元素"><i class="fab fa-pinterest fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=如何使用CSS垂直对齐元素&body=Check out this article: https://lnxpgn.github.io/2016/03/06/how-to-vertically-align-elements-using-css/"><i class="fa-solid fa-envelope fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://getpocket.com/save?url=https://lnxpgn.github.io/2016/03/06/how-to-vertically-align-elements-using-css/&title=如何使用CSS垂直对齐元素"><i class="fab fa-get-pocket fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://reddit.com/submit?url=https://lnxpgn.github.io/2016/03/06/how-to-vertically-align-elements-using-css/&title=如何使用CSS垂直对齐元素"><i class="fab fa-reddit fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.stumbleupon.com/submit?url=https://lnxpgn.github.io/2016/03/06/how-to-vertically-align-elements-using-css/&title=如何使用CSS垂直对齐元素"><i class="fab fa-stumbleupon fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://digg.com/submit?url=https://lnxpgn.github.io/2016/03/06/how-to-vertically-align-elements-using-css/&title=如何使用CSS垂直对齐元素"><i class="fab fa-digg fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.tumblr.com/share/link?url=https://lnxpgn.github.io/2016/03/06/how-to-vertically-align-elements-using-css/&name=如何使用CSS垂直对齐元素&description=&lt;p&gt;任何一个Web开发人员都会遇到垂直对齐这个老问题。我在Web领域工作了将近一年，已经被客户问了多次“把这个对齐到窗口中央”或“把那个放到那个的中部”。使用CSS容易实现水平对齐：&lt;/p&gt;
+&lt;p&gt;对于块级元素（block-level element）&lt;/p&gt;
+&lt;pre class=&#34;line-numbers language-css&#34; data-language=&#34;css&#34;&gt;&lt;code class=&#34;language-css&#34;&gt;&lt;span class=&#34;token property&#34;&gt;display&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;:&lt;/span&gt; block&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt; &lt;span class=&#34;token property&#34;&gt;margin&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;:&lt;/span&gt; 0 auto&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;span aria-hidden=&#34;true&#34; class=&#34;line-numbers-rows&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;对于内联元素（inline element，也叫行内元素）&lt;/p&gt;
+&lt;pre class=&#34;line-numbers language-css&#34; data-language=&#34;css&#34;&gt;&lt;code class=&#34;language-css&#34;&gt;&lt;span class=&#34;token property&#34;&gt;display&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;:&lt;/span&gt; inline-block&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt; &lt;span class=&#34;token property&#34;&gt;text-align&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;:&lt;/span&gt; center&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;span aria-hidden=&#34;true&#34; class=&#34;line-numbers-rows&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;为什么垂直对齐不能这么简单？问题在于网站传统上并不是为了垂直对齐，网页是横向缩放的，高度改变以适应内容。我们幸运的是CSS有多种方法可以绕过这个问题，有些方法好于其他，有些则是十分糟糕，不应该使用。记住这些都是相对的（有时是绝对的），一个可以在某种情况下解决问题的方法可能不能解决另外一种情况的问题。&lt;/p&gt;"><i class="fab fa-tumblr fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://news.ycombinator.com/submitlink?u=https://lnxpgn.github.io/2016/03/06/how-to-vertically-align-elements-using-css/&t=如何使用CSS垂直对齐元素"><i class="fab fa-hacker-news fa-lg" aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+
+    <div id="actions-footer">
+        <a id="menu" class="icon" href="#" onclick="$('#nav-footer').toggle();return false;"><i class="fa-solid fa-bars fa-lg" aria-hidden="true"></i> Menu</a>
+        
+          <a id="toc" class="icon" href="#" onclick="$('#toc-footer').toggle();return false;"><i class="fa-solid fa-list fa-lg" aria-hidden="true"></i> TOC</a>
+        
+        <a id="share" class="icon" href="#" onclick="$('#share-footer').toggle();return false;"><i class="fa-solid fa-share-alt fa-lg" aria-hidden="true"></i> Share</a>
+        <a id="top" style="display:none" class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fa-solid fa-chevron-up fa-lg" aria-hidden="true"></i> Top</a>
+    </div>
+
+  </div>
+</div>
+
+        
+        <footer id="footer">
+  <div class="footer-left">
+    Copyright &copy;
+    
+    
+    2015-2025
+    lnxpgn
+  </div>
+  <div class="footer-right">
+    <nav>
+      <ul>
+        <!--
+       --><li><a href="/">Home</a></li><!--
+     --><!--
+       --><li><a href="/archives/">Writing</a></li><!--
+     --><!--
+       --><li><a href="/categories/">Categories</a></li><!--
+     --><!--
+       --><li><a href="/tags/">Tags</a></li><!--
+     --><!--
+       --><li><a href="/about/">About</a></li><!--
+     -->
+      </ul>
+    </nav>
+  </div>
+</footer>
+
+    </div>
+    <!-- styles -->
+
+
+
+  <link rel="preload" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" crossorigin="anonymous" onload="this.onload=null;this.rel='stylesheet'"/>
+
+
+  <link
+    rel="stylesheet"
+    href="/css/prism-default-line-numbers.css"/>
+
+
+    <!-- jquery -->
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" crossorigin="anonymous"></script>
+
+
+
+
+<!-- clipboard -->
+
+  
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.7/clipboard.min.js" crossorigin="anonymous"></script>
+  
+  <script type="text/javascript">
+  $(function() {
+    // copy-btn HTML
+    var btn = "<span class=\"btn-copy tooltipped tooltipped-sw\" aria-label=\"Copy to clipboard!\">";
+    btn += '<i class="fa-regular fa-clone"></i>';
+    btn += '</span>';
+    // mount it!
+    $(".highlight table").before(btn);
+    var clip = new ClipboardJS('.btn-copy', {
+      text: function(trigger) {
+        return Array.from(trigger.nextElementSibling.querySelectorAll('.code')).reduce((str,it)=>str+it.innerText+'\n','')
+      }
+    });
+    clip.on('success', function(e) {
+      e.trigger.setAttribute('aria-label', "Copied!");
+      e.clearSelection();
+    })
+  })
+  </script>
+
+
+<script src="/js/main.js"></script>
+
+<!-- search -->
+
+<!-- Baidu Analytics -->
+
+<!-- Cloudflare Analytics -->
+
+<!-- Disqus Comments -->
+
+<!-- utterances Comments -->
+
+</body>
+</html>

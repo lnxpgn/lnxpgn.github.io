@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang=zh>
+<head>
+    <!-- so meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5" />
+    <meta name="description" content="Why IndexedDB is slow and what to use insteadIndexedDB is slow in multiple transactions, fast in a single transaction. It is not easy to use a single transaction because of user operations and the bro">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Weekly - issue 10">
+<meta property="og:url" content="https://lnxpgn.github.io/2022/01/03/issue-10-202201-1/index.html">
+<meta property="og:site_name" content="竹里馆">
+<meta property="og:description" content="Why IndexedDB is slow and what to use insteadIndexedDB is slow in multiple transactions, fast in a single transaction. It is not easy to use a single transaction because of user operations and the bro">
+<meta property="og:locale">
+<meta property="article:published_time" content="2022-01-02T16:00:00.000Z">
+<meta property="article:modified_time" content="2023-12-08T09:15:04.000Z">
+<meta property="article:author" content="lnxpgn">
+<meta property="article:tag" content="Weekly">
+<meta property="article:tag" content="Linux">
+<meta property="article:tag" content="IndexedDB">
+<meta property="article:tag" content="Machine Learning">
+<meta name="twitter:card" content="summary">
+    
+    
+      
+        
+          <link rel="shortcut icon" href="/images/favicon.ico">
+        
+      
+      
+        
+          <link rel="icon" type="image/png" href="/images/favicon-192x192.png" sizes="192x192">
+        
+      
+      
+        
+          <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+        
+      
+    
+    <!-- title -->
+    <title>Weekly - issue 10</title>
+    <!-- async scripts -->
+    <!-- Google Analytics -->
+
+
+    <!-- Umami Analytics -->
+
+
+    <!-- styles -->
+    
+<link rel="stylesheet" href="/css/style.css">
+
+    <!-- persian styles -->
+    
+    <!-- rss -->
+    
+    
+	<!-- mathjax -->
+	
+<meta name="generator" content="Hexo 7.3.0"><link rel="alternate" href="/atom.xml" title="竹里馆" type="application/atom+xml">
+<link rel="alternate" href="/rss.xml" title="竹里馆" type="application/rss+xml">
+</head>
+
+<body class="max-width mx-auto px3 ltr">
+    
+      <div id="header-post">
+  <a id="menu-icon" href="#" aria-label="Menu"><i class="fa-solid fa-bars fa-lg"></i></a>
+  <a id="menu-icon-tablet" href="#" aria-label="Menu"><i class="fa-solid fa-bars fa-lg"></i></a>
+  <a id="top-icon-tablet" href="#" aria-label="Top" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');" style="display:none;"><i class="fa-solid fa-chevron-up fa-lg"></i></a>
+  <span id="menu">
+    <span id="nav">
+      <ul>
+        <!--
+       --><li><a href="/">Home</a></li><!--
+     --><!--
+       --><li><a href="/archives/">Writing</a></li><!--
+     --><!--
+       --><li><a href="/categories/">Categories</a></li><!--
+     --><!--
+       --><li><a href="/tags/">Tags</a></li><!--
+     --><!--
+       --><li><a href="/about/">About</a></li><!--
+     -->
+      </ul>
+    </span>
+    <br/>
+    <span id="actions">
+      <ul>
+        
+        <li><a class="icon" aria-label="Previous post" href="/2022/01/23/issue-11-202201-2/"><i class="fa-solid fa-chevron-left" aria-hidden="true" onmouseover="$('#i-prev').toggle();" onmouseout="$('#i-prev').toggle();"></i></a></li>
+        
+        
+        <li><a class="icon" aria-label="Next post" href="/2021/12/26/issue-9-202112-1/"><i class="fa-solid fa-chevron-right" aria-hidden="true" onmouseover="$('#i-next').toggle();" onmouseout="$('#i-next').toggle();"></i></a></li>
+        
+        <li><a class="icon" aria-label="Back to top" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fa-solid fa-chevron-up" aria-hidden="true" onmouseover="$('#i-top').toggle();" onmouseout="$('#i-top').toggle();"></i></a></li>
+        <li><a class="icon" aria-label="Share post" href="#"><i class="fa-solid fa-share-alt" aria-hidden="true" onmouseover="$('#i-share').toggle();" onmouseout="$('#i-share').toggle();" onclick="$('#share').toggle();return false;"></i></a></li>
+      </ul>
+      <span id="i-prev" class="info" style="display:none;">Previous post</span>
+      <span id="i-next" class="info" style="display:none;">Next post</span>
+      <span id="i-top" class="info" style="display:none;">Back to top</span>
+      <span id="i-share" class="info" style="display:none;">Share post</span>
+    </span>
+    <br/>
+    <div id="share" style="display: none">
+      <ul>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.facebook.com/sharer.php?u=https://lnxpgn.github.io/2022/01/03/issue-10-202201-1/"><i class="fab fa-facebook " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://twitter.com/share?url=https://lnxpgn.github.io/2022/01/03/issue-10-202201-1/&text=Weekly - issue 10"><i class="fab fa-twitter " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.linkedin.com/shareArticle?url=https://lnxpgn.github.io/2022/01/03/issue-10-202201-1/&title=Weekly - issue 10"><i class="fab fa-linkedin " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://pinterest.com/pin/create/bookmarklet/?url=https://lnxpgn.github.io/2022/01/03/issue-10-202201-1/&is_video=false&description=Weekly - issue 10"><i class="fab fa-pinterest " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=Weekly - issue 10&body=Check out this article: https://lnxpgn.github.io/2022/01/03/issue-10-202201-1/"><i class="fa-solid fa-envelope " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://getpocket.com/save?url=https://lnxpgn.github.io/2022/01/03/issue-10-202201-1/&title=Weekly - issue 10"><i class="fab fa-get-pocket " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://reddit.com/submit?url=https://lnxpgn.github.io/2022/01/03/issue-10-202201-1/&title=Weekly - issue 10"><i class="fab fa-reddit " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.stumbleupon.com/submit?url=https://lnxpgn.github.io/2022/01/03/issue-10-202201-1/&title=Weekly - issue 10"><i class="fab fa-stumbleupon " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://digg.com/submit?url=https://lnxpgn.github.io/2022/01/03/issue-10-202201-1/&title=Weekly - issue 10"><i class="fab fa-digg " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.tumblr.com/share/link?url=https://lnxpgn.github.io/2022/01/03/issue-10-202201-1/&name=Weekly - issue 10&description="><i class="fab fa-tumblr " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://news.ycombinator.com/submitlink?u=https://lnxpgn.github.io/2022/01/03/issue-10-202201-1/&t=Weekly - issue 10"><i class="fab fa-hacker-news " aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+    
+    
+      <div id="toc">
+        <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#Why-IndexedDB-is-slow-and-what-to-use-instead"><span class="toc-number">1.</span> <span class="toc-text">Why IndexedDB is slow and what to use instead</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Stanford-machine-learning-cheatsheets"><span class="toc-number">2.</span> <span class="toc-text">Stanford machine learning cheatsheets</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#My-First-5-Minutes-On-A-Server-Or-Essential-Security-for-Linux-Servers"><span class="toc-number">3.</span> <span class="toc-text">My First 5 Minutes On A Server; Or, Essential Security for Linux Servers</span></a></li></ol>
+      </div>
+    
+  </span>
+</div>
+
+    
+    <div class="content index py4 ">
+        
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+  <header>
+    
+    <h1 class="posttitle p-name" itemprop="name headline">
+        Weekly - issue 10
+    </h1>
+
+
+
+    <div class="meta">
+      <!-- <span class="author p-author h-card" itemprop="author" itemscope itemtype="http://schema.org/Person">
+        <span class="p-name" itemprop="name">lnxpgn</span>
+      </span> -->
+      
+    <div class="postdate">
+      
+        <time datetime="2022-01-02T16:00:00.000Z" class="dt-published" itemprop="datePublished">2022-01-03</time>
+        
+      
+    </div>
+
+
+      
+    <div class="article-category">
+        <i class="fa-solid fa-archive"></i>
+        <a class="category-link" href="/categories/Weekly/">Weekly</a>
+    </div>
+
+
+      
+    <div class="article-tag">
+        <i class="fa-solid fa-tag"></i>
+        <a class="p-category" href="/tags/IndexedDB/" rel="tag">IndexedDB</a>, <a class="p-category" href="/tags/Linux/" rel="tag">Linux</a>, <a class="p-category" href="/tags/Machine-Learning/" rel="tag">Machine Learning</a>, <a class="p-category" href="/tags/Weekly/" rel="tag">Weekly</a>
+    </div>
+
+
+    </div>
+  </header>
+  
+
+  <div class="content e-content" itemprop="articleBody">
+    <h3 id="Why-IndexedDB-is-slow-and-what-to-use-instead"><a href="#Why-IndexedDB-is-slow-and-what-to-use-instead" class="headerlink" title="Why IndexedDB is slow and what to use instead"></a><a target="_blank" rel="noopener" href="https://rxdb.info/slow-indexeddb.html">Why IndexedDB is slow and what to use instead</a></h3><p>IndexedDB is slow in multiple transactions, fast in a single transaction.</p>
+<p>It is not easy to use a single transaction because of user operations and the browser’s multiple tabs.</p>
+<p>Using IndexedDB as a filesystem, not as a database: All data is loaded into the memory on the initial page load, then persist the memory state into IndexedDB with a single write transaction.</p>
+<p><a target="_blank" rel="noopener" href="https://github.com/techfort/LokiJS">LokiJS: javascript embeddable &#x2F; in-memory database</a> is an alternative.</p>
+<h3 id="Stanford-machine-learning-cheatsheets"><a href="#Stanford-machine-learning-cheatsheets" class="headerlink" title="Stanford machine learning cheatsheets"></a><a target="_blank" rel="noopener" href="https://stanford.edu/~shervine/teaching/cs-229/">Stanford machine learning cheatsheets</a></h3><p><a target="_blank" rel="noopener" href="https://github.com/afshinea/stanford-cs-229-machine-learning">Here</a> is the PDF versions. Available in <a target="_blank" rel="noopener" href="https://github.com/afshinea/stanford-cs-229-machine-learning/tree/master/ar">العربية</a> - <a target="_blank" rel="noopener" href="https://github.com/afshinea/stanford-cs-229-machine-learning/tree/master/en">English</a> - <a target="_blank" rel="noopener" href="https://github.com/afshinea/stanford-cs-229-machine-learning/tree/master/es">Español</a> - <a target="_blank" rel="noopener" href="https://github.com/afshinea/stanford-cs-229-machine-learning/tree/master/fa">فارسی</a> - <a target="_blank" rel="noopener" href="https://github.com/afshinea/stanford-cs-229-machine-learning/tree/master/fr">Français</a> - <a target="_blank" rel="noopener" href="https://stanford.edu/~shervine/l/ko/teaching/cs-229/cheatsheet-machine-learning-tips-and-tricks">한국어</a> - <a target="_blank" rel="noopener" href="https://github.com/afshinea/stanford-cs-229-machine-learning/tree/master/pt">Português</a> - <a target="_blank" rel="noopener" href="https://github.com/afshinea/stanford-cs-229-machine-learning/tree/master/tr">Türkçe</a> - <a target="_blank" rel="noopener" href="https://github.com/afshinea/stanford-cs-229-machine-learning/tree/master/vi">Tiếng Việt</a> - <a target="_blank" rel="noopener" href="https://github.com/afshinea/stanford-cs-229-machine-learning/tree/master/zh">简中</a> - <a target="_blank" rel="noopener" href="https://github.com/afshinea/stanford-cs-229-machine-learning/tree/master/zh-tw">繁中</a></p>
+<h3 id="My-First-5-Minutes-On-A-Server-Or-Essential-Security-for-Linux-Servers"><a href="#My-First-5-Minutes-On-A-Server-Or-Essential-Security-for-Linux-Servers" class="headerlink" title="My First 5 Minutes On A Server; Or, Essential Security for Linux Servers"></a><a target="_blank" rel="noopener" href="https://sollove.com/2013/03/03/my-first-5-minutes-on-a-server-or-essential-security-for-linux-servers/">My First 5 Minutes On A Server; Or, Essential Security for Linux Servers</a></h3><ul>
+<li><p>Change the root password to something long and complex;</p>
+</li>
+<li><p>Install <a target="_blank" rel="noopener" href="http://www.fail2ban.org/">Fail2ban</a>;</p>
+</li>
+<li><p>Require SSH public key authentication;</p>
+</li>
+<li><p>Test the non-root user &amp; enable sudo;</p>
+</li>
+<li><p>Configure SSH to prevent password &amp; root logins and lock SSH to particular IPs;</p>
+</li>
+<li><p>Set up a firewall;</p>
+</li>
+<li><p>Enable automatic security updates;</p>
+</li>
+<li><p>Install <a target="_blank" rel="noopener" href="http://linux.die.net/man/8/logwatch">Logwatch</a> to keep an eye on things.</p>
+</li>
+</ul>
+
+  </div>
+</article>
+
+
+
+        
+          <div id="footer-post-container">
+  <div id="footer-post">
+
+    <div id="nav-footer" style="display: none">
+      <ul>
+        
+          <li><a href="/">Home</a></li>
+        
+          <li><a href="/archives/">Writing</a></li>
+        
+          <li><a href="/categories/">Categories</a></li>
+        
+          <li><a href="/tags/">Tags</a></li>
+        
+          <li><a href="/about/">About</a></li>
+        
+      </ul>
+    </div>
+
+    
+    
+      <div id="toc-footer" style="display: none">
+        <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#Why-IndexedDB-is-slow-and-what-to-use-instead"><span class="toc-number">1.</span> <span class="toc-text">Why IndexedDB is slow and what to use instead</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Stanford-machine-learning-cheatsheets"><span class="toc-number">2.</span> <span class="toc-text">Stanford machine learning cheatsheets</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#My-First-5-Minutes-On-A-Server-Or-Essential-Security-for-Linux-Servers"><span class="toc-number">3.</span> <span class="toc-text">My First 5 Minutes On A Server; Or, Essential Security for Linux Servers</span></a></li></ol>
+      </div>
+    
+
+    <div id="share-footer" style="display: none">
+      <ul>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.facebook.com/sharer.php?u=https://lnxpgn.github.io/2022/01/03/issue-10-202201-1/"><i class="fab fa-facebook fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://twitter.com/share?url=https://lnxpgn.github.io/2022/01/03/issue-10-202201-1/&text=Weekly - issue 10"><i class="fab fa-twitter fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.linkedin.com/shareArticle?url=https://lnxpgn.github.io/2022/01/03/issue-10-202201-1/&title=Weekly - issue 10"><i class="fab fa-linkedin fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://pinterest.com/pin/create/bookmarklet/?url=https://lnxpgn.github.io/2022/01/03/issue-10-202201-1/&is_video=false&description=Weekly - issue 10"><i class="fab fa-pinterest fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=Weekly - issue 10&body=Check out this article: https://lnxpgn.github.io/2022/01/03/issue-10-202201-1/"><i class="fa-solid fa-envelope fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://getpocket.com/save?url=https://lnxpgn.github.io/2022/01/03/issue-10-202201-1/&title=Weekly - issue 10"><i class="fab fa-get-pocket fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://reddit.com/submit?url=https://lnxpgn.github.io/2022/01/03/issue-10-202201-1/&title=Weekly - issue 10"><i class="fab fa-reddit fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.stumbleupon.com/submit?url=https://lnxpgn.github.io/2022/01/03/issue-10-202201-1/&title=Weekly - issue 10"><i class="fab fa-stumbleupon fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://digg.com/submit?url=https://lnxpgn.github.io/2022/01/03/issue-10-202201-1/&title=Weekly - issue 10"><i class="fab fa-digg fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.tumblr.com/share/link?url=https://lnxpgn.github.io/2022/01/03/issue-10-202201-1/&name=Weekly - issue 10&description="><i class="fab fa-tumblr fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://news.ycombinator.com/submitlink?u=https://lnxpgn.github.io/2022/01/03/issue-10-202201-1/&t=Weekly - issue 10"><i class="fab fa-hacker-news fa-lg" aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+
+    <div id="actions-footer">
+        <a id="menu" class="icon" href="#" onclick="$('#nav-footer').toggle();return false;"><i class="fa-solid fa-bars fa-lg" aria-hidden="true"></i> Menu</a>
+        
+          <a id="toc" class="icon" href="#" onclick="$('#toc-footer').toggle();return false;"><i class="fa-solid fa-list fa-lg" aria-hidden="true"></i> TOC</a>
+        
+        <a id="share" class="icon" href="#" onclick="$('#share-footer').toggle();return false;"><i class="fa-solid fa-share-alt fa-lg" aria-hidden="true"></i> Share</a>
+        <a id="top" style="display:none" class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fa-solid fa-chevron-up fa-lg" aria-hidden="true"></i> Top</a>
+    </div>
+
+  </div>
+</div>
+
+        
+        <footer id="footer">
+  <div class="footer-left">
+    Copyright &copy;
+    
+    
+    2015-2025
+    lnxpgn
+  </div>
+  <div class="footer-right">
+    <nav>
+      <ul>
+        <!--
+       --><li><a href="/">Home</a></li><!--
+     --><!--
+       --><li><a href="/archives/">Writing</a></li><!--
+     --><!--
+       --><li><a href="/categories/">Categories</a></li><!--
+     --><!--
+       --><li><a href="/tags/">Tags</a></li><!--
+     --><!--
+       --><li><a href="/about/">About</a></li><!--
+     -->
+      </ul>
+    </nav>
+  </div>
+</footer>
+
+    </div>
+    <!-- styles -->
+
+
+
+  <link rel="preload" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" crossorigin="anonymous" onload="this.onload=null;this.rel='stylesheet'"/>
+
+
+  <link
+    rel="stylesheet"
+    href="/css/prism-default-line-numbers.css"/>
+
+
+    <!-- jquery -->
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" crossorigin="anonymous"></script>
+
+
+
+
+<!-- clipboard -->
+
+  
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.7/clipboard.min.js" crossorigin="anonymous"></script>
+  
+  <script type="text/javascript">
+  $(function() {
+    // copy-btn HTML
+    var btn = "<span class=\"btn-copy tooltipped tooltipped-sw\" aria-label=\"Copy to clipboard!\">";
+    btn += '<i class="fa-regular fa-clone"></i>';
+    btn += '</span>';
+    // mount it!
+    $(".highlight table").before(btn);
+    var clip = new ClipboardJS('.btn-copy', {
+      text: function(trigger) {
+        return Array.from(trigger.nextElementSibling.querySelectorAll('.code')).reduce((str,it)=>str+it.innerText+'\n','')
+      }
+    });
+    clip.on('success', function(e) {
+      e.trigger.setAttribute('aria-label', "Copied!");
+      e.clearSelection();
+    })
+  })
+  </script>
+
+
+<script src="/js/main.js"></script>
+
+<!-- search -->
+
+<!-- Baidu Analytics -->
+
+<!-- Cloudflare Analytics -->
+
+<!-- Disqus Comments -->
+
+<!-- utterances Comments -->
+
+</body>
+</html>

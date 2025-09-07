@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang=zh>
+<head>
+    <!-- so meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5" />
+    <meta name="description" content="呼吸习惯与身心健康相关绝大多数人对呼吸有误解。我们认为呼吸是一种被动的行为。呼吸意味着活着，停止呼吸意味着死亡。但呼吸并非是简单的二元关系。如何呼吸至关重要。我们呼吸摄入的空气分子比地球上所有沙滩上的沙砾还要多。我们每天呼入呼出的空气分子重约 30 磅，远超饮食。呼吸的方式与饮食、运动和基因一样重要。正确的呼吸能让我们活得更久更健康，糟糕的呼吸可能导致一系列慢性疾病，可能会改变我们的身体结构。古代">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Weekly - issue 4">
+<meta property="og:url" content="https://lnxpgn.github.io/2020/05/31/issue-4-202005-4/index.html">
+<meta property="og:site_name" content="竹里馆">
+<meta property="og:description" content="呼吸习惯与身心健康相关绝大多数人对呼吸有误解。我们认为呼吸是一种被动的行为。呼吸意味着活着，停止呼吸意味着死亡。但呼吸并非是简单的二元关系。如何呼吸至关重要。我们呼吸摄入的空气分子比地球上所有沙滩上的沙砾还要多。我们每天呼入呼出的空气分子重约 30 磅，远超饮食。呼吸的方式与饮食、运动和基因一样重要。正确的呼吸能让我们活得更久更健康，糟糕的呼吸可能导致一系列慢性疾病，可能会改变我们的身体结构。古代">
+<meta property="og:locale">
+<meta property="article:published_time" content="2020-05-30T16:00:00.000Z">
+<meta property="article:modified_time" content="2023-12-09T03:49:42.000Z">
+<meta property="article:author" content="lnxpgn">
+<meta property="article:tag" content="Weekly">
+<meta property="article:tag" content="PostgreSQL">
+<meta property="article:tag" content="Health">
+<meta property="article:tag" content="健康">
+<meta property="article:tag" content="Microservices">
+<meta property="article:tag" content="NLP">
+<meta property="article:tag" content="Prometheus">
+<meta property="article:tag" content="MySQL">
+<meta name="twitter:card" content="summary">
+    
+    
+      
+        
+          <link rel="shortcut icon" href="/images/favicon.ico">
+        
+      
+      
+        
+          <link rel="icon" type="image/png" href="/images/favicon-192x192.png" sizes="192x192">
+        
+      
+      
+        
+          <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+        
+      
+    
+    <!-- title -->
+    <title>Weekly - issue 4</title>
+    <!-- async scripts -->
+    <!-- Google Analytics -->
+
+
+    <!-- Umami Analytics -->
+
+
+    <!-- styles -->
+    
+<link rel="stylesheet" href="/css/style.css">
+
+    <!-- persian styles -->
+    
+    <!-- rss -->
+    
+    
+	<!-- mathjax -->
+	
+<meta name="generator" content="Hexo 7.3.0"><link rel="alternate" href="/atom.xml" title="竹里馆" type="application/atom+xml">
+<link rel="alternate" href="/rss.xml" title="竹里馆" type="application/rss+xml">
+</head>
+
+<body class="max-width mx-auto px3 ltr">
+    
+      <div id="header-post">
+  <a id="menu-icon" href="#" aria-label="Menu"><i class="fa-solid fa-bars fa-lg"></i></a>
+  <a id="menu-icon-tablet" href="#" aria-label="Menu"><i class="fa-solid fa-bars fa-lg"></i></a>
+  <a id="top-icon-tablet" href="#" aria-label="Top" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');" style="display:none;"><i class="fa-solid fa-chevron-up fa-lg"></i></a>
+  <span id="menu">
+    <span id="nav">
+      <ul>
+        <!--
+       --><li><a href="/">Home</a></li><!--
+     --><!--
+       --><li><a href="/archives/">Writing</a></li><!--
+     --><!--
+       --><li><a href="/categories/">Categories</a></li><!--
+     --><!--
+       --><li><a href="/tags/">Tags</a></li><!--
+     --><!--
+       --><li><a href="/about/">About</a></li><!--
+     -->
+      </ul>
+    </span>
+    <br/>
+    <span id="actions">
+      <ul>
+        
+        <li><a class="icon" aria-label="Previous post" href="/2020/06/08/issue-5-202006-1/"><i class="fa-solid fa-chevron-left" aria-hidden="true" onmouseover="$('#i-prev').toggle();" onmouseout="$('#i-prev').toggle();"></i></a></li>
+        
+        
+        <li><a class="icon" aria-label="Next post" href="/2020/05/24/issue-3-202005-3/"><i class="fa-solid fa-chevron-right" aria-hidden="true" onmouseover="$('#i-next').toggle();" onmouseout="$('#i-next').toggle();"></i></a></li>
+        
+        <li><a class="icon" aria-label="Back to top" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fa-solid fa-chevron-up" aria-hidden="true" onmouseover="$('#i-top').toggle();" onmouseout="$('#i-top').toggle();"></i></a></li>
+        <li><a class="icon" aria-label="Share post" href="#"><i class="fa-solid fa-share-alt" aria-hidden="true" onmouseover="$('#i-share').toggle();" onmouseout="$('#i-share').toggle();" onclick="$('#share').toggle();return false;"></i></a></li>
+      </ul>
+      <span id="i-prev" class="info" style="display:none;">Previous post</span>
+      <span id="i-next" class="info" style="display:none;">Next post</span>
+      <span id="i-top" class="info" style="display:none;">Back to top</span>
+      <span id="i-share" class="info" style="display:none;">Share post</span>
+    </span>
+    <br/>
+    <div id="share" style="display: none">
+      <ul>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.facebook.com/sharer.php?u=https://lnxpgn.github.io/2020/05/31/issue-4-202005-4/"><i class="fab fa-facebook " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://twitter.com/share?url=https://lnxpgn.github.io/2020/05/31/issue-4-202005-4/&text=Weekly - issue 4"><i class="fab fa-twitter " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.linkedin.com/shareArticle?url=https://lnxpgn.github.io/2020/05/31/issue-4-202005-4/&title=Weekly - issue 4"><i class="fab fa-linkedin " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://pinterest.com/pin/create/bookmarklet/?url=https://lnxpgn.github.io/2020/05/31/issue-4-202005-4/&is_video=false&description=Weekly - issue 4"><i class="fab fa-pinterest " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=Weekly - issue 4&body=Check out this article: https://lnxpgn.github.io/2020/05/31/issue-4-202005-4/"><i class="fa-solid fa-envelope " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://getpocket.com/save?url=https://lnxpgn.github.io/2020/05/31/issue-4-202005-4/&title=Weekly - issue 4"><i class="fab fa-get-pocket " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://reddit.com/submit?url=https://lnxpgn.github.io/2020/05/31/issue-4-202005-4/&title=Weekly - issue 4"><i class="fab fa-reddit " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.stumbleupon.com/submit?url=https://lnxpgn.github.io/2020/05/31/issue-4-202005-4/&title=Weekly - issue 4"><i class="fab fa-stumbleupon " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://digg.com/submit?url=https://lnxpgn.github.io/2020/05/31/issue-4-202005-4/&title=Weekly - issue 4"><i class="fab fa-digg " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.tumblr.com/share/link?url=https://lnxpgn.github.io/2020/05/31/issue-4-202005-4/&name=Weekly - issue 4&description="><i class="fab fa-tumblr " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://news.ycombinator.com/submitlink?u=https://lnxpgn.github.io/2020/05/31/issue-4-202005-4/&t=Weekly - issue 4"><i class="fab fa-hacker-news " aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+    
+    
+      <div id="toc">
+        <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%91%BC%E5%90%B8%E4%B9%A0%E6%83%AF%E4%B8%8E%E8%BA%AB%E5%BF%83%E5%81%A5%E5%BA%B7%E7%9B%B8%E5%85%B3"><span class="toc-number">1.</span> <span class="toc-text">呼吸习惯与身心健康相关</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Patroni"><span class="toc-number">2.</span> <span class="toc-text">Patroni</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#So-you-want-to-learn-Microservices"><span class="toc-number">3.</span> <span class="toc-text">So you want to learn Microservices?</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#A-list-of-beginner-friendly-NLP-projects%E2%80%94using-pre-trained-models"><span class="toc-number">4.</span> <span class="toc-text">A list of beginner-friendly NLP projects—using pre-trained models</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Prometheus-Basics"><span class="toc-number">5.</span> <span class="toc-text">Prometheus-Basics</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#MySQL-sharding-at-Quora"><span class="toc-number">6.</span> <span class="toc-text">MySQL sharding at Quora</span></a></li></ol>
+      </div>
+    
+  </span>
+</div>
+
+    
+    <div class="content index py4 ">
+        
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+  <header>
+    
+    <h1 class="posttitle p-name" itemprop="name headline">
+        Weekly - issue 4
+    </h1>
+
+
+
+    <div class="meta">
+      <!-- <span class="author p-author h-card" itemprop="author" itemscope itemtype="http://schema.org/Person">
+        <span class="p-name" itemprop="name">lnxpgn</span>
+      </span> -->
+      
+    <div class="postdate">
+      
+        <time datetime="2020-05-30T16:00:00.000Z" class="dt-published" itemprop="datePublished">2020-05-31</time>
+        
+      
+    </div>
+
+
+      
+    <div class="article-category">
+        <i class="fa-solid fa-archive"></i>
+        <a class="category-link" href="/categories/Weekly/">Weekly</a>
+    </div>
+
+
+      
+    <div class="article-tag">
+        <i class="fa-solid fa-tag"></i>
+        <a class="p-category" href="/tags/Health/" rel="tag">Health</a>, <a class="p-category" href="/tags/Microservices/" rel="tag">Microservices</a>, <a class="p-category" href="/tags/MySQL/" rel="tag">MySQL</a>, <a class="p-category" href="/tags/NLP/" rel="tag">NLP</a>, <a class="p-category" href="/tags/PostgreSQL/" rel="tag">PostgreSQL</a>, <a class="p-category" href="/tags/Prometheus/" rel="tag">Prometheus</a>, <a class="p-category" href="/tags/Weekly/" rel="tag">Weekly</a>, <a class="p-category" href="/tags/%E5%81%A5%E5%BA%B7/" rel="tag">健康</a>
+    </div>
+
+
+    </div>
+  </header>
+  
+
+  <div class="content e-content" itemprop="articleBody">
+    <h3 id="呼吸习惯与身心健康相关"><a href="#呼吸习惯与身心健康相关" class="headerlink" title="呼吸习惯与身心健康相关"></a><a target="_blank" rel="noopener" href="https://www.solidot.org/story?sid=64454">呼吸习惯与身心健康相关</a></h3><p>绝大多数人对呼吸有误解。我们认为呼吸是一种被动的行为。呼吸意味着活着，停止呼吸意味着死亡。但呼吸并非是简单的二元关系。<a target="_blank" rel="noopener" href="https://www.wsj.com/articles/the-healing-power-of-proper-breathing-11590098696">如何呼吸至关重要</a>。我们呼吸摄入的空气分子比地球上所有沙滩上的沙砾还要多。我们每天呼入呼出的空气分子重约 30 磅，远超饮食。呼吸的方式与饮食、运动和基因一样重要。正确的呼吸能让我们活得更久更健康，糟糕的呼吸可能导致一系列慢性疾病，可能会改变我们的身体结构。古代的人对此主题有更深入的理解。主要宗教和文化都认为正确的呼吸对健康很关键。中国古代学者还写了多本关于呼吸的书籍。印度瑜伽修行者更是<a target="_blank" rel="noopener" href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3221193/">呼吸的大师</a>。我们许多人的呼吸习惯都不够好，我们会将其归罪于身体年龄。大约 30 岁之后，胸部骨骼会变薄向内收缩。到  50 岁时我们失去了 12% 的肺容量。这一收缩之后会加速。我们被迫更快更艰难的呼吸。但好消息是我们可以在任何时候改变呼吸习惯，逆转肺容量损失。1980 年代，长达 70 年的心脏疾病研究项目 Framingham Study 发现，衡量寿命的一个最关键指标不是遗传、饮食和每天的锻炼量，而是肺容量。肺容量越大寿命越长。更大的肺部可以用更少的呼吸吸入更多的空气，减少身体的磨损。健康呼吸的第一步是延长呼吸，更深入更长点。用大约 5 秒钟的时间慢慢吸气，然后用类似的时间呼气，每分钟大约完成六次呼吸。按照这样的节奏呼气吸气，几分钟就能将血压降低 10 个甚至 15 个点。健康呼吸的第二步：用鼻子呼吸。</p>
+<p><em>但是我想知道日常生活中一分钟呼吸6次如何做到。</em></p>
+<h3 id="Patroni"><a href="#Patroni" class="headerlink" title="Patroni"></a><a target="_blank" rel="noopener" href="https://github.com/zalando/patroni">Patroni</a></h3><p>A template for PostgreSQL High Availability with Etcd, Consul, ZooKeeper, or Kubernetes.</p>
+<h3 id="So-you-want-to-learn-Microservices"><a href="#So-you-want-to-learn-Microservices" class="headerlink" title="So you want to learn Microservices?"></a><a target="_blank" rel="noopener" href="https://dev.to/kgoralski/deep-dive-into-microservices-architecture-h54">So you want to learn Microservices?</a></h3><p>Micro services architecture is complicated.</p>
+<h3 id="A-list-of-beginner-friendly-NLP-projects—using-pre-trained-models"><a href="#A-list-of-beginner-friendly-NLP-projects—using-pre-trained-models" class="headerlink" title="A list of beginner-friendly NLP projects—using pre-trained models"></a><a target="_blank" rel="noopener" href="https://towardsdatascience.com/a-list-of-beginner-friendly-nlp-projects-using-pre-trained-models-dc4768b4bec0">A list of beginner-friendly NLP projects—using pre-trained models</a></h3><p>To build production software projects based on NLP (natural language processing): ML-powered autocomplete, customer support bots , predictive text generators, language identifiers, media monitors.</p>
+<h3 id="Prometheus-Basics"><a href="#Prometheus-Basics" class="headerlink" title="Prometheus-Basics"></a><a target="_blank" rel="noopener" href="https://github.com/yolossn/Prometheus-Basics">Prometheus-Basics</a></h3><p>A beginner friendly introduction to <em>prometheus</em>. <em>Prometheus</em> is a system monitoring and alerting system.</p>
+<h3 id="MySQL-sharding-at-Quora"><a href="#MySQL-sharding-at-Quora" class="headerlink" title="MySQL sharding at Quora"></a><a target="_blank" rel="noopener" href="https://www.quora.com/q/quoraengineering/MySQL-sharding-at-Quora?share=1">MySQL sharding at Quora</a></h3><p>How Quora scaled MySQL to meet the growing content requirements.</p>
+
+  </div>
+</article>
+
+
+
+        
+          <div id="footer-post-container">
+  <div id="footer-post">
+
+    <div id="nav-footer" style="display: none">
+      <ul>
+        
+          <li><a href="/">Home</a></li>
+        
+          <li><a href="/archives/">Writing</a></li>
+        
+          <li><a href="/categories/">Categories</a></li>
+        
+          <li><a href="/tags/">Tags</a></li>
+        
+          <li><a href="/about/">About</a></li>
+        
+      </ul>
+    </div>
+
+    
+    
+      <div id="toc-footer" style="display: none">
+        <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%91%BC%E5%90%B8%E4%B9%A0%E6%83%AF%E4%B8%8E%E8%BA%AB%E5%BF%83%E5%81%A5%E5%BA%B7%E7%9B%B8%E5%85%B3"><span class="toc-number">1.</span> <span class="toc-text">呼吸习惯与身心健康相关</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Patroni"><span class="toc-number">2.</span> <span class="toc-text">Patroni</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#So-you-want-to-learn-Microservices"><span class="toc-number">3.</span> <span class="toc-text">So you want to learn Microservices?</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#A-list-of-beginner-friendly-NLP-projects%E2%80%94using-pre-trained-models"><span class="toc-number">4.</span> <span class="toc-text">A list of beginner-friendly NLP projects—using pre-trained models</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Prometheus-Basics"><span class="toc-number">5.</span> <span class="toc-text">Prometheus-Basics</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#MySQL-sharding-at-Quora"><span class="toc-number">6.</span> <span class="toc-text">MySQL sharding at Quora</span></a></li></ol>
+      </div>
+    
+
+    <div id="share-footer" style="display: none">
+      <ul>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.facebook.com/sharer.php?u=https://lnxpgn.github.io/2020/05/31/issue-4-202005-4/"><i class="fab fa-facebook fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://twitter.com/share?url=https://lnxpgn.github.io/2020/05/31/issue-4-202005-4/&text=Weekly - issue 4"><i class="fab fa-twitter fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.linkedin.com/shareArticle?url=https://lnxpgn.github.io/2020/05/31/issue-4-202005-4/&title=Weekly - issue 4"><i class="fab fa-linkedin fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://pinterest.com/pin/create/bookmarklet/?url=https://lnxpgn.github.io/2020/05/31/issue-4-202005-4/&is_video=false&description=Weekly - issue 4"><i class="fab fa-pinterest fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=Weekly - issue 4&body=Check out this article: https://lnxpgn.github.io/2020/05/31/issue-4-202005-4/"><i class="fa-solid fa-envelope fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://getpocket.com/save?url=https://lnxpgn.github.io/2020/05/31/issue-4-202005-4/&title=Weekly - issue 4"><i class="fab fa-get-pocket fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://reddit.com/submit?url=https://lnxpgn.github.io/2020/05/31/issue-4-202005-4/&title=Weekly - issue 4"><i class="fab fa-reddit fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.stumbleupon.com/submit?url=https://lnxpgn.github.io/2020/05/31/issue-4-202005-4/&title=Weekly - issue 4"><i class="fab fa-stumbleupon fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://digg.com/submit?url=https://lnxpgn.github.io/2020/05/31/issue-4-202005-4/&title=Weekly - issue 4"><i class="fab fa-digg fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.tumblr.com/share/link?url=https://lnxpgn.github.io/2020/05/31/issue-4-202005-4/&name=Weekly - issue 4&description="><i class="fab fa-tumblr fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://news.ycombinator.com/submitlink?u=https://lnxpgn.github.io/2020/05/31/issue-4-202005-4/&t=Weekly - issue 4"><i class="fab fa-hacker-news fa-lg" aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+
+    <div id="actions-footer">
+        <a id="menu" class="icon" href="#" onclick="$('#nav-footer').toggle();return false;"><i class="fa-solid fa-bars fa-lg" aria-hidden="true"></i> Menu</a>
+        
+          <a id="toc" class="icon" href="#" onclick="$('#toc-footer').toggle();return false;"><i class="fa-solid fa-list fa-lg" aria-hidden="true"></i> TOC</a>
+        
+        <a id="share" class="icon" href="#" onclick="$('#share-footer').toggle();return false;"><i class="fa-solid fa-share-alt fa-lg" aria-hidden="true"></i> Share</a>
+        <a id="top" style="display:none" class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fa-solid fa-chevron-up fa-lg" aria-hidden="true"></i> Top</a>
+    </div>
+
+  </div>
+</div>
+
+        
+        <footer id="footer">
+  <div class="footer-left">
+    Copyright &copy;
+    
+    
+    2015-2025
+    lnxpgn
+  </div>
+  <div class="footer-right">
+    <nav>
+      <ul>
+        <!--
+       --><li><a href="/">Home</a></li><!--
+     --><!--
+       --><li><a href="/archives/">Writing</a></li><!--
+     --><!--
+       --><li><a href="/categories/">Categories</a></li><!--
+     --><!--
+       --><li><a href="/tags/">Tags</a></li><!--
+     --><!--
+       --><li><a href="/about/">About</a></li><!--
+     -->
+      </ul>
+    </nav>
+  </div>
+</footer>
+
+    </div>
+    <!-- styles -->
+
+
+
+  <link rel="preload" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" crossorigin="anonymous" onload="this.onload=null;this.rel='stylesheet'"/>
+
+
+  <link
+    rel="stylesheet"
+    href="/css/prism-default-line-numbers.css"/>
+
+
+    <!-- jquery -->
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" crossorigin="anonymous"></script>
+
+
+
+
+<!-- clipboard -->
+
+  
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.7/clipboard.min.js" crossorigin="anonymous"></script>
+  
+  <script type="text/javascript">
+  $(function() {
+    // copy-btn HTML
+    var btn = "<span class=\"btn-copy tooltipped tooltipped-sw\" aria-label=\"Copy to clipboard!\">";
+    btn += '<i class="fa-regular fa-clone"></i>';
+    btn += '</span>';
+    // mount it!
+    $(".highlight table").before(btn);
+    var clip = new ClipboardJS('.btn-copy', {
+      text: function(trigger) {
+        return Array.from(trigger.nextElementSibling.querySelectorAll('.code')).reduce((str,it)=>str+it.innerText+'\n','')
+      }
+    });
+    clip.on('success', function(e) {
+      e.trigger.setAttribute('aria-label', "Copied!");
+      e.clearSelection();
+    })
+  })
+  </script>
+
+
+<script src="/js/main.js"></script>
+
+<!-- search -->
+
+<!-- Baidu Analytics -->
+
+<!-- Cloudflare Analytics -->
+
+<!-- Disqus Comments -->
+
+<!-- utterances Comments -->
+
+</body>
+</html>
